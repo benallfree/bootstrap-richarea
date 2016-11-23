@@ -6,38 +6,31 @@ var pump = require('pump');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
+var clean = require('gulp-clean');
 
-
-gulp.task('js-compress', function (cb) {
+gulp.task('js-compress', ['assets', 'js', 'clean'], function (cb) {
   pump([
-        gulp.src('src/index.js'),
+        gulp.src('dist/**/*.js'),
         babel({
           presets: ['es2015']
         }),
         uglify(),
-        rename('richarea.min.js'),
+        rename({
+          extname: ".min.js"
+        }),
         gulp.dest('dist')
     ],
     cb
   );
 });
 
-gulp.task('sass-compress', function (cb) {
+gulp.task('sass-compress', ['assets', 'sass', 'clean'], function (cb) {
   pump([
-        gulp.src('dist/richarea.css'),
+        gulp.src('dist/**/*.css'),
         cleanCSS({compatibility: 'ie8'}),
-        rename('richarea.min.css'),
-        gulp.dest('dist')
-    ],
-    cb
-  );
-});
-
-gulp.task('html-compress', function (cb) {
-  pump([
-        gulp.src('dist/richarea.html'),
-        htmlmin({collapseWhitespace: true}),
-        rename('richarea.min.html'),
+        rename({
+          extname: ".min.css"
+        }),
         gulp.dest('dist')
     ],
     cb
@@ -45,8 +38,7 @@ gulp.task('html-compress', function (cb) {
 });
 
 
-
-gulp.task('js', function(cb) {
+gulp.task('js', ['clean'], function(cb) {
   pump([
       gulp.src('src/index.js'),
       babel({
@@ -59,15 +51,15 @@ gulp.task('js', function(cb) {
   );
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./src/sass/*.scss')
+gulp.task('sass', ['clean'], function () {
+  return gulp.src('./src/sass/richarea.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/assets/css'));
 });
 
-gulp.task('html', function () {
-  return gulp.src('./src/richarea.html')
-    .pipe(gulp.dest('./dist'));
+gulp.task('assets', ['clean'], function () {
+  return gulp.src('./assets/**/*')
+    .pipe(gulp.dest('./dist/assets'));
 });
  
  
@@ -75,4 +67,9 @@ gulp.task('sass:watch', function () {
   gulp.watch('./*.scss', ['sass']);
 });
 
-gulp.task('default', ['html', 'js', 'sass', 'js-compress', 'sass-compress', 'html-compress']);
+gulp.task('clean', function () {
+    return gulp.src('./dist', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('default', ['clean', 'assets', 'js', 'sass', 'js-compress', 'sass-compress']);
