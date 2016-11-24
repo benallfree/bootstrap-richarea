@@ -11,7 +11,7 @@ var webpack = require('gulp-webpack');
 var replace = require('gulp-replace');
 var fs = require('fs');
  
-gulp.task('js-compress', ['assets', 'js', 'clean'], function (cb) {
+gulp.task('js-compress', ['assets', 'js', 'js-full', 'clean'], function (cb) {
   pump([
         gulp.src('dist/**/*.js'),
         babel({
@@ -54,6 +54,7 @@ gulp.task('js', ['clean'], function(cb) {
       }),
       rename('richarea.js'),
       replace(/__TPL__EDITOR_TEMPLATE/g, JSON.stringify(template)),
+      replace(/__TPL__LAYOUTS/g, JSON.stringify(null)),
       gulp.dest('dist/')
     ],
     cb
@@ -80,6 +81,67 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
+gulp.task('js-full', function (cb) {
+  var layouts_html = fs.readFileSync('./src/templates/layouts.html', 'utf8');
+  var layouts = {};
+  require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+
+    var $ = require("jquery")(window);
+    var $tree = $('<div>');
+    $tree.html(layouts_html);
+    $tree.children('div').each((idx,e) => {
+      var $e = $(e);
+      var fields = {};
+      var layout_id = $e.data('id');
+      $e.find('[data-editor]').each( (idx,e) => {
+        var $e = $(e);
+        var defaultValue = $(e).data('default-value');
+        // if(options.userForms && !defaultValue && $(e).data('editor')=='forms')
+        // {
+        //   defaultValue = options.userForms[0].slug;
+        // }
+        fields[$(e).data('field')] = {
+          editor: $(e).data('editor'),
+          defaultValue: defaultValue,
+        };
+      });
+      layouts[layout_id] = {
+        id: $e.data('id'),
+        thumb: $e.data('thumb'),
+        fields: $.extend(true, {}, fields),
+        categories: $e.data('cat'),
+        template: $e.html().trim(),
+      };
+    });
+    
+    var template = fs.readFileSync('./src/templates/editor.html', 'utf8');
+    pump([
+        gulp.src('src/index.js'),
+        webpack({
+          module: {
+            loaders: [
+              { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            ]
+          }        
+        }),
+        rename('richarea-full.js'),
+        replace(/__TPL__EDITOR_TEMPLATE/g, JSON.stringify(template)),
+        replace(/__TPL__LAYOUTS/g, JSON.stringify(layouts)),
+        gulp.dest('dist/')
+      ],
+      cb
+    );    
+  });
+
+  
+    // return gulp.src('./dist', {read: false})
+    //     .pipe(clean());
+});
 
 
-gulp.task('default', ['clean', 'assets', 'js', 'sass', 'js-compress', 'sass-compress']);
+
+gulp.task('default', ['clean', 'assets', 'js', 'js-full', 'sass', 'js-compress', 'sass-compress']);
