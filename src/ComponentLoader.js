@@ -1,13 +1,14 @@
-let $ = require('jquery');
-let Vue = require('vue');
-
-class ComponentManager
+class ComponentLoader
 {
-  static init()
+  static init(options)
   {
+    options = $.extend(true, {}, {
+      componentsUrl: '../dist/assets/components.html',
+      userForms: null,
+    },options);
     this.isInitializing = true;
     $(()=> {
-      $.get('/components/snippets.html', (html)=> {
+      $.get(options.componentsUrl, (html)=> {
         var $tree = $('<div>');
         $tree.html(html);
         $tree.children('div').each((idx,e) => {
@@ -17,9 +18,9 @@ class ComponentManager
           $e.find('[data-editor]').each( (idx,e) => {
             var $e = $(e);
             var defaultValue = $(e).data('default-value');
-            if(!defaultValue && $(e).data('editor')=='forms')
+            if(options.userForms && !defaultValue && $(e).data('editor')=='forms')
             {
-              defaultValue = userForms[0].slug;
+              defaultValue = options.userForms[0].slug;
             }
             fields[$(e).data('field')] = {
               editor: $(e).data('editor'),
@@ -74,7 +75,7 @@ class ComponentManager
   {
     if(!this.isInitialized)
     {
-      throw new TypeError('ComponentManager.init() must finish first.');
+      throw new TypeError('ComponentLoader.init() must finish first.');
     }
     if(item instanceof Array)
     {
@@ -95,9 +96,9 @@ class ComponentManager
   }
 }
 
-ComponentManager.callbacks = [];
-ComponentManager.isInitialized = false;
-ComponentManager.components = {};
-ComponentManager.isInitializing = false;
+ComponentLoader.callbacks = [];
+ComponentLoader.isInitialized = false;
+ComponentLoader.components = {};
+ComponentLoader.isInitializing = false;
 
-module.exports = ComponentManager;
+module.exports = ComponentLoader;

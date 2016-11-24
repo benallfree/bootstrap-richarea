@@ -1,0 +1,98 @@
+<div class="richarea-editor">
+  <input :value="content" name="content" type="hidden"></input>
+  <input :value="itemsJson" name="itemJson" type="hidden"></input>
+  <ul class="sortable">
+    <li :class="{active: currentIdx==index }" :data-index="index" @click="select" @dblclick="edit" v-for="(item,index) in items">
+      <div class="tools">
+        <span class="move btn btn-success btn-xs glyphicon glyphicon-resize-vertical"></span>
+        <span @click="edit" class="add btn btn-default btn-xs glyphicon glyphicon-plus"></span>
+        <span @click="edit" class="settings btn btn-default btn-xs glyphicon glyphicon-cog"></span>
+        <span @click="duplicate" class="duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate"></span>
+        <span @click="remove" class="delete btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
+      </div>
+      <div class="item">
+        <component :forms="forms" :is="'c'+item.component_id" :item="item"></component>
+      </div>
+    </li>
+    <li class="disabled add text-center">
+      <button @click.prevent="add" class="btn btn-primary btn-xl">+</button>
+    </li>
+  </ul>
+  <div class="modal fade component-settings" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal" type="button">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+          <h4 class="modal-title">Edit Component</h4>
+        </div>
+        <div class="modal-body">
+          <template v-if="currentComponent">
+            <template v-if="Object.keys(currentComponent.fields).length>0">
+              <div v-for="(field,fieldName) in currentComponent.fields">
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-xs-2 control-label">{{fieldName | titlecase}}</label>
+                    <div class="col-xs-10">
+                      <div v-if="field.editor=='text'">
+                        <input class="form-control" type="text" v-model="currentItem.data[fieldName]"></input>
+                      </div>
+                      <div v-if="field.editor=='textarea'">
+                        <textarea class="form-control" rows="3" v-model="currentItem.data[fieldName]"></textarea>
+                      </div>
+                      <div v-if="field.editor=='link'">
+                        <input class="form-control" type="text" v-model="currentItem.data[fieldName].href"></input>
+                        <input class="form-control" type="text" v-model="currentItem.data[fieldName].display"></input>
+                      </div>
+                      <div v-if="field.editor=='image'">
+                        <div :data-field="fieldName" class="image-editor">
+                          <input accept="image/gif,image/png,image/jpeg" class="cropit-image-input" type="file"></input>
+                          <img :src="currentItem.data[fieldName].croppedImage" class="reference" style="width:100%; display: none"/>
+                          <div class="cropit-preview"></div>
+                          <input class="cropit-image-zoom-input" type="range"></input>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template v-else>
+              There are no fields to edit for this component.
+            </template>
+          </template>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal modal-fullscreen fade components-modal" role="dialog">
+    <div class="modal-dialog component-selector" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+          <h4 class="modal-title">Add Component</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div :class="{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }" @click="selectCat(cat)" class="btn btn-xs" style="margin: 2px;" v-for="cat in componentCategories">
+              {{cat[1]}}
+            </div>
+          </div>
+          <img class="component" data-dismiss="modal" :data-component-id="component.id" :src="component.thumb" v-for="(component,index) in components" v-if="inActiveCategories(component)" v-on:click="insert(component.id)"/>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

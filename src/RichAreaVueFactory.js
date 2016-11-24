@@ -1,17 +1,20 @@
-require('./vue');
-let ComponentManager = require('./ComponentManager');
-ComponentManager.init();
+let ComponentLoader = require('./ComponentLoader');
+ComponentLoader.init();
 
 class RichAreaVueFactory
 {
   static create(options)
   {
-    ComponentManager.onInit(()=>{
-      let items = ComponentManager.ensureDefaultValues($.extend(true, [], options.items));
+    options = $.extend(true, {}, {
+      componentCategories: [],
+      userForms: [],
+    },options);
+    ComponentLoader.onInit(()=>{
+      let items = ComponentLoader.ensureDefaultValues($.extend(true, [], options.items));
 
       function $editor()
       {
-        return $(options.editor);
+        return $(options.root).find('.richarea-editor');
       }
     
       function $sortable()
@@ -19,18 +22,18 @@ class RichAreaVueFactory
         return $editor().find('.sortable');
       }
       
-      app = new Vue({
-        el: options.editor,
+      let app = new Vue({
+        el: $editor().get(0),
         data: {
           content: null,
           itemsJson: null,
           currentIdx: null,
           $currentComponent: null,
           items: items,
-          components: ComponentManager.components,
-          componentCategories: componentCategories,
+          components: ComponentLoader.components,
+          componentCategories: options.componentCategories,
           selectedCategory: 0,
-          forms: userForms,
+          forms: options.userForms,
         },
         computed: {
           currentItem: function() {
@@ -72,6 +75,11 @@ class RichAreaVueFactory
           isComponentSettingsInitialized: false,
         },
         methods: {
+          add: function() {
+            this.currentIdx = null;
+            let $modal = $editor().find('.components-modal');
+            $modal.modal('show');
+          },
           selectCat: function(cat) {
             this.selectedCategory = cat[0];
           },
@@ -123,7 +131,7 @@ class RichAreaVueFactory
           },
           insert: function(component_id)
           {
-            var o = ComponentManager.ensureDefaultValues({component_id: component_id});
+            var o = ComponentLoader.ensureDefaultValues({component_id: component_id});
             var idx = $sortable().find('li.active').index();
             if(idx>=0)
             {
@@ -262,7 +270,10 @@ class RichAreaVueFactory
             cursor: 'move'
           });
           this.initCropper();
-          $editor().find('.components-modal').fullscreen();
+          if($.prototype.fullscreen)
+          {
+            $editor().find('.components-modal').fullscreen();
+          }
         }
       });      
     });

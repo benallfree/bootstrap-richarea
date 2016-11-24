@@ -24,7 +24,7 @@
     }
   }  
   
-  &.richarea-editor {
+  .richarea-editor {
     display: none;
     position: relative;
   
@@ -91,9 +91,12 @@
         }
       }      
     }
-    .modal-body.component-selector {
-      background-color: $gray-lighter;
-      color: $gray-darker;
+    .modal-dialog.component-selector {
+      .modal-body
+      {
+        background-color: $gray-lighter;
+        color: $gray-darker;
+      }
     }
     img {
       &.component {
