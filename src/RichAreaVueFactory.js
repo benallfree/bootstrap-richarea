@@ -8,6 +8,7 @@ class RichAreaVueFactory
     options = $.extend(true, {}, {
       componentCategories: [],
       userForms: [],
+      imageUploadUrl: null,
     },options);
     ComponentLoader.onInit(()=>{
       let items = ComponentLoader.ensureDefaultValues($.extend(true, [], options.items));
@@ -188,6 +189,7 @@ class RichAreaVueFactory
                       let file = $fileInput.get(0).files[0];
                       fr = new FileReader();
                       fr.onload = ()=>{
+                        if(!options.imageUploadUrl) return;
                         $.post(options.imageUploadUrl, {
                           data: fr.result,
                         }, (data,status)=>{
@@ -221,6 +223,7 @@ class RichAreaVueFactory
 
                 $modal.on('hide.bs.modal', ()=>{
                   if(!shouldSave) return;
+                  if(!options.imageUploadUrl) return;
                   $.post(options.imageUploadUrl, {
                     data: $e.cropit('export'),
                   }, (data,status)=>{

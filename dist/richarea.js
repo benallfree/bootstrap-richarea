@@ -102,7 +102,8 @@
 	    value: function create(options) {
 	      options = $.extend(true, {}, {
 	        componentCategories: [],
-	        userForms: []
+	        userForms: [],
+	        imageUploadUrl: null
 	      }, options);
 	      ComponentLoader.onInit(function () {
 	        var items = ComponentLoader.ensureDefaultValues($.extend(true, [], options.items));
@@ -276,6 +277,7 @@
 	                        var file = $fileInput.get(0).files[0];
 	                        fr = new FileReader();
 	                        fr.onload = function () {
+	                          if (!options.imageUploadUrl) return;
 	                          $.post(options.imageUploadUrl, {
 	                            data: fr.result
 	                          }, function (data, status) {
@@ -308,6 +310,7 @@
 
 	                  $modal.on('hide.bs.modal', function () {
 	                    if (!shouldSave) return;
+	                    if (!options.imageUploadUrl) return;
 	                    $.post(options.imageUploadUrl, {
 	                      data: $e.cropit('export')
 	                    }, function (data, status) {

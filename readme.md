@@ -39,16 +39,22 @@ Then:
 
 ## Usage
 
-    <div id="richarea"></div>
+### Creating
+
+    <textarea id="richarea"></textarea>
     
     $(function() {
       $('#richarea').richarea();
     });
 
+### Getting Data
+
 To get HTML and layout data:
 
     $('#richarea').richarea('html');
     $('#richarea').richarea('data');
+
+### Events
 
 To get notified when content changes:
 
@@ -60,12 +66,17 @@ To get notified when content changes:
       }
     });
 
-To use a custom set of components (please note, you are responsible for loading them however you need to):
+### Custom Layouts
 
-    var myComponets = {...};
+To use a custom set of layouts (please note, you are responsible for loading them however you need to):
+
+    var myLayouts = {...};
     $('#richarea').richarea({
-      components: myComponents,
+      layouts: myLayouts,
     });
+
+
+### Custom Categories
 
 To use a custom set of categories:
 
@@ -73,6 +84,21 @@ To use a custom set of categories:
     $('#richarea').richarea({
       categories: myCats,
     });
+
+### Images
+
+By default, images are stored as Data URLs in `richarea('html')`. If you want RichArea to upload them to your server instead, use this:
+
+    $('#richarea').richarea({
+      imageUploadUrl: '/my/upload/handler',
+    });
+
+RichArea will `POST` to the URL specified and expects back a JSON response:
+
+    {
+      status: "success|error",
+      url: "/path/to/image/on/server.png",
+    }
 
 
 ## Customizing CSS
