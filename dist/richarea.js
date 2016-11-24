@@ -46,6 +46,8 @@
 
 	'use strict';
 
+	__webpack_require__(1);
+
 	(function ($) {
 	  $(function () {
 	    jQuery.fn.visible = function () {
@@ -66,10 +68,10 @@
 	      var $e = $(this);
 	      $e.hide();
 
-	      var $root = $("<div class='richarea'>" + "<div class=\"richarea-editor\">\n  <input :value=\"content\" name=\"content\" type=\"hidden\"></input>\n  <input :value=\"itemsJson\" name=\"itemJson\" type=\"hidden\"></input>\n  <ul class=\"sortable\">\n    <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n      <div class=\"tools\">\n        <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n        <span @click=\"edit\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n        <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n        <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n        <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n      </div>\n      <div class=\"item\">\n        <component :forms=\"forms\" :is=\"'c'+item.component_id\" :item=\"item\"></component>\n      </div>\n    </li>\n    <li class=\"disabled add text-center\">\n      <button @click.prevent=\"add\" class=\"btn btn-primary btn-xl\">+</button>\n    </li>\n  </ul>\n  <div class=\"modal fade component-settings\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\" type=\"button\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Edit Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <template v-if=\"currentComponent\">\n            <template v-if=\"Object.keys(currentComponent.fields).length>0\">\n              <div v-for=\"(field,fieldName) in currentComponent.fields\">\n                <div class=\"form-horizontal\">\n                  <div class=\"form-group\">\n                    <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                    <div class=\"col-xs-10\">\n                      <div v-if=\"field.editor=='text'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName]\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='textarea'\">\n                        <textarea class=\"form-control\" rows=\"3\" v-model=\"currentItem.data[fieldName]\"></textarea>\n                      </div>\n                      <div v-if=\"field.editor=='link'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].href\"></input>\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].display\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='image'\">\n                        <div :data-field=\"fieldName\" class=\"image-editor\">\n                          <input accept=\"image/gif,image/png,image/jpeg\" class=\"cropit-image-input\" type=\"file\"></input>\n                          <img :src=\"currentItem.data[fieldName].croppedImage\" class=\"reference\" style=\"width:100%; display: none\"/>\n                          <div class=\"cropit-preview\"></div>\n                          <input class=\"cropit-image-zoom-input\" type=\"range\"></input>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </template>\n            <template v-else>\n              There are no fields to edit for this component.\n            </template>\n          </template>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"modal modal-fullscreen fade components-modal\" role=\"dialog\">\n    <div class=\"modal-dialog component-selector\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Add Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <div>\n            <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in componentCategories\">\n              {{cat[1]}}\n            </div>\n          </div>\n          <img class=\"component\" data-dismiss=\"modal\" :data-component-id=\"component.id\" :src=\"component.thumb\" v-for=\"(component,index) in components\" v-if=\"inActiveCategories(component)\" v-on:click=\"insert(component.id)\"/>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  \n</div>\n" + "</div>");
+	      var $root = $("<div class='richarea'>" + "<div class=\"richarea-editor\">\n  <ul class=\"sortable\">\n    <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n      <div class=\"tools\">\n        <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n        <span @click=\"add(index)\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n        <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n        <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n        <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n      </div>\n      <div class=\"item\">\n        <layout :forms=\"forms\" :is=\"'c'+item.layout_id\" :item=\"item\"></layout>\n      </div>\n    </li>\n    <li class=\"disabled add text-center\">\n      <button @click.prevent=\"add(null)\" class=\"btn btn-primary btn-xl\">+</button>\n    </li>\n  </ul>\n  <div class=\"modal fade layout-settings\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" @click=\"close\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Edit Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <template v-if=\"currentLayout\">\n            <template v-if=\"Object.keys(currentLayout.fields).length>0\">\n              <div v-for=\"(field,fieldName) in currentLayout.fields\">\n                <div class=\"form-horizontal\">\n                  <div class=\"form-group\">\n                    <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                    <div class=\"col-xs-10\">\n                      <div v-if=\"field.editor=='text'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName]\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='textarea'\">\n                        <textarea class=\"form-control\" rows=\"3\" v-model=\"currentItem.data[fieldName]\"></textarea>\n                      </div>\n                      <div v-if=\"field.editor=='link'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].href\"></input>\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].display\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='image'\">\n                        <div :data-field=\"fieldName\" class=\"image-editor\">\n                          <input accept=\"image/gif,image/png,image/jpeg\" class=\"cropit-image-input\" type=\"file\"></input>\n                          <img :src=\"currentItem.data[fieldName].croppedImage\" class=\"reference\" style=\"width:100%; display: none\"/>\n                          <div class=\"cropit-preview\"></div>\n                          <input class=\"cropit-image-zoom-input\" type=\"range\"></input>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </template>\n            <template v-else>\n              There are no fields to edit for this layout.\n            </template>\n          </template>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\"  @click=\"close\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"modal modal-fullscreen fade layouts-modal\" role=\"dialog\">\n    <div class=\"modal-dialog layout-selector\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Add Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <div>\n            <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in layoutCategories\">\n              {{cat[1]}}\n            </div>\n          </div>\n          <img class=\"layout\" data-dismiss=\"modal\" :data-layout-id=\"layout.id\" :src=\"layout.thumb\" v-for=\"(layout,index) in layouts\" v-if=\"inActiveCategories(layout)\" v-on:click=\"insert(layout.id)\"/>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  \n</div>\n" + "</div>");
 	      $e.after($root);
 
-	      var RichAreaVueFactory = __webpack_require__(1);
+	      var RichAreaVueFactory = __webpack_require__(2);
 	      options = $.extend(true, {}, {
 	        root: $root,
 	        items: []
@@ -81,6 +83,24 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Array.prototype.move = function (old_index, new_index) {
+	    if (old_index == new_index) return this;
+	    if (new_index >= this.length) {
+	        var k = new_index - this.length;
+	        while (k-- + 1) {
+	            this.push(undefined);
+	        }
+	    }
+	    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+	    return this; // for testing purposes
+	};
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -98,17 +118,22 @@
 	    key: 'create',
 	    value: function create(options) {
 	      options = $.extend(true, {}, {
-	        componentCategories: [],
+	        layoutCategories: [],
 	        userForms: [],
 	        imageUploadUrl: null,
-	        components: null,
+	        layouts: [],
 	        items: []
 	      }, options);
 
-	      options.components.forEach(function (c) {
+	      if (Object.keys(options.layouts).length == 0) {
+	        throw new TypeError("You must define at least one layout.");
+	      }
+
+	      Object.keys(options.layouts).forEach(function (cid) {
+	        var c = options.layouts[cid];
 	        Vue.component('c' + c.id, {
 	          props: ['item', 'forms'],
-	          template: "<div class='component-container'>" + c.template + "</div>",
+	          template: "<div class='layout-container'>" + c.template + "</div>",
 	          filters: {
 	            embedify: function embedify(url) {
 	              function getId(url) {
@@ -142,9 +167,9 @@
 	          return item;
 	        }
 	        $.extend(true, item, { data: {} });
-	        var component = options.components[item.component_id];
-	        if (!component) return;
-	        var fields = component.fields;
+	        var layout = options.layouts[item.layout_id];
+	        if (!layout) return;
+	        var fields = layout.fields;
 	        Object.keys(fields).forEach(function (key) {
 	          if (key in item.data) return;
 	          item.data[key] = fields[key].defaultValue;
@@ -168,21 +193,22 @@
 	          content: null,
 	          itemsJson: null,
 	          currentIdx: null,
-	          $currentComponent: null,
+	          $currentLayout: null,
 	          items: items,
-	          components: options.components,
-	          componentCategories: options.componentCategories,
+	          layouts: options.layouts,
+	          layoutCategories: options.layoutCategories,
 	          selectedCategory: 0,
-	          forms: options.userForms
+	          forms: options.userForms,
+	          isCropperInitialized: false
 	        },
 	        computed: {
 	          currentItem: function currentItem() {
 	            return this.items[this.currentIdx];
 	          },
-	          currentComponent: function currentComponent() {
+	          currentLayout: function currentLayout() {
 	            var currentItem = this.items[this.currentIdx];
 	            if (!currentItem) return null;
-	            return this.components[currentItem.component_id];
+	            return this.layouts[currentItem.layout_id];
 	          }
 	        },
 	        filters: {
@@ -197,7 +223,7 @@
 	        },
 	        watch: {
 	          currentIdx: function currentIdx(v) {
-	            this.isComponentSettingsInitialized = false;
+	            this.isCropperInitialized = false;
 	            this.$nextTick(function () {
 	              $sortable().find('.tools').hide();
 	              if (v == null) return;
@@ -209,62 +235,71 @@
 	              this.calc();
 	            },
 	            deep: true
-	          },
-	          isComponentSettingsInitialized: false
+	          }
 	        },
 	        methods: {
-	          add: function add() {
-	            this.currentIdx = null;
-	            var $modal = $editor().find('.components-modal');
+	          add: function add(idx) {
+	            this.currentIdx = idx;
+	            var $modal = $editor().find('.layouts-modal');
 	            $modal.modal('show');
 	          },
 	          selectCat: function selectCat(cat) {
 	            this.selectedCategory = cat[0];
 	          },
-	          inActiveCategories: function inActiveCategories(component) {
+	          inActiveCategories: function inActiveCategories(layout) {
 	            if (this.selectedCategory == -1) return true;
-	            for (var i = 0; i < component.categories.length; i++) {
-	              var id = component.categories[i];
+	            for (var i = 0; i < layout.categories.length; i++) {
+	              var id = layout.categories[i];
 	              if (this.selectedCategory == id) return true;
 	            }
 	            return false;
 	          },
+	          notifyChange: function notifyChange() {
+	            if (!options.onChange) return;
+	            options.onChange({ html: this.content, data: this.items });
+	          },
+	          close: function close() {
+	            $editor().find('.modal.in').modal('hide');
+	            this.calc();
+	          },
 	          calc: function calc() {
-	            this.calcContent();
-	            this.calcJson();
+	            var _this2 = this;
+
+	            this.$nextTick(function () {
+	              if ($editor().find('.modal.layout-settings.in').length > 0) return; // Suspend calculations while modal is one.
+	              _this2.calcContent();
+	              _this2.calcJson();
+	              _this2.notifyChange();
+	            });
 	          },
 	          calcJson: function calcJson() {
 	            this.itemsJson = JSON.stringify(this.items);
 	          },
 	          calcContent: function calcContent() {
-	            var _this2 = this;
-
-	            this.$nextTick(function () {
-	              var htmls = [];
-	              $sortable().find('.item .component-container').each(function (idx, e) {
-	                var $e = $(e).clone();
-	                $e.find('[data-render]').each(function (idx, e) {
-	                  var $e = $(e);
-	                  $e.replaceWith($e.data('render'));
-	                });
-	                ['data-editor', 'data-field', 'data-default-value'].forEach(function (attr) {
-	                  $e.find('[' + attr + ']').removeAttr(attr);
-	                });
-	                var html = $e.html();
-	                htmls.push(html);
+	            var htmls = [];
+	            $sortable().find('.item .layout-container').each(function (idx, e) {
+	              var $e = $(e).clone();
+	              $e.find('[data-render]').each(function (idx, e) {
+	                var $e = $(e);
+	                $e.replaceWith($e.data('render'));
 	              });
-	              var $container = $('<div>').addClass('richarea');
-	              $container.html(htmls.join('\n'));
-	              _this2.content = $container.get(0).outerHTML;
+	              ['data-editor', 'data-field', 'data-default-value'].forEach(function (attr) {
+	                $e.find('[' + attr + ']').removeAttr(attr);
+	              });
+	              var html = $e.html();
+	              htmls.push(html);
 	            });
+	            var $container = $('<div>').addClass('richarea');
+	            $container.html(htmls.join('\n'));
+	            this.content = $container.get(0).outerHTML;
 	          },
 	          select: function select(event) {
 	            var $li = $(event.target).closest('li');
 	            this.currentIdx = $li.index();
-	            this.$currentComponent = $li;
+	            this.$currentLayout = $li;
 	          },
-	          insert: function insert(component_id) {
-	            var o = ComponentLoader.ensureDefaultValues({ component_id: component_id });
+	          insert: function insert(layout_id) {
+	            var o = ensureDefaultValues({ layout_id: layout_id });
 	            var idx = $sortable().find('li.active').index();
 	            if (idx >= 0) {
 	              this.items.splice(idx, 0, o);
@@ -275,19 +310,20 @@
 	            }
 	          },
 	          edit: function edit(event) {
-	            var $modal = $editor().find('.component-settings');
+	            var $modal = $editor().find('.layout-settings');
 	            $modal.modal('show');
 	          },
 	          initCropper: function initCropper(event) {
 	            var _this3 = this;
 
-	            var $modal = $editor().find('.component-settings');
+	            var $modal = $editor().find('.layout-settings');
 	            $modal.on('show.bs.modal', function () {
-	              if (_this3.isComponentSettingsInitialized) return;
+	              if (_this3.isCropperInitialized) return;
 	              $modal.find('.image-editor').invisible();
 	            });
 	            $modal.on('shown.bs.modal', function () {
-	              if (_this3.isComponentSettingsInitialized) return;
+	              if (_this3.isCropperInitialized) return;
+
 	              $modal.find('.image-editor').each(function (idx, e) {
 	                var $e = $(e);
 	                var $r = $(e).find('.reference');
@@ -312,10 +348,10 @@
 	                  },
 	                  smallImage: 'allow', // Allow images that must be zoomed to fit
 	                  onImageLoaded: function onImageLoaded() {
-	                    if (!_this3.isComponentSettingsInitialized) {
+	                    if (!_this3.isCropperInitialized) {
 	                      $e.cropit('zoom', _this3.currentItem.data[fieldName].zoom);
 	                      $e.cropit('offset', _this3.currentItem.data[fieldName].offset);
-	                      _this3.isComponentSettingsInitialized = true;
+	                      _this3.isCropperInitialized = true;
 	                      $modal.find('.image-editor').visible();
 	                    } else {
 	                      shouldSave = true;
@@ -335,21 +371,21 @@
 	                        });
 	                      };
 	                      fr.readAsDataURL(file);
-	                      _this3.$currentComponent.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
+	                      _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
 	                    }
 	                  },
 	                  onZoomChange: function onZoomChange() {
-	                    if (!_this3.isComponentSettingsInitialized) return;
+	                    if (!_this3.isCropperInitialized) return;
 	                    shouldSave = true;
 	                    _this3.items[_this3.currentIdx].data[fieldName].zoom = $e.cropit('zoom');
-	                    _this3.$currentComponent.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
+	                    _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
 	                  },
 	                  onOffsetChange: function onOffsetChange() {
-	                    if (!_this3.isComponentSettingsInitialized) return;
+	                    if (!_this3.isCropperInitialized) return;
 	                    shouldSave = true;
 	                    var o = $e.cropit('offset');
 	                    _this3.items[_this3.currentIdx].data[fieldName].offset = { x: Math.floor(o.x), y: Math.floor(o.y) };
-	                    _this3.$currentComponent.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
+	                    _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
 	                  }
 	                });
 	                $e.cropit('imageSrc', _this3.items[_this3.currentIdx].data[fieldName].originalImage);
@@ -404,7 +440,7 @@
 	          });
 	          this.initCropper();
 	          if ($.prototype.fullscreen) {
-	            $editor().find('.components-modal').fullscreen();
+	            $editor().find('.layouts-modal').fullscreen();
 	          }
 	        }
 	      });

@@ -11,7 +11,7 @@ var webpack = require('gulp-webpack');
 var replace = require('gulp-replace');
 var fs = require('fs');
  
-gulp.task('js-compress', ['assets', 'js', 'js-full', 'clean'], function (cb) {
+gulp.task('js-compress', ['js', 'js-with-layouts', 'clean'], function (cb) {
   pump([
         gulp.src('dist/**/*.js'),
         babel({
@@ -27,7 +27,7 @@ gulp.task('js-compress', ['assets', 'js', 'js-full', 'clean'], function (cb) {
   );
 });
 
-gulp.task('sass-compress', ['assets', 'sass', 'clean'], function (cb) {
+gulp.task('sass-compress', ['sass', 'clean'], function (cb) {
   pump([
         gulp.src('dist/**/*.css'),
         cleanCSS({compatibility: 'ie8'}),
@@ -54,22 +54,22 @@ gulp.task('js', ['clean'], function(cb) {
       }),
       rename('richarea.js'),
       replace(/__TPL__EDITOR_TEMPLATE/g, JSON.stringify(template)),
-      replace(/__TPL__LAYOUTS/g, JSON.stringify(null)),
+      replace(/__TPL__LAYOUTS/g, JSON.stringify([])),
       gulp.dest('dist/')
     ],
     cb
   );
 });
 
-gulp.task('sass', ['clean', 'assets'], function () {
+gulp.task('sass', ['clean'], function () {
   return gulp.src('./src/sass/richarea.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/assets/css'));
+    .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('assets', ['clean'], function () {
-  return gulp.src('./src/assets/**/*')
-    .pipe(gulp.dest('./dist/assets'));
+gulp.task('images', ['clean'], function () {
+  return gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./dist/images'));
 });
  
 gulp.task('watch', function () {
@@ -81,7 +81,7 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('js-full', function (cb) {
+gulp.task('js-with-layouts', function (cb) {
   var layouts_html = fs.readFileSync('./src/templates/layouts.html', 'utf8');
   var layouts = {};
   require("jsdom").env("", function(err, window) {
@@ -128,7 +128,7 @@ gulp.task('js-full', function (cb) {
             ]
           }        
         }),
-        rename('richarea-full.js'),
+        rename('richarea-with-layouts.js'),
         replace(/__TPL__EDITOR_TEMPLATE/g, JSON.stringify(template)),
         replace(/__TPL__LAYOUTS/g, JSON.stringify(layouts)),
         gulp.dest('dist/')
@@ -144,4 +144,4 @@ gulp.task('js-full', function (cb) {
 
 
 
-gulp.task('default', ['clean', 'assets', 'js', 'js-full', 'sass', 'js-compress', 'sass-compress']);
+gulp.task('default', ['clean', 'images', 'js', 'js-with-layouts', 'sass', 'js-compress', 'sass-compress']);

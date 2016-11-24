@@ -1,3 +1,5 @@
+require('./array.js');
+
 (($ => {
   $(() => {
     jQuery.fn.visible = function() {

@@ -3,17 +3,23 @@ class RichAreaVueFactory
   static create(options)
   {
     options = $.extend(true, {}, {
-      componentCategories: [],
+      layoutCategories: [],
       userForms: [],
       imageUploadUrl: null,
-      components: __TPL__LAYOUTS,
+      layouts: __TPL__LAYOUTS,
       items: [],
     },options);
     
-    options.components.forEach(function(c) {
+    if(Object.keys(options.layouts).length==0)
+    {
+      throw new TypeError("You must define at least one layout.");
+    }
+    
+    Object.keys(options.layouts).forEach(function(cid) {
+      let c = options.layouts[cid];
       Vue.component('c'+c.id, {
         props: ['item', 'forms'],
-        template: "<div class='component-container'>"+c.template+"</div>",
+        template: "<div class='layout-container'>"+c.template+"</div>",
         filters: {
           embedify: (url)=> {
             function getId(url) {
@@ -48,9 +54,9 @@ class RichAreaVueFactory
         return item;
       }
       $.extend(true, item, {data: {}});
-      let component = options.components[item.component_id];
-      if(!component) return;
-      let fields = component.fields;
+      let layout = options.layouts[item.layout_id];
+      if(!layout) return;
+      let fields = layout.fields;
       Object.keys(fields).forEach((key)=> {
         if(key in item.data) return;
         item.data[key] = fields[key].defaultValue;
@@ -76,21 +82,22 @@ class RichAreaVueFactory
         content: null,
         itemsJson: null,
         currentIdx: null,
-        $currentComponent: null,
+        $currentLayout: null,
         items: items,
-        components: options.components,
-        componentCategories: options.componentCategories,
+        layouts: options.layouts,
+        layoutCategories: options.layoutCategories,
         selectedCategory: 0,
         forms: options.userForms,
+        isCropperInitialized: false,
       },
       computed: {
         currentItem: function() {
           return this.items[this.currentIdx];
         },
-        currentComponent: function() {
+        currentLayout: function() {
           var currentItem = this.items[this.currentIdx];
           if(!currentItem) return null;
-          return this.components[currentItem.component_id];
+          return this.layouts[currentItem.layout_id];
         }
       },
       filters: {
@@ -106,7 +113,7 @@ class RichAreaVueFactory
       watch: {
         currentIdx: function(v)
         {
-          this.isComponentSettingsInitialized=false;
+          this.isCropperInitialized=false;
           this.$nextTick(function() {
             $sortable().find('.tools').hide();
             if(v==null) return;
@@ -120,31 +127,43 @@ class RichAreaVueFactory
           },
           deep: true,
         },
-        isComponentSettingsInitialized: false,
       },
       methods: {
-        add: function() {
-          this.currentIdx = null;
-          let $modal = $editor().find('.components-modal');
+        add: function(idx) {
+          this.currentIdx = idx;
+          let $modal = $editor().find('.layouts-modal');
           $modal.modal('show');
         },
         selectCat: function(cat) {
           this.selectedCategory = cat[0];
         },
-        inActiveCategories: function(component)
+        inActiveCategories: function(layout)
         {
           if(this.selectedCategory==-1) return true;
-          for(var i=0;i<component.categories.length; i++)
+          for(var i=0;i<layout.categories.length; i++)
           {
-            let id = component.categories[i];
+            let id = layout.categories[i];
             if(this.selectedCategory == id) return true;
           }
           return false;
         },
+        notifyChange: function() {
+          if(!options.onChange) return;
+          options.onChange({html: this.content, data: this.items});
+        },
+        close: function()
+        {
+          $editor().find('.modal.in').modal('hide');
+          this.calc();
+        },
         calc: function()
         {
-          this.calcContent();
-          this.calcJson();
+          this.$nextTick(()=>{
+            if($editor().find('.modal.layout-settings.in').length>0) return; // Suspend calculations while modal is one.
+            this.calcContent();
+            this.calcJson();
+            this.notifyChange();
+          });
         },
         calcJson: function()
         {
@@ -152,34 +171,32 @@ class RichAreaVueFactory
         },
         calcContent: function()
         {
-          this.$nextTick(()=>{
-            var htmls = [];
-            $sortable().find('.item .component-container').each(function(idx,e) {
-              var $e = $(e).clone();
-              $e.find('[data-render]').each(function(idx,e) {
-                var $e = $(e);
-                $e.replaceWith($e.data('render'));
-              });
-              ['data-editor', 'data-field', 'data-default-value',].forEach(function(attr) {
-                $e.find('['+attr+']').removeAttr(attr);
-              });
-              var html = $e.html();
-              htmls.push(html);
+          var htmls = [];
+          $sortable().find('.item .layout-container').each(function(idx,e) {
+            var $e = $(e).clone();
+            $e.find('[data-render]').each(function(idx,e) {
+              var $e = $(e);
+              $e.replaceWith($e.data('render'));
             });
-            let $container = $('<div>').addClass('richarea');
-            $container.html(htmls.join('\n'));
-            this.content = $container.get(0).outerHTML;
+            ['data-editor', 'data-field', 'data-default-value',].forEach(function(attr) {
+              $e.find('['+attr+']').removeAttr(attr);
+            });
+            var html = $e.html();
+            htmls.push(html);
           });
+          let $container = $('<div>').addClass('richarea');
+          $container.html(htmls.join('\n'));
+          this.content = $container.get(0).outerHTML;
         },
         select: function(event)
         {
           var $li = $(event.target).closest('li');
           this.currentIdx = $li.index();
-          this.$currentComponent = $li;
+          this.$currentLayout = $li;
         },
-        insert: function(component_id)
+        insert: function(layout_id)
         {
-          var o = ComponentLoader.ensureDefaultValues({component_id: component_id});
+          var o = ensureDefaultValues({layout_id: layout_id});
           var idx = $sortable().find('li.active').index();
           if(idx>=0)
           {
@@ -192,18 +209,19 @@ class RichAreaVueFactory
         },
         edit: function(event)
         {
-          let $modal = $editor().find('.component-settings');
+          let $modal = $editor().find('.layout-settings');
           $modal.modal('show');
         },
         initCropper: function(event)
         {
-          let $modal = $editor().find('.component-settings');
+          let $modal = $editor().find('.layout-settings');
           $modal.on('show.bs.modal', ()=>{
-            if(this.isComponentSettingsInitialized) return;
+            if(this.isCropperInitialized) return;
             $modal.find('.image-editor').invisible();
           });
           $modal.on('shown.bs.modal', ()=>{
-            if(this.isComponentSettingsInitialized) return;
+            if(this.isCropperInitialized) return;
+            
             $modal.find('.image-editor').each((idx,e)=> {
               let $e = $(e);
               let $r = $(e).find('.reference');
@@ -224,11 +242,11 @@ class RichAreaVueFactory
                 onImageError:  function() { console.log('onImageError', arguments); },
                 smallImage: 'allow', // Allow images that must be zoomed to fit
                 onImageLoaded: ()=>{
-                  if(!this.isComponentSettingsInitialized)
+                  if(!this.isCropperInitialized)
                   {
                     $e.cropit('zoom', this.currentItem.data[fieldName].zoom);
                     $e.cropit('offset', this.currentItem.data[fieldName].offset);
-                    this.isComponentSettingsInitialized = true;
+                    this.isCropperInitialized = true;
                     $modal.find('.image-editor').visible();
                   } else {
                     shouldSave = true;
@@ -249,21 +267,21 @@ class RichAreaVueFactory
                       });
                     }
                     fr.readAsDataURL(file);
-                    this.$currentComponent.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
+                    this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
                   }
                 },
                 onZoomChange: ()=>{
-                  if(!this.isComponentSettingsInitialized) return;
+                  if(!this.isCropperInitialized) return;
                   shouldSave = true;
                   this.items[this.currentIdx].data[fieldName].zoom = $e.cropit('zoom');
-                  this.$currentComponent.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
+                  this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
                 },
                 onOffsetChange: ()=>{
-                  if(!this.isComponentSettingsInitialized) return;
+                  if(!this.isCropperInitialized) return;
                   shouldSave = true;
                   let o = $e.cropit('offset');
                   this.items[this.currentIdx].data[fieldName].offset = {x: Math.floor(o.x), y: Math.floor(o.y)};
-                  this.$currentComponent.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
+                  this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
                 },
               });
               $e.cropit('imageSrc', this.items[this.currentIdx].data[fieldName].originalImage);
@@ -322,7 +340,7 @@ class RichAreaVueFactory
         this.initCropper();
         if($.prototype.fullscreen)
         {
-          $editor().find('.components-modal').fullscreen();
+          $editor().find('.layouts-modal').fullscreen();
         }
       }
     });      

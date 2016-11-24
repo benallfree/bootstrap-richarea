@@ -13,7 +13,7 @@
   img {
     max-width: 100%;
   }
-  .component-settings
+  .layout-settings
   {
     .image-editor
     {
@@ -91,7 +91,7 @@
         }
       }      
     }
-    .modal-dialog.component-selector {
+    .modal-dialog.layout-selector {
       .modal-body
       {
         background-color: $gray-lighter;
@@ -99,7 +99,7 @@
       }
     }
     img {
-      &.component {
+      &.layout {
         border: 1px solid $gray-lighter;
         border-radius: 3px;
         margin: 5px;

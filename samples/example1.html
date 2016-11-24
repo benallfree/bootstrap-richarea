@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="../dist/assets/css/richarea.css">
+    <link rel="stylesheet" href="../dist/richarea.css">
 
     <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
@@ -22,17 +22,27 @@
     <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
     -->
 
-    <script src="../dist/richarea.js"></script>    
+    <script src="../dist/richarea-with-layouts.js"></script>    
   </head>
   <body>
     <h1>Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</h1>
-    <textarea id="richarea"></textarea>
+    <hr/>
+    <div id="richarea"></div>
     
     <script>
     $(function() {
-      $('#richarea').richarea();
+      $('#richarea').richarea({
+        onChange: function(o)
+        {
+          $('#html').val(o.html);
+          $('#data').val(JSON.stringify(o.data));
+        }
+      });
     });
     </script>
+    
+    <textarea id="html" style="width:300px;height:300px"></textarea>
+    <textarea id="data" style="width:300px;height:300px"></textarea>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
   </body>

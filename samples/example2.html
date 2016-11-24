@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/richarea.css">
+
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/tether/1.3.7/tether.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.cropit/0.5.1/jquery.cropit.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.actual/1.0.18/jquery.actual.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
+    <!--
+    <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
+    -->
+
+    <script src="../dist/richarea-with-layouts.js"></script>    
+  </head>
+  <body>
+    <h1>File upload to server</h1>
+    <p style="color:red">Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</p>
+    <hr/>
+    <div id="richarea"></div>
+    
+    <script>
+    $(function() {
+      $('#richarea').richarea();
+    });
+    </script>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  </body>
+</html>
