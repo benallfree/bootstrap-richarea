@@ -3,11 +3,18 @@ class RichAreaVueFactory
   static create(options)
   {
     options = $.extend(true, {}, {
-      layoutCategories: [],
+      layoutCategories: require('./categories.js'),
       userForms: [],
       imageUploadUrl: null,
-      layouts: __TPL__LAYOUTS,
+      layouts: require('./layouts.js'),
       items: [],
+      addLayouts: [],
+      editors: {
+        'edit-text': require('./editors/text'),
+        'edit-textarea': require('./editors/textarea'),
+        'edit-link': require('./editors/link'),
+        'edit-image': require('./editors/image'),
+      }
     },options);
     
     if(Object.keys(options.layouts).length==0)
@@ -15,9 +22,15 @@ class RichAreaVueFactory
       throw new TypeError("You must define at least one layout.");
     }
     
+    let localVueComponents = options.editors;
+    
+    options.extraLayouts.forEach(function(o) {
+      options.layouts[o.id] = o;
+    })
+    
     Object.keys(options.layouts).forEach(function(cid) {
       let c = options.layouts[cid];
-      Vue.component('c'+c.id, {
+      localVueComponents['c'+c.id] = {
         props: ['item', 'forms'],
         template: "<div class='layout-container'>"+c.template+"</div>",
         filters: {
@@ -41,9 +54,9 @@ class RichAreaVueFactory
             return v.replace("\n", "<br/>");
           }
         }
-      });
+      };
     });
-
+    
     function ensureDefaultValues(item)
     {
       if(item instanceof Array)
@@ -63,6 +76,7 @@ class RichAreaVueFactory
       });
       return item;
     }
+
     
     let items = ensureDefaultValues($.extend(true, [], options.items));
 
@@ -77,6 +91,7 @@ class RichAreaVueFactory
     }
     
     let app = new Vue({
+      components: localVueComponents,
       el: $editor().get(0),
       data: {
         content: null,
@@ -88,7 +103,6 @@ class RichAreaVueFactory
         layoutCategories: options.layoutCategories,
         selectedCategory: 0,
         forms: options.userForms,
-        isCropperInitialized: false,
       },
       computed: {
         currentItem: function() {
@@ -113,7 +127,6 @@ class RichAreaVueFactory
       watch: {
         currentIdx: function(v)
         {
-          this.isCropperInitialized=false;
           this.$nextTick(function() {
             $sortable().find('.tools').hide();
             if(v==null) return;
@@ -140,6 +153,7 @@ class RichAreaVueFactory
         inActiveCategories: function(layout)
         {
           if(this.selectedCategory==-1) return true;
+          if(!layout.categories) debugger;
           for(var i=0;i<layout.categories.length; i++)
           {
             let id = layout.categories[i];
@@ -212,97 +226,7 @@ class RichAreaVueFactory
           let $modal = $editor().find('.layout-settings');
           $modal.modal('show');
         },
-        initCropper: function(event)
-        {
-          let $modal = $editor().find('.layout-settings');
-          $modal.on('show.bs.modal', ()=>{
-            if(this.isCropperInitialized) return;
-            $modal.find('.image-editor').invisible();
-          });
-          $modal.on('shown.bs.modal', ()=>{
-            if(this.isCropperInitialized) return;
-            
-            $modal.find('.image-editor').each((idx,e)=> {
-              let $e = $(e);
-              let $r = $(e).find('.reference');
-              let w = Math.floor($r.actual('width'));
-              let h = Math.floor($r.actual('height'));
-              let $export = $e.find('.export');
-              let fieldName = $e.data('field');
-              let shouldSave = false;
-              $e.cropit({
-                exportZoom: $r.get(0).naturalWidth / w,
-                imageBackground: false,
-                imageBackgroundBorderWidth: 0,
-                initialZoom: 'fill',
-                width: w,
-                height: h,
-                maxZoom: 5,
-                onFileReadError: function() { console.log('onFileReadError', arguments); },
-                onImageError:  function() { console.log('onImageError', arguments); },
-                smallImage: 'allow', // Allow images that must be zoomed to fit
-                onImageLoaded: ()=>{
-                  if(!this.isCropperInitialized)
-                  {
-                    $e.cropit('zoom', this.currentItem.data[fieldName].zoom);
-                    $e.cropit('offset', this.currentItem.data[fieldName].offset);
-                    this.isCropperInitialized = true;
-                    $modal.find('.image-editor').visible();
-                  } else {
-                    shouldSave = true;
-                    let $fileInput = $e.find('[type=file]');
-                    let file = $fileInput.get(0).files[0];
-                    fr = new FileReader();
-                    fr.onload = ()=>{
-                      if(!options.imageUploadUrl) return;
-                      $.post(options.imageUploadUrl, {
-                        data: fr.result,
-                      }, (data,status)=>{
-                        console.log([data, status]);
-                        if(status=='success' && data.status=='success')
-                        {
-                          this.items[this.currentIdx].data[fieldName].originalImage = data.url;
-                          this.items[this.currentIdx].data[fieldName].croppedImage = data.url;
-                        }
-                      });
-                    }
-                    fr.readAsDataURL(file);
-                    this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
-                  }
-                },
-                onZoomChange: ()=>{
-                  if(!this.isCropperInitialized) return;
-                  shouldSave = true;
-                  this.items[this.currentIdx].data[fieldName].zoom = $e.cropit('zoom');
-                  this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
-                },
-                onOffsetChange: ()=>{
-                  if(!this.isCropperInitialized) return;
-                  shouldSave = true;
-                  let o = $e.cropit('offset');
-                  this.items[this.currentIdx].data[fieldName].offset = {x: Math.floor(o.x), y: Math.floor(o.y)};
-                  this.$currentLayout.find('[data-field='+fieldName+']').attr('src', $e.cropit('export'));
-                },
-              });
-              $e.cropit('imageSrc', this.items[this.currentIdx].data[fieldName].originalImage);
-
-              $modal.on('hide.bs.modal', ()=>{
-                if(!shouldSave) return;
-                if(!options.imageUploadUrl) return;
-                $.post(options.imageUploadUrl, {
-                  data: $e.cropit('export'),
-                }, (data,status)=>{
-                  console.log([data, status]);
-                  if(status=='success' && data.status=='success')
-                  {
-                    this.items[this.currentIdx].data[fieldName].croppedImage = data.url;
-                  }
-                });
-              });          
-            });              
-          });
-
-        },
+        
         duplicate: function(event)
         {
           this.items.splice(this.currentIdx,0,$.extend(true, {}, this.items[this.currentIdx]));
@@ -337,7 +261,6 @@ class RichAreaVueFactory
           },
           cursor: 'move'
         });
-        this.initCropper();
         if($.prototype.fullscreen)
         {
           $editor().find('.layouts-modal').fullscreen();

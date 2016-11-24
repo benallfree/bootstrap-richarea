@@ -68,7 +68,7 @@
 	      var $e = $(this);
 	      $e.hide();
 
-	      var $root = $("<div class='richarea'>" + "<div class=\"richarea-editor\">\n  <ul class=\"sortable\">\n    <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n      <div class=\"tools\">\n        <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n        <span @click=\"add(index)\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n        <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n        <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n        <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n      </div>\n      <div class=\"item\">\n        <layout :forms=\"forms\" :is=\"'c'+item.layout_id\" :item=\"item\"></layout>\n      </div>\n    </li>\n    <li class=\"disabled add text-center\">\n      <button @click.prevent=\"add(null)\" class=\"btn btn-primary btn-xl\">+</button>\n    </li>\n  </ul>\n  <div class=\"modal fade layout-settings\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" @click=\"close\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Edit Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <template v-if=\"currentLayout\">\n            <template v-if=\"Object.keys(currentLayout.fields).length>0\">\n              <div v-for=\"(field,fieldName) in currentLayout.fields\">\n                <div class=\"form-horizontal\">\n                  <div class=\"form-group\">\n                    <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                    <div class=\"col-xs-10\">\n                      <div v-if=\"field.editor=='text'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName]\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='textarea'\">\n                        <textarea class=\"form-control\" rows=\"3\" v-model=\"currentItem.data[fieldName]\"></textarea>\n                      </div>\n                      <div v-if=\"field.editor=='link'\">\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].href\"></input>\n                        <input class=\"form-control\" type=\"text\" v-model=\"currentItem.data[fieldName].display\"></input>\n                      </div>\n                      <div v-if=\"field.editor=='image'\">\n                        <div :data-field=\"fieldName\" class=\"image-editor\">\n                          <input accept=\"image/gif,image/png,image/jpeg\" class=\"cropit-image-input\" type=\"file\"></input>\n                          <img :src=\"currentItem.data[fieldName].croppedImage\" class=\"reference\" style=\"width:100%; display: none\"/>\n                          <div class=\"cropit-preview\"></div>\n                          <input class=\"cropit-image-zoom-input\" type=\"range\"></input>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </template>\n            <template v-else>\n              There are no fields to edit for this layout.\n            </template>\n          </template>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\"  @click=\"close\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"modal modal-fullscreen fade layouts-modal\" role=\"dialog\">\n    <div class=\"modal-dialog layout-selector\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Add Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <div>\n            <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in layoutCategories\">\n              {{cat[1]}}\n            </div>\n          </div>\n          <img class=\"layout\" data-dismiss=\"modal\" :data-layout-id=\"layout.id\" :src=\"layout.thumb\" v-for=\"(layout,index) in layouts\" v-if=\"inActiveCategories(layout)\" v-on:click=\"insert(layout.id)\"/>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  \n</div>\n" + "</div>");
+	      var $root = $("<div class='richarea'>" + "<div class=\"richarea-editor\">\n  <ul class=\"sortable\">\n    <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n      <div class=\"tools\">\n        <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n        <span @click=\"add(index)\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n        <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n        <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n        <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n      </div>\n      <div class=\"item\">\n        <layout :forms=\"forms\" :is=\"'c'+item.layout_id\" :item=\"item\"></layout>\n      </div>\n    </li>\n    <li class=\"disabled add text-center\">\n      <button @click.prevent=\"add(null)\" class=\"btn btn-primary btn-xl\">+</button>\n    </li>\n  </ul>\n  <div class=\"modal fade layout-settings\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" @click=\"close\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Edit Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <template v-if=\"currentLayout\">\n            <template v-if=\"Object.keys(currentLayout.fields).length>0\">\n              <div v-for=\"(field,fieldName) in currentLayout.fields\">\n                <div class=\"form-horizontal\">\n                  <div class=\"form-group\">\n                    <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                    <div class=\"col-xs-10\">\n                      <component :is=\"'edit-'+field.editor\" :item=\"currentItem\" :field-name=\"fieldName\"></component>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </template>\n            <template v-else>\n              There are no fields to edit for this layout.\n            </template>\n          </template>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\"  @click=\"close\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"modal modal-fullscreen fade layouts-modal\" role=\"dialog\">\n    <div class=\"modal-dialog layout-selector\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Add Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <div>\n            <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in layoutCategories\">\n              {{cat[1]}}\n            </div>\n          </div>\n          <img class=\"layout\" data-dismiss=\"modal\" :data-layout-id=\"layout.id\" :src=\"layout.thumb\" v-for=\"(layout,index) in layouts\" v-if=\"inActiveCategories(layout)\" v-on:click=\"insert(layout.id)\"/>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  \n</div>\n" + "</div>");
 	      $e.after($root);
 
 	      var RichAreaVueFactory = __webpack_require__(2);
@@ -87,21 +87,30 @@
 
 	"use strict";
 
-	Array.prototype.move = function (old_index, new_index) {
-	    if (old_index == new_index) return this;
-	    if (new_index >= this.length) {
-	        var k = new_index - this.length;
-	        while (k-- + 1) {
-	            this.push(undefined);
-	        }
+	(function () {
+	    if (!Array.prototype.move) {
+	        Array.prototype.move = function (old_index, new_index) {
+	            while (old_index < 0) {
+	                old_index += this.length;
+	            }
+	            while (new_index < 0) {
+	                new_index += this.length;
+	            }
+	            if (new_index >= this.length) {
+	                var k = new_index - this.length;
+	                while (k-- + 1) {
+	                    this.push(undefined);
+	                }
+	            }
+	            this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+	            return this; // for testing purposes
+	        };
 	    }
-	    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
-	    return this; // for testing purposes
-	};
+	})(undefined);
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -118,20 +127,33 @@
 	    key: 'create',
 	    value: function create(options) {
 	      options = $.extend(true, {}, {
-	        layoutCategories: [],
+	        layoutCategories: __webpack_require__(3),
 	        userForms: [],
 	        imageUploadUrl: null,
-	        layouts: [],
-	        items: []
+	        layouts: __webpack_require__(4),
+	        items: [],
+	        addLayouts: [],
+	        editors: {
+	          'edit-text': __webpack_require__(5),
+	          'edit-textarea': __webpack_require__(6),
+	          'edit-link': __webpack_require__(7),
+	          'edit-image': __webpack_require__(8)
+	        }
 	      }, options);
 
 	      if (Object.keys(options.layouts).length == 0) {
 	        throw new TypeError("You must define at least one layout.");
 	      }
 
+	      var localVueComponents = options.editors;
+
+	      options.extraLayouts.forEach(function (o) {
+	        options.layouts[o.id] = o;
+	      });
+
 	      Object.keys(options.layouts).forEach(function (cid) {
 	        var c = options.layouts[cid];
-	        Vue.component('c' + c.id, {
+	        localVueComponents['c' + c.id] = {
 	          props: ['item', 'forms'],
 	          template: "<div class='layout-container'>" + c.template + "</div>",
 	          filters: {
@@ -154,7 +176,7 @@
 	              return v.replace("\n", "<br/>");
 	            }
 	          }
-	        });
+	        };
 	      });
 
 	      function ensureDefaultValues(item) {
@@ -188,6 +210,7 @@
 	      }
 
 	      var app = new Vue({
+	        components: localVueComponents,
 	        el: $editor().get(0),
 	        data: {
 	          content: null,
@@ -198,8 +221,7 @@
 	          layouts: options.layouts,
 	          layoutCategories: options.layoutCategories,
 	          selectedCategory: 0,
-	          forms: options.userForms,
-	          isCropperInitialized: false
+	          forms: options.userForms
 	        },
 	        computed: {
 	          currentItem: function currentItem() {
@@ -223,7 +245,6 @@
 	        },
 	        watch: {
 	          currentIdx: function currentIdx(v) {
-	            this.isCropperInitialized = false;
 	            this.$nextTick(function () {
 	              $sortable().find('.tools').hide();
 	              if (v == null) return;
@@ -248,6 +269,7 @@
 	          },
 	          inActiveCategories: function inActiveCategories(layout) {
 	            if (this.selectedCategory == -1) return true;
+	            if (!layout.categories) debugger;
 	            for (var i = 0; i < layout.categories.length; i++) {
 	              var id = layout.categories[i];
 	              if (this.selectedCategory == id) return true;
@@ -313,98 +335,7 @@
 	            var $modal = $editor().find('.layout-settings');
 	            $modal.modal('show');
 	          },
-	          initCropper: function initCropper(event) {
-	            var _this3 = this;
 
-	            var $modal = $editor().find('.layout-settings');
-	            $modal.on('show.bs.modal', function () {
-	              if (_this3.isCropperInitialized) return;
-	              $modal.find('.image-editor').invisible();
-	            });
-	            $modal.on('shown.bs.modal', function () {
-	              if (_this3.isCropperInitialized) return;
-
-	              $modal.find('.image-editor').each(function (idx, e) {
-	                var $e = $(e);
-	                var $r = $(e).find('.reference');
-	                var w = Math.floor($r.actual('width'));
-	                var h = Math.floor($r.actual('height'));
-	                var $export = $e.find('.export');
-	                var fieldName = $e.data('field');
-	                var shouldSave = false;
-	                $e.cropit({
-	                  exportZoom: $r.get(0).naturalWidth / w,
-	                  imageBackground: false,
-	                  imageBackgroundBorderWidth: 0,
-	                  initialZoom: 'fill',
-	                  width: w,
-	                  height: h,
-	                  maxZoom: 5,
-	                  onFileReadError: function onFileReadError() {
-	                    console.log('onFileReadError', arguments);
-	                  },
-	                  onImageError: function onImageError() {
-	                    console.log('onImageError', arguments);
-	                  },
-	                  smallImage: 'allow', // Allow images that must be zoomed to fit
-	                  onImageLoaded: function onImageLoaded() {
-	                    if (!_this3.isCropperInitialized) {
-	                      $e.cropit('zoom', _this3.currentItem.data[fieldName].zoom);
-	                      $e.cropit('offset', _this3.currentItem.data[fieldName].offset);
-	                      _this3.isCropperInitialized = true;
-	                      $modal.find('.image-editor').visible();
-	                    } else {
-	                      shouldSave = true;
-	                      var $fileInput = $e.find('[type=file]');
-	                      var file = $fileInput.get(0).files[0];
-	                      fr = new FileReader();
-	                      fr.onload = function () {
-	                        if (!options.imageUploadUrl) return;
-	                        $.post(options.imageUploadUrl, {
-	                          data: fr.result
-	                        }, function (data, status) {
-	                          console.log([data, status]);
-	                          if (status == 'success' && data.status == 'success') {
-	                            _this3.items[_this3.currentIdx].data[fieldName].originalImage = data.url;
-	                            _this3.items[_this3.currentIdx].data[fieldName].croppedImage = data.url;
-	                          }
-	                        });
-	                      };
-	                      fr.readAsDataURL(file);
-	                      _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
-	                    }
-	                  },
-	                  onZoomChange: function onZoomChange() {
-	                    if (!_this3.isCropperInitialized) return;
-	                    shouldSave = true;
-	                    _this3.items[_this3.currentIdx].data[fieldName].zoom = $e.cropit('zoom');
-	                    _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
-	                  },
-	                  onOffsetChange: function onOffsetChange() {
-	                    if (!_this3.isCropperInitialized) return;
-	                    shouldSave = true;
-	                    var o = $e.cropit('offset');
-	                    _this3.items[_this3.currentIdx].data[fieldName].offset = { x: Math.floor(o.x), y: Math.floor(o.y) };
-	                    _this3.$currentLayout.find('[data-field=' + fieldName + ']').attr('src', $e.cropit('export'));
-	                  }
-	                });
-	                $e.cropit('imageSrc', _this3.items[_this3.currentIdx].data[fieldName].originalImage);
-
-	                $modal.on('hide.bs.modal', function () {
-	                  if (!shouldSave) return;
-	                  if (!options.imageUploadUrl) return;
-	                  $.post(options.imageUploadUrl, {
-	                    data: $e.cropit('export')
-	                  }, function (data, status) {
-	                    console.log([data, status]);
-	                    if (status == 'success' && data.status == 'success') {
-	                      _this3.items[_this3.currentIdx].data[fieldName].croppedImage = data.url;
-	                    }
-	                  });
-	                });
-	              });
-	            });
-	          },
 	          duplicate: function duplicate(event) {
 	            this.items.splice(this.currentIdx, 0, $.extend(true, {}, this.items[this.currentIdx]));
 	          },
@@ -417,7 +348,7 @@
 
 	        },
 	        mounted: function mounted() {
-	          var _this4 = this;
+	          var _this3 = this;
 
 	          this.calc();
 	          $editor().show();
@@ -432,13 +363,12 @@
 	              var $e = $(ui.item);
 	              var oidx = $e.data('index');
 	              var nidx = $e.index();
-	              _this4.items.move(oidx, nidx);
-	              _this4.currentIdx = nidx;
+	              _this3.items.move(oidx, nidx);
+	              _this3.currentIdx = nidx;
 	              $sortable().sortable('cancel');
 	            },
 	            cursor: 'move'
 	          });
-	          this.initCropper();
 	          if ($.prototype.fullscreen) {
 	            $editor().find('.layouts-modal').fullscreen();
 	          }
@@ -451,6 +381,169 @@
 	}();
 
 	module.exports = RichAreaVueFactory;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = [[0, "Default"], [35, "Forms"], [-1, "All"], [1, "Title"], [2, "Title, Subtitle"], [3, "Info, Title"], [4, "Info, Title, Subtitle"], [5, "Heading, Paragraph"], [6, "Paragraph"], [7, "Paragraph, Images + Caption"], [8, "Heading, Paragraph, Images + Caption"], [9, "Images + Caption"], [10, "Images + Long Caption"], [11, "Images"], [12, "Single Image"], [13, "Call to Action"], [14, "List"], [15, "Quotes"], [16, "Profile"], [17, "Map"], [20, "Video"], [18, "Social"], [21, "Services"], [22, "Contact Info"], [23, "Pricing"], [24, "Team Profile"], [25, "Products/Portfolio"], [26, "How It Works"], [27, "Partners/Clients"], [28, "As Featured On"], [29, "Achievements"], [32, "Skills"], [30, "Coming Soon"], [31, "Page Not Found"], [33, "Buy Now"], [34, "Panels"], [19, "Separator"]];
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = [];
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = {
+	          props: ['item', 'fieldName'],
+	          template: '<input class="form-control" type="text" v-model="item.data[fieldName]"/>'
+	};
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = {
+	  props: ['item', 'fieldName'],
+	  template: '<textarea class="form-control" rows="3" v-model="item.data[fieldName]"></textarea>'
+	};
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = {
+	  props: ['item', 'fieldName'],
+	  template: '\n    <div>\n      <input class="form-control" type="text" v-model="item.data[fieldName].href"></input>\n      <input class="form-control" type="text" v-model="item.data[fieldName].display"></input>\n    </div>\n  '
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = {
+	  props: ['item', 'fieldName'],
+	  template: '\n    <div>\n      <div :data-field="fieldName" class="image-editor">\n        <input accept="image/gif,image/png,image/jpeg" class="cropit-image-input" type="file"></input>\n        <img :src="item.data[fieldName].croppedImage" class="reference" style="width:100%; display: none"/>\n        <div class="cropit-preview"></div>\n        <input class="cropit-image-zoom-input" type="range"></input>\n      </div>\n    </div>\n  ',
+	  data: {
+	    isCropperInitialized: false
+	  },
+	  computed: {
+	    field: function field() {
+	      return this.item.data[this.fieldName];
+	    }
+	  },
+	  mounted: function mounted() {
+	    var _this = this;
+
+	    var $el = $(this.$el);
+	    var $modal = $el.closest('.modal');
+	    $modal.on('show.bs.modal', function () {
+	      if (_this.isCropperInitialized) return;
+	      $modal.find('.image-editor').invisible();
+	    });
+	    $modal.on('shown.bs.modal', function () {
+	      if (_this.isCropperInitialized) return;
+
+	      var initializingCount = 0;
+	      var $e = $el.find('.image-editor');
+	      var $r = $e.find('.reference');
+	      var w = Math.floor($r.actual('width'));
+	      var h = Math.floor($r.actual('height'));
+	      var $export = $e.find('.export');
+	      var shouldSave = false;
+	      initializingCount++;
+	      $e.cropit({
+	        exportZoom: $r.get(0).naturalWidth / w,
+	        imageBackground: false,
+	        imageBackgroundBorderWidth: 0,
+	        initialZoom: 'image',
+	        width: w,
+	        height: h,
+	        maxZoom: 5,
+	        onFileReadError: function onFileReadError() {
+	          console.log('onFileReadError', arguments);
+	        },
+	        onImageError: function onImageError() {
+	          console.log('onImageError', arguments);
+	        },
+	        smallImage: 'allow', // Allow images that must be zoomed to fit
+	        onImageLoaded: function onImageLoaded() {
+	          if (!_this.isCropperInitialized) {
+	            $e.cropit('zoom', _this.field.zoom);
+	            $e.cropit('offset', _this.field.offset);
+	            initializingCount--;
+	            if (initializingCount == 0) {
+	              _this.isCropperInitialized = true;
+	            }
+	            $modal.find('.image-editor').visible();
+	          } else {
+	            shouldSave = true;
+	            var $fileInput = $e.find('[type=file]');
+	            var file = $fileInput.get(0).files[0];
+	            fr = new FileReader();
+	            fr.onload = function () {
+	              if (!options.imageUploadUrl) return;
+	              $.post(options.imageUploadUrl, {
+	                data: fr.result
+	              }, function (data, status) {
+	                console.log([data, status]);
+	                if (status == 'success' && data.status == 'success') {
+	                  _this.field.originalImage = data.url;
+	                  _this.field.croppedImage = data.url;
+	                }
+	              });
+	            };
+	            fr.readAsDataURL(file);
+	            _this.field.croppedImage = $e.cropit('export');
+	          }
+	        },
+	        onZoomChange: function onZoomChange() {
+	          if (!_this.isCropperInitialized) return;
+	          shouldSave = true;
+	          _this.field.zoom = $e.cropit('zoom');
+	          _this.field.croppedImage = $e.cropit('export');
+	        },
+	        onOffsetChange: function onOffsetChange() {
+	          if (!_this.isCropperInitialized) return;
+	          shouldSave = true;
+	          var o = $e.cropit('offset');
+	          _this.field.offset = { x: Math.floor(o.x), y: Math.floor(o.y) };
+	          _this.field.croppedImage = $e.cropit('export');
+	        }
+	      });
+	      $e.cropit('imageSrc', _this.field.originalImage);
+
+	      $modal.on('hide.bs.modal', function () {
+	        if (!shouldSave) return;
+	        if (!options.imageUploadUrl) return;
+	        $.post(options.imageUploadUrl, {
+	          data: $e.cropit('export')
+	        }, function (data, status) {
+	          console.log([data, status]);
+	          if (status == 'success' && data.status == 'success') {
+	            _this.field.croppedImage = data.url;
+	          }
+	        });
+	      });
+	    });
+	  }
+	};
 
 /***/ }
 /******/ ]);

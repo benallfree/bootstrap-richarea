@@ -27,13 +27,12 @@ if(!isset($exts[$mime_type]))
 $decodedData = base64_decode($data);
 
 /* Save the file */
-$fname = tempnam(__DIR__, 'richarea').$exts[$mime_type];
-file_put_contents($fname, $decodedData);
+$fname = md5($decodedData).$exts[$mime_type];
+file_put_contents(__DIR__.'/'.$fname, $decodedData);
 
 /* Return the final response */
-$parts = pathinfo($fname);
 $args = [
   'status'=>'success',
-  'url'=>sprintf('/server/%s.%s', $parts['basename'], $parts['ext']),
+  'url'=>sprintf('/server/%s', $fname),
 ];
 die(json_encode($args));

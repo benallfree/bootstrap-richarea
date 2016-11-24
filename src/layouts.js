@@ -1,0 +1,1 @@
+module.exports = __TPL__LAYOUTS;

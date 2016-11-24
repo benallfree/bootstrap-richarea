@@ -143,5 +143,4 @@ gulp.task('js-with-layouts', function (cb) {
 });
 
 
-
 gulp.task('default', ['clean', 'images', 'js', 'js-with-layouts', 'sass', 'js-compress', 'sass-compress']);

@@ -33,24 +33,7 @@
                   <div class="form-group">
                     <label class="col-xs-2 control-label">{{fieldName | titlecase}}</label>
                     <div class="col-xs-10">
-                      <div v-if="field.editor=='text'">
-                        <input class="form-control" type="text" v-model="currentItem.data[fieldName]"></input>
-                      </div>
-                      <div v-if="field.editor=='textarea'">
-                        <textarea class="form-control" rows="3" v-model="currentItem.data[fieldName]"></textarea>
-                      </div>
-                      <div v-if="field.editor=='link'">
-                        <input class="form-control" type="text" v-model="currentItem.data[fieldName].href"></input>
-                        <input class="form-control" type="text" v-model="currentItem.data[fieldName].display"></input>
-                      </div>
-                      <div v-if="field.editor=='image'">
-                        <div :data-field="fieldName" class="image-editor">
-                          <input accept="image/gif,image/png,image/jpeg" class="cropit-image-input" type="file"></input>
-                          <img :src="currentItem.data[fieldName].croppedImage" class="reference" style="width:100%; display: none"/>
-                          <div class="cropit-preview"></div>
-                          <input class="cropit-image-zoom-input" type="range"></input>
-                        </div>
-                      </div>
+                      <component :is="'edit-'+field.editor" :item="currentItem" :field-name="fieldName"></component>
                     </div>
                   </div>
                 </div>

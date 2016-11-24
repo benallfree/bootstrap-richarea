@@ -156,3 +156,116 @@ Or just the plain old CSS:
 ## Building
 
 gulp
+
+## Extending
+
+RichArea is extensible in two main ways:
+
+1. New layouts
+2. New editable data types
+
+By default, RichArea includes about 30 layouts `text`, `textarea`, and `image` editors. You can do a lot with these, but in some cases, you may want more layouts and field types.
+
+For example, the `richarea-all-layouts` package contains 300 layouts and the `richarea-image-cropper` extension replaces the default image editor with a much more capable one (but which requires additional dependencies).
+
+### Creating New Layouts
+
+Making a new layout is easy. Here is a sample layout:
+
+    {
+      id: 'something-unique',
+      thumb: '/path/to/my/image/or/base64/data/url',
+      fields: {
+        myFieldName: {
+          editor: 'text',
+          defaultValue: 'Hello, world',
+        },
+      },
+      template: `
+        <h1>
+          {{ item.data.myFieldName }}
+        </h1>
+      `
+    }
+    
+
+### Creating New Editors
+
+Making new editors requires making a [local Vue component](https://vuejs.org/v2/guide/components.html#Local-Registration). Here is a sample editor and a layout that uses it.
+
+    <div id="richarea"></div>
+    
+    $(function() {
+      // Define the display layout for a street address
+      let addressLayout = {
+        id: 'bca-address',                                // Something unique, I prefix all my custom layouts with my initials
+        thumb: '/path/to/my/image/or/base64/data/url',    // The sample image of what this layout looks like
+        fields: {                                         // The field default values are what will appear in the 
+          street1: {                                      // editor when the layout is first placed there.
+            editor: 'text',
+            defaultValue: '123 Mayberry Drive',
+          },
+          street2: {
+            editor: 'text',
+            defaultValue: 'Unit 432',
+          },
+          city: {
+            editor: 'text',
+            defaultValue: 'Reno',
+          },
+          state: {
+            editor: 'text',
+            defaultValue: 'NV',
+          },
+          zip: {
+            editor: 'text',
+            defaultValue: '89519',
+          },
+        },
+        // The most important part - what this layout looks like!
+        // All tempaltes must have a single root node - I use <div>
+        template: `                                       
+          <div>
+            <div v-if="item.data.street1">
+              <b>{{ item.data.street1 }}</b>
+            </div>
+            <div v-if="item.data.street2">
+              {{ item.data.street2 }}
+            </div>
+            <div>
+              {{ item.data.city }}<span v-if="item.data.street1 && (item.data.state || item.data.zip)">, </span>{{item.data.state}}<span v-if="item.data.state && item.data.zip">&nbsp;&nbsp;</span>{{item.data.zip}}
+            </div>
+          </div>
+        `
+      };
+      
+      // This is the data for a locally-registere Vue component. Add all your logic, functions, and event handling here.
+      let addressVueComponent = {
+        props: ['item', 'fieldName'],
+        template: `
+          <div>
+            <input type="text" placeholder="Street 1" v-model="item.data[fieldName].street1" />
+            <br/>
+            <input type="text" placeholder="Street 2" v-model="item.data[fieldName].street2" />
+            <br/>
+            <input type="text" placeholder="City" v-model="item.data[fieldName].city" />
+            <br/>
+            <input type="text" placeholder="State" v-model="item.data[fieldName].state" />
+            <br/>
+            <input type="text" placeholder="Zip" v-model="item.data[fieldName].zip" />
+            <br/>
+        `,
+        data: {},
+        mounted: {},
+        calculated: {},
+      };
+          
+      
+      $('#richarea').richarea({
+        additionalEditors: {
+          address: addressVueComponent,
+        },
+        additionalLayouts: {
+        }
+      })
+    });

@@ -32,7 +32,9 @@
     
     <script>
     $(function() {
-      $('#richarea').richarea();
+      $('#richarea').richarea({
+        imageUploadUrl: '/server/upload.php',
+      });
     });
     </script>
 
