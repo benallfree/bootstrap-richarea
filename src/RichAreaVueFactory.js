@@ -3,18 +3,19 @@ class RichAreaVueFactory
   static create(options)
   {
     options = $.extend(true, {}, {
+      assetRoot: '',
       layoutCategories: require('./categories.js'),
-      userForms: [],
       imageUploadUrl: null,
-      layouts: require('./layouts.js'),
+      layouts: RichAreaConfig.layouts,
       items: [],
-      addLayouts: [],
+      extraLayouts: [],
       editors: {
         'edit-text': require('./editors/text'),
         'edit-textarea': require('./editors/textarea'),
         'edit-link': require('./editors/link'),
         'edit-image': require('./editors/image'),
-      }
+      },
+      mode: 'edit',
     },options);
     
     if(Object.keys(options.layouts).length==0)
@@ -31,7 +32,7 @@ class RichAreaVueFactory
     Object.keys(options.layouts).forEach(function(cid) {
       let c = options.layouts[cid];
       localVueComponents['c'+c.id] = {
-        props: ['item', 'forms'],
+        props: ['item', 'config'],
         template: "<div class='layout-container'>"+c.template+"</div>",
         filters: {
           embedify: (url)=> {
@@ -62,7 +63,7 @@ class RichAreaVueFactory
       if(item instanceof Array)
       {
         item.forEach((item)=>{
-          this.ensureDefaultValues(item);
+          ensureDefaultValues(item);
         });
         return item;
       }
@@ -80,30 +81,34 @@ class RichAreaVueFactory
     
     let items = ensureDefaultValues($.extend(true, [], options.items));
 
+    function $app()
+    {
+      return $(options.root).find('.richarea-app');
+    }
+    
     function $editor()
     {
       return $(options.root).find('.richarea-editor');
     }
-  
+
     function $sortable()
     {
       return $editor().find('.sortable');
     }
     
+    let appData = $.extend(true, {
+      content: null,
+      itemsJson: null,
+      currentIdx: null,
+      $currentLayout: null,
+      items: items,
+      selectedCategory: 0,
+    }, options);
+    
     let app = new Vue({
       components: localVueComponents,
-      el: $editor().get(0),
-      data: {
-        content: null,
-        itemsJson: null,
-        currentIdx: null,
-        $currentLayout: null,
-        items: items,
-        layouts: options.layouts,
-        layoutCategories: options.layoutCategories,
-        selectedCategory: 0,
-        forms: options.userForms,
-      },
+      el: options.root.find('.richarea-app').get(0),
+      data: appData,
       computed: {
         currentItem: function() {
           return this.items[this.currentIdx];
@@ -112,6 +117,11 @@ class RichAreaVueFactory
           var currentItem = this.items[this.currentIdx];
           if(!currentItem) return null;
           return this.layouts[currentItem.layout_id];
+        },
+        config: function() {
+          return {
+            assetRoot: this.assetRoot,
+          }
         }
       },
       filters: {
@@ -242,7 +252,7 @@ class RichAreaVueFactory
       },
       mounted: function() {
         this.calc();
-        $editor().show();
+        $app().show();
         $sortable().sortable({
           placeholder: "alert alert-warning",
           items: 'li:not(.disabled)',

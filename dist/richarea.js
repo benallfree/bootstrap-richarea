@@ -47,31 +47,30 @@
 	'use strict';
 
 	__webpack_require__(1);
+	__webpack_require__(2);
+
+	window.RichAreaConfig = __webpack_require__(3);
 
 	(function ($) {
 	  $(function () {
-	    jQuery.fn.visible = function () {
-	      return this.css('visibility', 'visible');
-	    };
-
-	    jQuery.fn.invisible = function () {
-	      return this.css('visibility', 'hidden');
-	    };
-
-	    jQuery.fn.visibilityToggle = function () {
-	      return this.css('visibility', function (i, visibility) {
-	        return visibility == 'visible' ? 'hidden' : 'visible';
-	      });
-	    };
-
 	    $.fn.richarea = function (options) {
+	      options = $.extend(true, {
+	        mode: 'edit'
+	      }, options);
+
 	      var $e = $(this);
+
 	      $e.hide();
 
-	      var $root = $("<div class='richarea'>" + "<div class=\"richarea-editor\">\n  <ul class=\"sortable\">\n    <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n      <div class=\"tools\">\n        <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n        <span @click=\"add(index)\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n        <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n        <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n        <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n      </div>\n      <div class=\"item\">\n        <layout :forms=\"forms\" :is=\"'c'+item.layout_id\" :item=\"item\"></layout>\n      </div>\n    </li>\n    <li class=\"disabled add text-center\">\n      <button @click.prevent=\"add(null)\" class=\"btn btn-primary btn-xl\">+</button>\n    </li>\n  </ul>\n  <div class=\"modal fade layout-settings\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" @click=\"close\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Edit Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <template v-if=\"currentLayout\">\n            <template v-if=\"Object.keys(currentLayout.fields).length>0\">\n              <div v-for=\"(field,fieldName) in currentLayout.fields\">\n                <div class=\"form-horizontal\">\n                  <div class=\"form-group\">\n                    <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                    <div class=\"col-xs-10\">\n                      <component :is=\"'edit-'+field.editor\" :item=\"currentItem\" :field-name=\"fieldName\"></component>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </template>\n            <template v-else>\n              There are no fields to edit for this layout.\n            </template>\n          </template>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\"  @click=\"close\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"modal modal-fullscreen fade layouts-modal\" role=\"dialog\">\n    <div class=\"modal-dialog layout-selector\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button class=\"close\" data-dismiss=\"modal\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n          <h4 class=\"modal-title\">Add Component</h4>\n        </div>\n        <div class=\"modal-body\">\n          <div>\n            <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in layoutCategories\">\n              {{cat[1]}}\n            </div>\n          </div>\n          <img class=\"layout\" data-dismiss=\"modal\" :data-layout-id=\"layout.id\" :src=\"layout.thumb\" v-for=\"(layout,index) in layouts\" v-if=\"inActiveCategories(layout)\" v-on:click=\"insert(layout.id)\"/>\n        </div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  \n</div>\n" + "</div>");
+	      var $root = null;
+	      if (options.mode == 'view') {
+	        $root = $("<div class='richarea'>" + __webpack_require__(4) + "</div>");
+	      } else {
+	        $root = $("<div class='richarea'>" + __webpack_require__(5) + "</div>");
+	      }
 	      $e.after($root);
 
-	      var RichAreaVueFactory = __webpack_require__(2);
+	      var RichAreaVueFactory = __webpack_require__(6);
 	      options = $.extend(true, {}, {
 	        root: $root,
 	        items: []
@@ -110,6 +109,56 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	jQuery.fn.visible = function () {
+	    return this.css('visibility', 'visible');
+	};
+
+	jQuery.fn.invisible = function () {
+	    return this.css('visibility', 'hidden');
+	};
+
+	jQuery.fn.visibilityToggle = function () {
+	    return this.css('visibility', function (i, visibility) {
+	        return visibility == 'visible' ? 'hidden' : 'visible';
+	    });
+	};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var RichArea = function RichArea() {
+	  _classCallCheck(this, RichArea);
+	};
+
+	RichArea.layouts = {};
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = "<div class=\"richarea-app\">\n  <div v-for=\"(item,index) in items\">\n    <layout :is=\"'c'+item.layout_id\" :item=\"item\" :config=\"config\"></layout>\n  </div>\n</div>\n";
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = "<div class=\"richarea-app\">\n  <div class=\"richarea-editor\">\n    <ul class=\"sortable\">\n      <li :class=\"{active: currentIdx==index }\" :data-index=\"index\" @click=\"select\" @dblclick=\"edit\" v-for=\"(item,index) in items\">\n        <div class=\"tools\">\n          <span class=\"move btn btn-success btn-xs glyphicon glyphicon-resize-vertical\"></span>\n          <span @click=\"add(index)\" class=\"add btn btn-default btn-xs glyphicon glyphicon-plus\"></span>\n          <span @click=\"edit\" class=\"settings btn btn-default btn-xs glyphicon glyphicon-cog\"></span>\n          <span @click=\"duplicate\" class=\"duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate\"></span>\n          <span @click=\"remove\" class=\"delete btn btn-danger btn-xs glyphicon glyphicon-remove\"></span>\n        </div>\n        <div class=\"item\">\n          <layout :is=\"'c'+item.layout_id\" :item=\"item\"></layout>\n        </div>\n      </li>\n      <li class=\"disabled add text-center\">\n        <button @click.prevent=\"add(null)\" class=\"btn btn-primary btn-xl\">+</button>\n      </li>\n    </ul>\n    <div class=\"modal fade layout-settings\" role=\"dialog\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <button class=\"close\" @click=\"close\">\n              <span class=\"glyphicon glyphicon-remove\"></span>\n            </button>\n            <h4 class=\"modal-title\">Edit Component</h4>\n          </div>\n          <div class=\"modal-body\">\n            <template v-if=\"currentLayout\">\n              <template v-if=\"Object.keys(currentLayout.fields).length>0\">\n                <div v-for=\"(field,fieldName) in currentLayout.fields\">\n                  <div class=\"form-horizontal\">\n                    <div class=\"form-group\">\n                      <label class=\"col-xs-2 control-label\">{{fieldName | titlecase}}</label>\n                      <div class=\"col-xs-10\">\n                        <component :is=\"'edit-'+field.editor\" :item=\"currentItem\" :field-name=\"fieldName\"></component>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </template>\n              <template v-else>\n                There are no fields to edit for this layout.\n              </template>\n            </template>\n          </div>\n          <div class=\"modal-footer\">\n            <button class=\"btn btn-default\"  @click=\"close\">Close</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  \n    <div class=\"modal modal-fullscreen fade layouts-modal\" role=\"dialog\">\n      <div class=\"modal-dialog layout-selector\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <button class=\"close\" data-dismiss=\"modal\">\n              <span class=\"glyphicon glyphicon-remove\"></span>\n            </button>\n            <h4 class=\"modal-title\">Add Component</h4>\n          </div>\n          <div class=\"modal-body\">\n            <div>\n              <div :class=\"{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }\" @click=\"selectCat(cat)\" class=\"btn btn-xs\" style=\"margin: 2px;\" v-for=\"cat in layoutCategories\">\n                {{cat[1]}}\n              </div>\n            </div>\n            <img class=\"layout\" data-dismiss=\"modal\" :data-layout-id=\"layout.id\" :src=\"layout.thumb\" v-for=\"(layout,index) in layouts\" v-if=\"inActiveCategories(layout)\" v-on:click=\"insert(layout.id)\"/>\n          </div>\n          <div class=\"modal-footer\">\n            <button class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -127,18 +176,19 @@
 	    key: 'create',
 	    value: function create(options) {
 	      options = $.extend(true, {}, {
-	        layoutCategories: __webpack_require__(3),
-	        userForms: [],
+	        assetRoot: '',
+	        layoutCategories: __webpack_require__(7),
 	        imageUploadUrl: null,
-	        layouts: __webpack_require__(4),
+	        layouts: RichAreaConfig.layouts,
 	        items: [],
-	        addLayouts: [],
+	        extraLayouts: [],
 	        editors: {
-	          'edit-text': __webpack_require__(5),
-	          'edit-textarea': __webpack_require__(6),
-	          'edit-link': __webpack_require__(7),
-	          'edit-image': __webpack_require__(8)
-	        }
+	          'edit-text': __webpack_require__(8),
+	          'edit-textarea': __webpack_require__(9),
+	          'edit-link': __webpack_require__(10),
+	          'edit-image': __webpack_require__(11)
+	        },
+	        mode: 'edit'
 	      }, options);
 
 	      if (Object.keys(options.layouts).length == 0) {
@@ -154,7 +204,7 @@
 	      Object.keys(options.layouts).forEach(function (cid) {
 	        var c = options.layouts[cid];
 	        localVueComponents['c' + c.id] = {
-	          props: ['item', 'forms'],
+	          props: ['item', 'config'],
 	          template: "<div class='layout-container'>" + c.template + "</div>",
 	          filters: {
 	            embedify: function embedify(url) {
@@ -180,11 +230,9 @@
 	      });
 
 	      function ensureDefaultValues(item) {
-	        var _this = this;
-
 	        if (item instanceof Array) {
 	          item.forEach(function (item) {
-	            _this.ensureDefaultValues(item);
+	            ensureDefaultValues(item);
 	          });
 	          return item;
 	        }
@@ -201,6 +249,10 @@
 
 	      var items = ensureDefaultValues($.extend(true, [], options.items));
 
+	      function $app() {
+	        return $(options.root).find('.richarea-app');
+	      }
+
 	      function $editor() {
 	        return $(options.root).find('.richarea-editor');
 	      }
@@ -209,20 +261,19 @@
 	        return $editor().find('.sortable');
 	      }
 
+	      var appData = $.extend(true, {
+	        content: null,
+	        itemsJson: null,
+	        currentIdx: null,
+	        $currentLayout: null,
+	        items: items,
+	        selectedCategory: 0
+	      }, options);
+
 	      var app = new Vue({
 	        components: localVueComponents,
-	        el: $editor().get(0),
-	        data: {
-	          content: null,
-	          itemsJson: null,
-	          currentIdx: null,
-	          $currentLayout: null,
-	          items: items,
-	          layouts: options.layouts,
-	          layoutCategories: options.layoutCategories,
-	          selectedCategory: 0,
-	          forms: options.userForms
-	        },
+	        el: options.root.find('.richarea-app').get(0),
+	        data: appData,
 	        computed: {
 	          currentItem: function currentItem() {
 	            return this.items[this.currentIdx];
@@ -231,6 +282,11 @@
 	            var currentItem = this.items[this.currentIdx];
 	            if (!currentItem) return null;
 	            return this.layouts[currentItem.layout_id];
+	          },
+	          config: function config() {
+	            return {
+	              assetRoot: this.assetRoot
+	            };
 	          }
 	        },
 	        filters: {
@@ -285,13 +341,13 @@
 	            this.calc();
 	          },
 	          calc: function calc() {
-	            var _this2 = this;
+	            var _this = this;
 
 	            this.$nextTick(function () {
 	              if ($editor().find('.modal.layout-settings.in').length > 0) return; // Suspend calculations while modal is one.
-	              _this2.calcContent();
-	              _this2.calcJson();
-	              _this2.notifyChange();
+	              _this.calcContent();
+	              _this.calcJson();
+	              _this.notifyChange();
 	            });
 	          },
 	          calcJson: function calcJson() {
@@ -348,10 +404,10 @@
 
 	        },
 	        mounted: function mounted() {
-	          var _this3 = this;
+	          var _this2 = this;
 
 	          this.calc();
-	          $editor().show();
+	          $app().show();
 	          $sortable().sortable({
 	            placeholder: "alert alert-warning",
 	            items: 'li:not(.disabled)',
@@ -363,8 +419,8 @@
 	              var $e = $(ui.item);
 	              var oidx = $e.data('index');
 	              var nidx = $e.index();
-	              _this3.items.move(oidx, nidx);
-	              _this3.currentIdx = nidx;
+	              _this2.items.move(oidx, nidx);
+	              _this2.currentIdx = nidx;
 	              $sortable().sortable('cancel');
 	            },
 	            cursor: 'move'
@@ -383,7 +439,7 @@
 	module.exports = RichAreaVueFactory;
 
 /***/ },
-/* 3 */
+/* 7 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -391,15 +447,7 @@
 	module.exports = [[0, "Default"], [35, "Forms"], [-1, "All"], [1, "Title"], [2, "Title, Subtitle"], [3, "Info, Title"], [4, "Info, Title, Subtitle"], [5, "Heading, Paragraph"], [6, "Paragraph"], [7, "Paragraph, Images + Caption"], [8, "Heading, Paragraph, Images + Caption"], [9, "Images + Caption"], [10, "Images + Long Caption"], [11, "Images"], [12, "Single Image"], [13, "Call to Action"], [14, "List"], [15, "Quotes"], [16, "Profile"], [17, "Map"], [20, "Video"], [18, "Social"], [21, "Services"], [22, "Contact Info"], [23, "Pricing"], [24, "Team Profile"], [25, "Products/Portfolio"], [26, "How It Works"], [27, "Partners/Clients"], [28, "As Featured On"], [29, "Achievements"], [32, "Skills"], [30, "Coming Soon"], [31, "Page Not Found"], [33, "Buy Now"], [34, "Panels"], [19, "Separator"]];
 
 /***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	module.exports = [];
-
-/***/ },
-/* 5 */
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -410,7 +458,7 @@
 	};
 
 /***/ },
-/* 6 */
+/* 9 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -421,7 +469,7 @@
 	};
 
 /***/ },
-/* 7 */
+/* 10 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -432,7 +480,7 @@
 	};
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';

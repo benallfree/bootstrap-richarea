@@ -155,7 +155,17 @@ Or just the plain old CSS:
 
 ## Building
 
-gulp
+To build RichArea and accompanying JS:
+
+    npm install
+    gulp
+
+
+Thumbnails are a separate task because they take so long.
+
+    brew install imagemagick
+    brew install graphicsmagick
+    gulp thumbnails
 
 ## Extending
 
@@ -170,24 +180,29 @@ For example, the `richarea-all-layouts` package contains 300 layouts and the `ri
 
 ### Creating New Layouts
 
-Making a new layout is easy. Here is a sample layout:
+Making a new layout is easy. See `samples/example3.html`.
 
-    {
-      id: 'something-unique',
-      thumb: '/path/to/my/image/or/base64/data/url',
-      fields: {
-        myFieldName: {
-          editor: 'text',
-          defaultValue: 'Hello, world',
-        },
-      },
-      template: `
-        <h1>
-          {{ item.data.myFieldName }}
-        </h1>
-      `
-    }
-    
+    $(function() {
+      $('#richarea').richarea({
+        extraLayouts: [
+          {
+            id: 'my-header',
+            thumb: '/path/to/my/image.png',
+            fields: {
+              myFieldName: {
+                editor: 'text',
+                defaultValue: 'Hello, world',
+              },
+            },
+            categories: [0],
+            template: `
+              <h1>This is Ben's Header. Don't mess with it.</h1>
+              <h2>{{ item.data.myFieldName }}</h2>
+            `
+          }
+        ]
+      });
+    });    
 
 ### Creating New Editors
 

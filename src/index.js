@@ -1,35 +1,38 @@
 require('./array.js');
+require('./jquery.visibility.js');
+
+
+window.RichAreaConfig = require('./RichAreaConfig.js');
+
 
 (($ => {
   $(() => {
-    jQuery.fn.visible = function() {
-        return this.css('visibility', 'visible');
-    };
-
-    jQuery.fn.invisible = function() {
-        return this.css('visibility', 'hidden');
-    };
-
-    jQuery.fn.visibilityToggle = function() {
-        return this.css('visibility', function(i, visibility) {
-            return (visibility == 'visible') ? 'hidden' : 'visible';
-        });
-    };
-    
     $.fn.richarea = function(options)
     {
+      options = $.extend(true,{
+        mode: 'edit',
+      }, options);
+      
       let $e = $(this);
+      
       $e.hide();
-    
-      let $root = $("<div class='richarea'>"+__TPL__EDITOR_TEMPLATE+"</div>");
+  
+      let $root = null;
+      if(options.mode=='view')
+      {
+        $root = $("<div class='richarea'>"+require('../build/viewer')+"</div>");
+      } else {
+        $root = $("<div class='richarea'>"+require('../build/editor')+"</div>");
+      }
       $e.after($root);
-    
+  
       let RichAreaVueFactory = require('./RichAreaVueFactory');
       options = $.extend(true, {}, {
         root: $root,
         items: [],
       }, options)
       RichAreaVueFactory.create(options);
+
     }
   });
 }))(jQuery);

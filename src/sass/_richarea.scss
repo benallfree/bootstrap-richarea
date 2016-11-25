@@ -9,105 +9,109 @@
   {
     min-width: 25px;  
   }
-  
+
   img {
     max-width: 100%;
   }
-  .layout-settings
+
+  .richarea-app
   {
-    .image-editor
-    {
-      img
-      {
-        max-width: initial;
-      }
-    }
-  }  
-  
-  .richarea-editor {
     display: none;
-    position: relative;
-  
-    ul.sortable {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    .richarea-editor {
       position: relative;
-      li {
-        min-height: 20px;
+  
+      ul.sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         position: relative;
-        border: none;
-        border-radius: 3px;
-        padding: 0px;
-        margin: 0px;
-        .tools {
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          display: none;
-          background: rgba($gray, 0.2);
-          //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        li {
+          min-height: 20px;
+          position: relative;
+          border: none;
           border-radius: 3px;
-          padding: 3px;
-          width: 150px;
-          z-index: 1000;
-          .glyphicon {
-            margin-bottom: 3px;
-            width: 25px;
-          }
-        }
-        .item
-        {
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          -o-user-select: none;
-          user-select: none;
-          &:after {
-            content: " ";
-            z-index: 10;
-            display: block;
+          padding: 0px;
+          margin: 0px;
+          .tools {
             position: absolute;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0);
+            top: 5px;
+            right: 5px;
+            display: none;
+            background: rgba($gray, 0.2);
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
             border-radius: 3px;
+            padding: 3px;
+            width: 150px;
+            z-index: 1000;
+            .glyphicon {
+              margin-bottom: 3px;
+              width: 25px;
+            }
           }
-        }
-        &:hover {
-          cursor: pointer;
-        }
-        &.active {
           .item
           {
-            &:after
-            {
-              background: rgba($gray-lighter, 0.44);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            &:after {
+              content: " ";
+              z-index: 10;
+              display: block;
+              position: absolute;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: rgba(0, 0, 0, 0);
+              border-radius: 3px;
             }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &.active {
+            .item
+            {
+              &:after
+              {
+                background: rgba($gray-lighter, 0.44);
+              }
           
+            }
+          }
+        }      
+      }
+      .modal-dialog.layout-settings
+      {
+        .image-editor
+        {
+          img
+          {
+            max-width: initial;
           }
         }
-      }      
-    }
-    .modal-dialog.layout-selector {
-      .modal-body
-      {
-        background-color: $gray-lighter;
-        color: $gray-darker;
-      }
-    }
-    img {
-      &.layout {
-        border: 1px solid $gray-lighter;
-        border-radius: 3px;
-        margin: 5px;
-        max-width: 195px;
-        &:hover {
-          cursor: pointer;
+      }  
+      .modal-dialog.layout-selector {
+        .modal-body
+        {
+          background-color: $gray-lighter;
+          color: $gray-darker;
         }
       }
-    }  
+      img {
+        &.layout {
+          border: 1px solid $gray-lighter;
+          border-radius: 3px;
+          margin: 5px;
+          max-width: 195px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }  
+    }    
   }
+
 }

@@ -1,3 +1,12 @@
+module.exports = function(layout) {
+  var fs = require('fs');
+  var c = {
+    css: fs.readFileSync('./dist/richarea.css', 'utf8'),
+    js: fs.readFileSync('./dist/richarea.js', 'utf8'),
+    layouts: fs.readFileSync('./dist/richarea-layouts.js', 'utf8'),
+  }
+
+  return `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +17,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="../dist/richarea.css">
+    <style>
+    ${c.css}
+    </style>
 
     <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
@@ -18,50 +29,26 @@
     <script src="https://cdn.jsdelivr.net/jquery.actual/1.0.18/jquery.actual.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
-    <!--
-    <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
-    -->
 
-    <script src="../dist/richarea-with-layouts.js"></script>    
+    <script>
+    ${c.js};
+    ${c.layouts};
+    </script>
   </head>
   <body>
-    <h1>Custom Layout</h1>
-    <p style="color:red">Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</p>
-    <hr/>
     <div id="richarea"></div>
-    
     <script>
     $(function() {
       $('#richarea').richarea({
-        onChange: function(o)
-        {
-          $('#html').val(o.html);
-          $('#data').val(JSON.stringify(o.data));
-        },
-        extraLayouts: [
-          {
-            id: 'my-header',
-            thumb: '/path/to/my/image/.png',
-            fields: {
-              myFieldName: {
-                editor: 'text',
-                defaultValue: 'Hello, world',
-              },
-            },
-            categories: [0],
-            template: `
-              <h1>This is Ben's Header. Don't mess with it.</h1>
-              <h2>{{ item.data.myFieldName }}</h2>
-            `
-          }
-        ]
+        assetRoot: '/dist',
+        items: [
+          {"layout_id":${layout.id},},
+        ],
+        mode: 'view',
       });
     });
     </script>
-    
-    <textarea id="html" style="width:300px;height:300px"></textarea>
-    <textarea id="data" style="width:300px;height:300px"></textarea>
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
   </body>
 </html>
+  `
+}

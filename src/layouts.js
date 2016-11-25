@@ -1,1 +1,1 @@
-module.exports = __TPL__LAYOUTS;
+window.RichAreaConfig.layouts = require('../build/layouts');
