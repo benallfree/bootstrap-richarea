@@ -12,6 +12,7 @@ var file = require('gulp-file');
 var _ = require('lodash');
 let Q = require('q');
 var plumber = require('gulp-plumber');
+var async = require('async');
 
 gulp.plumbedSrc = function( ){
   return gulp.src.apply( gulp, arguments )
@@ -150,15 +151,14 @@ gulp.task('thumbnails', ['clean', 'codegen', 'js', 'sass'], function (cb) {
   var layouts = require('./build/layouts');
   let Thumbnailer = require('./src/codegen/Thumbnailer');
 
-  let i = 10;
-  let qs = [];
+  let tasks = [];
   for(var id in layouts)
   {
-    var layout = layouts[id];
-    qs.push(Thumbnailer.process(layout));
-    if(i--<0) break;
+    tasks.push(Thumbnailer.createAsync(layouts[id]));
   }
-  Q.all(qs).then(function() { cb(); });
+  async.parallelLimit(tasks, 10, function() {
+    cb();
+  });
 });
 
 
