@@ -1,1 +1,0 @@
-module.exports = "<div class=\"richarea-app\">\n  <div v-for=\"(item,index) in items\">\n    <layout :is=\"'c'+item.layout_id\" :item=\"item\" :config=\"config\"></layout>\n  </div>\n</div>\n";

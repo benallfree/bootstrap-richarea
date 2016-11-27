@@ -29,6 +29,22 @@ class RichAreaVueFactory
       options.layouts[o.id] = o;
     })
     
+    // Fix up default asset paths
+    for(let layout_id in options.layouts)
+    {
+      let layout = options.layouts[layout_id];
+      for(let field_key in layout.fields)
+      {
+        let field = layout.fields[field_key];
+        if(field.editor=='image')
+        {
+          field.defaultValue.originalImage = options.assetRoot + field.defaultValue.originalImage;
+          field.defaultValue.croppedImage = options.assetRoot + field.defaultValue.croppedImage;
+        }
+      }
+    }
+    
+    // Create Vue components
     Object.keys(options.layouts).forEach(function(cid) {
       let c = options.layouts[cid];
       localVueComponents['c'+c.id] = {
@@ -121,6 +137,7 @@ class RichAreaVueFactory
         config: function() {
           return {
             assetRoot: this.assetRoot,
+            imageUploadUrl: this.imageUploadUrl,
           }
         }
       },
@@ -275,6 +292,14 @@ class RichAreaVueFactory
         {
           $editor().find('.layouts-modal').fullscreen();
         }
+        // A little hack to wait for all images to finish loading before telling Webshot it's okay to take a screen shot.
+        // http://phantomjs.org/api/webpage/handler/on-callback.html
+        if (typeof window.callPhantom === 'function') {
+          setTimeout(function() {
+            window.callPhantom('takeShot');
+          },2000);
+        }
+        
       }
     });      
   }

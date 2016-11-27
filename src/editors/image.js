@@ -1,5 +1,5 @@
 module.exports = {
-  props: ['item', 'fieldName'],
+  props: ['item', 'fieldName', 'config'],
   template: `
     <div>
       <div :data-field="fieldName" class="image-editor">
@@ -64,8 +64,8 @@ module.exports = {
             let file = $fileInput.get(0).files[0];
             fr = new FileReader();
             fr.onload = ()=>{
-              if(!options.imageUploadUrl) return;
-              $.post(options.imageUploadUrl, {
+              if(!this.config.imageUploadUrl) return;
+              $.post(this.config.imageUploadUrl, {
                 data: fr.result,
               }, (data,status)=>{
                 console.log([data, status]);
@@ -98,8 +98,8 @@ module.exports = {
 
       $modal.on('hide.bs.modal', ()=>{
         if(!shouldSave) return;
-        if(!options.imageUploadUrl) return;
-        $.post(options.imageUploadUrl, {
+        if(!this.config.imageUploadUrl) return;
+        $.post(this.config.imageUploadUrl, {
           data: $e.cropit('export'),
         }, (data,status)=>{
           console.log([data, status]);

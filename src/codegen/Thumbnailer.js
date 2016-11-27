@@ -19,13 +19,13 @@ class Thumbnailer
         siteType: 'html',
         // userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36',
         // phantomPath: './node_modules/.bin/phantomjs',
-        // takeShotOnCallback: true,
+        takeShotOnCallback: true,
         errorIfJSException: true,
       };
     
       var template = require('./webshot-template')(layout);
 
-      let src = `./build/images/${layout.id}.png`;
+      let src = `./dist/images/${layout.id}.png`;
       let dst = `./src/images/${layout.id}.png`;
     
       console.log(`${src}->${dst}`);
@@ -39,7 +39,9 @@ class Thumbnailer
         var gm = require('gm');
         var canvasWidth = 1024;
         var canvasHeight = 768;
-        gm(src).trim().resize(320,240)
+        gm(src)
+          .trim()
+          .resize(320,240)
           .borderColor('#ffffff')
           .border(20,20)
           .noProfile()

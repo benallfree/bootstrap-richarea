@@ -15,6 +15,7 @@ var plumber = require('gulp-plumber');
 var async = require('async');
 let pump = require('pump');
 var mkdirp = require('mkdirp');
+var download = require("gulp-download");
 
 gulp.plumbedSrc = function( ){
   return gulp.src.apply( gulp, arguments )
@@ -111,11 +112,11 @@ gulp.task('clean', function() {
 task('codegen', [], [
   [
     file('editor.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/editor.html', 'utf8')) + ';', { src: true }),
-    gulp.dest('./build/')
+    gulp.dest('./build')
   ],
   [
     file('viewer.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/viewer.html', 'utf8')) + ';', { src: true }),
-    gulp.dest('./build/')
+    gulp.dest('./build')
   ],
   require('./tasks/codegen-layouts')
 ]);
@@ -150,11 +151,34 @@ gulp.task('thumbnails', ['codegen', 'js', 'sass'], function (cb) {
   for(var id in layouts)
   {
     tasks.push(Thumbnailer.createAsync(layouts[id]));
-    break;
   }
   async.parallelLimit(tasks, 10, function() {
     cb();
   });
+});
+
+gulp.task('lorem', function(cb) {
+  let s = fs.readFileSync('./src/templates/layouts.html', 'utf8');
+  let sizes = {};
+
+  var regex = /(\d+x\d+\.png)/g;
+  let matches = null;
+  while (matches = regex.exec(s)) {
+    sizes[matches[1]] = true;
+  }
+  let jobs = [];
+  Object.keys(sizes).forEach(function(k) {
+    let parts = k.split(/[\.x]/);
+    let url = 'http://lorempixel.com/'+parts[0]+'/'+parts[1];
+    let fname = parts[0]+'x'+parts[1]+'.png';
+    console.log(url,fname);
+    jobs.push([
+      download(url),
+      rename(fname),
+      gulp.dest("./src/images"),
+    ]);
+  });
+  merge(jobs,cb);
 });
 
 
