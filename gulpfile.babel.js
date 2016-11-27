@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
-var clean = require('gulp-clean');
+var del = require('del');
 var webpack = require('gulp-webpack');
 var fs = require('fs');
 var file = require('gulp-file'); 
@@ -13,6 +13,8 @@ var _ = require('lodash');
 let Q = require('q');
 var plumber = require('gulp-plumber');
 var async = require('async');
+let pump = require('pump');
+var mkdirp = require('mkdirp');
 
 gulp.plumbedSrc = function( ){
   return gulp.src.apply( gulp, arguments )
@@ -21,7 +23,6 @@ gulp.plumbedSrc = function( ){
 
 function qpump(steps)
 {
-  let pump = require('pump');
   let d = Q.defer();
   pump(steps, function() { console.log('resolving'); d.resolve(); });
   return d.promise;
@@ -61,9 +62,9 @@ function packer()
     });
 }
 
-task('js-compress', ['js', 'clean',], [
+task('js-compress', ['js'], [
   [
-    gulp.src('dist/**/*.js'),
+    gulp.src(['./dist/richarea.js','./dist/richarea-layouts.js']),
     babel({
       presets: ['es2015']
     }),
@@ -71,39 +72,56 @@ task('js-compress', ['js', 'clean',], [
     rename({
       extname: ".min.js"
     }),
-    gulp.dest('dist')
+    gulp.dest('./dist')
   ]
 ]);
 
 
-task('sass-compress', ['sass', 'clean'], [
+task('sass-compress', ['sass'], [
   [
-    gulp.src('dist/**/*.css'),
+    gulp.src('./dist/richarea.css'),
     cleanCSS({compatibility: 'ie8'}),
     rename({
       extname: ".min.css"
     }),
-    gulp.dest('dist')
+    gulp.dest('./dist')
   ],
 ]);
 
 
-task('js', ['clean', 'codegen'], [
+task('js', ['codegen'], [
   [
-    gulp.src('src/index.js'),
+    gulp.src('./src/index.js'),
     packer(),
     rename('richarea.js'),
-    gulp.dest('dist/'),
+    gulp.dest('./dist'),
   ],
   [
-    gulp.src('src/layouts.js'),
+    gulp.src('./src/layouts.js'),
     packer(),
     rename('richarea-layouts.js'),
-    gulp.dest('dist/')
-  ],  
+    gulp.dest('./dist'),
+  ],
 ]);
 
-task('sass', ['clean'], [
+gulp.task('clean', function() {
+  return del(['./dist/**/*', './build/**/*']);
+});
+
+task('codegen', [], [
+  [
+    file('editor.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/editor.html', 'utf8')) + ';', { src: true }),
+    gulp.dest('./build/')
+  ],
+  [
+    file('viewer.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/viewer.html', 'utf8')) + ';', { src: true }),
+    gulp.dest('./build/')
+  ],
+  require('./tasks/codegen-layouts')
+]);
+
+
+task('sass', [], [
   [
     gulp.src('./src/sass/richarea.scss'),
     sass().on('error', sass.logError),
@@ -111,7 +129,7 @@ task('sass', ['clean'], [
   ],
 ]);
 
-task('images', ['clean'], [
+task('images', [], [
   [
     gulp.src('./src/images/**/*'),
     gulp.dest('./dist/images'),
@@ -122,31 +140,8 @@ gulp.task('watch', function () {
   return gulp.watch('src/**/*', ['default']);
 });
 
-task('clean', [], [
-  [
-    gulp.src('./dist', {read: false}),
-    clean()
-  ],
-  [
-    gulp.src('./build', {read: false}),
-    clean()
-  ],
-]);
 
-task('codegen', ['clean'], [
-  [
-    file('editor.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/editor.html', 'utf8')) + ';', {src: true}),
-    gulp.dest('build/')
-  ],
-  [
-    file('viewer.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/viewer.html', 'utf8')) + ';', {src: true}),
-    gulp.dest('build/')
-  ],
-  require('./tasks/codegen-layouts'),
-]);
-
-
-gulp.task('thumbnails', ['clean', 'codegen', 'js', 'sass'], function (cb) {
+gulp.task('thumbnails', ['codegen', 'js', 'sass'], function (cb) {
   let RichAreaConfig
   var layouts = require('./build/layouts');
   let Thumbnailer = require('./src/codegen/Thumbnailer');
@@ -155,6 +150,7 @@ gulp.task('thumbnails', ['clean', 'codegen', 'js', 'sass'], function (cb) {
   for(var id in layouts)
   {
     tasks.push(Thumbnailer.createAsync(layouts[id]));
+    break;
   }
   async.parallelLimit(tasks, 10, function() {
     cb();
@@ -162,4 +158,4 @@ gulp.task('thumbnails', ['clean', 'codegen', 'js', 'sass'], function (cb) {
 });
 
 
-gulp.task('default', ['clean', 'images', 'js', 'sass', 'codegen', 'js-compress', 'sass-compress']);
+gulp.task('default', ['images', 'js', 'sass', 'codegen', 'js-compress', 'sass-compress']);

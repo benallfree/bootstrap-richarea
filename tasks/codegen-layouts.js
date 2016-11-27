@@ -39,7 +39,6 @@ module.exports = function()
     
       layouts[layout_id] = {
         id: $e.data('id'),
-        thumb: $e.data('thumb'),
         fields: $.extend(true, {}, fields),
         categories: $e.data('cat'),
         template: html,
@@ -48,7 +47,7 @@ module.exports = function()
     
     pump([
         file('layouts.js', 'module.exports = ' + JSON.stringify(layouts, null, '\t') + ';', { src: true }),
-        gulp.dest('build/')
+        gulp.dest('./build/')
       ],
       function() {
         console.log('resolve***');

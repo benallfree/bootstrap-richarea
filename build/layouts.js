@@ -1,7 +1,6 @@
 module.exports = {
 	"1": {
 		"id": 1,
-		"thumb": "/images/thumbnails/a01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -15,7 +14,6 @@ module.exports = {
 	},
 	"2": {
 		"id": 2,
-		"thumb": "/images/thumbnails/a02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -29,7 +27,6 @@ module.exports = {
 	},
 	"3": {
 		"id": 3,
-		"thumb": "/images/thumbnails/a03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -43,7 +40,6 @@ module.exports = {
 	},
 	"4": {
 		"id": 4,
-		"thumb": "/images/thumbnails/a04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -57,7 +53,6 @@ module.exports = {
 	},
 	"5": {
 		"id": 5,
-		"thumb": "/images/thumbnails/a05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -71,7 +66,6 @@ module.exports = {
 	},
 	"6": {
 		"id": 6,
-		"thumb": "/images/thumbnails/a06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -85,7 +79,6 @@ module.exports = {
 	},
 	"7": {
 		"id": 7,
-		"thumb": "/images/thumbnails/a07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -99,7 +92,6 @@ module.exports = {
 	},
 	"8": {
 		"id": 8,
-		"thumb": "/images/thumbnails/a08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -113,7 +105,6 @@ module.exports = {
 	},
 	"9": {
 		"id": 9,
-		"thumb": "/images/thumbnails/a09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -128,7 +119,6 @@ module.exports = {
 	},
 	"10": {
 		"id": 10,
-		"thumb": "/images/thumbnails/a10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -142,7 +132,6 @@ module.exports = {
 	},
 	"11": {
 		"id": 11,
-		"thumb": "/images/thumbnails/c01.png",
 		"fields": {
 			"headline": {
 				"editor": "text",
@@ -160,7 +149,6 @@ module.exports = {
 	},
 	"12": {
 		"id": 12,
-		"thumb": "/images/thumbnails/g01.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -175,7 +163,6 @@ module.exports = {
 	},
 	"13": {
 		"id": 13,
-		"thumb": "/images/thumbnails/e01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -194,7 +181,6 @@ module.exports = {
 	},
 	"14": {
 		"id": 14,
-		"thumb": "/images/thumbnails/e02.png",
 		"fields": {
 			"subheading": {
 				"editor": "text",
@@ -213,7 +199,6 @@ module.exports = {
 	},
 	"15": {
 		"id": 15,
-		"thumb": "/images/thumbnails/e09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -226,8 +211,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/e09-1.jpg",
-					"croppedImage": "/images/e09-1.jpg",
+					"originalImage": "http://lorempixel.com/580/280/?r=1",
+					"croppedImage": "http://lorempixel.com/580/280/?r=2",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -240,11 +225,10 @@ module.exports = {
 			0,
 			5
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n\t\t</div>\n\n\t</div>"
 	},
 	"16": {
 		"id": 16,
-		"thumb": "/images/thumbnails/v01.png",
 		"fields": {},
 		"categories": [
 			0,
@@ -254,7 +238,6 @@ module.exports = {
 	},
 	"17": {
 		"id": 17,
-		"thumb": "/images/thumbnails/v02.png",
 		"fields": {},
 		"categories": [
 			0,
@@ -264,7 +247,6 @@ module.exports = {
 	},
 	"18": {
 		"id": 18,
-		"thumb": "/images/thumbnails/b01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -282,13 +264,12 @@ module.exports = {
 	},
 	"19": {
 		"id": 19,
-		"thumb": "/images/thumbnails/b12.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/b12-1.jpg",
-					"croppedImage": "/images/b12-1.jpg",
+					"originalImage": "http://lorempixel.com/200/200/?r=3",
+					"croppedImage": "http://lorempixel.com/200/200/?r=4",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -308,11 +289,10 @@ module.exports = {
 		"categories": [
 			0
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n\t\t\t<div class=\"text-center\">\n\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t</div>\n\n\t\t\t<div class=\"display text-center\">\n\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t</div>\n\n\t\t\t<p style=\"text-align: text-center\">{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n\t\t\t<div class=\"text-center\">\n\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t</div>\n\n\t\t\t<div class=\"display text-center\">\n\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t</div>\n\n\t\t\t<p style=\"text-align: text-center\">{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"20": {
 		"id": 20,
-		"thumb": "/images/thumbnails/b14.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -325,8 +305,8 @@ module.exports = {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/b14-1.jpg",
-					"croppedImage": "/images/b14-1.jpg",
+					"originalImage": "http://lorempixel.com/260/234/?r=5",
+					"croppedImage": "http://lorempixel.com/260/234/?r=6",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -337,8 +317,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/b14-2.jpg",
-					"croppedImage": "/images/b14-2.jpg",
+					"originalImage": "http://lorempixel.com/260/234/?r=7",
+					"croppedImage": "http://lorempixel.com/260/234/?r=8",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -349,8 +329,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/b14-3.jpg",
-					"croppedImage": "/images/b14-3.jpg",
+					"originalImage": "http://lorempixel.com/260/234/?r=9",
+					"croppedImage": "http://lorempixel.com/260/234/?r=10",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -366,13 +346,12 @@ module.exports = {
 	},
 	"21": {
 		"id": 21,
-		"thumb": "/images/thumbnails/g02.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g02-1.jpg",
-					"croppedImage": "/images/g02-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=11",
+					"croppedImage": "http://lorempixel.com/395/220/?r=12",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -389,11 +368,10 @@ module.exports = {
 			0,
 			6
 		],
-		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        \t</div>\n\t\t\t<div class=\"col-sm-6\">\n\n            \t\t<p>{{ item.data.content }}</p>\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n        \t</div>\n\t\t\t<div class=\"col-sm-6\">\n\n            \t\t<p>{{ item.data.content }}</p>\n\n        \t</div>\n\n\t</div>"
 	},
 	"22": {
 		"id": 22,
-		"thumb": "/images/thumbnails/g03.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -402,8 +380,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g03-1.jpg",
-					"croppedImage": "/images/g03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=13",
+					"croppedImage": "http://lorempixel.com/395/220/?r=14",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -416,11 +394,10 @@ module.exports = {
 			0,
 			6
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<p>{{ item.data.content }}</p>\n\n       \t\t </div>\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n       \t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<p>{{ item.data.content }}</p>\n\n       \t\t </div>\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n       \t\t</div>\n\n\t</div>"
 	},
 	"23": {
 		"id": 23,
-		"thumb": "/images/thumbnails/h01.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -429,8 +406,8 @@ module.exports = {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h01-1.jpg",
-					"croppedImage": "/images/h01-1.jpg",
+					"originalImage": "http://lorempixel.com/119/120/?r=15",
+					"croppedImage": "http://lorempixel.com/119/120/?r=16",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -441,8 +418,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h01-2.jpg",
-					"croppedImage": "/images/h01-2.jpg",
+					"originalImage": "http://lorempixel.com/119/120/?r=17",
+					"croppedImage": "http://lorempixel.com/119/120/?r=18",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -453,8 +430,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h01-3.jpg",
-					"croppedImage": "/images/h01-3.jpg",
+					"originalImage": "http://lorempixel.com/118/120/?r=19",
+					"croppedImage": "http://lorempixel.com/118/120/?r=20",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -471,13 +448,12 @@ module.exports = {
 	},
 	"24": {
 		"id": 24,
-		"thumb": "/images/thumbnails/h02.png",
 		"fields": {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h02-1.jpg",
-					"croppedImage": "/images/h02-1.jpg",
+					"originalImage": "http://lorempixel.com/119/120/?r=21",
+					"croppedImage": "http://lorempixel.com/119/120/?r=22",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -488,8 +464,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h02-2.jpg",
-					"croppedImage": "/images/h02-2.jpg",
+					"originalImage": "http://lorempixel.com/119/120/?r=23",
+					"croppedImage": "http://lorempixel.com/119/120/?r=24",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -500,8 +476,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/h02-3.jpg",
-					"croppedImage": "/images/h02-3.jpg",
+					"originalImage": "http://lorempixel.com/119/120/?r=25",
+					"croppedImage": "http://lorempixel.com/119/120/?r=26",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -522,13 +498,12 @@ module.exports = {
 	},
 	"25": {
 		"id": 25,
-		"thumb": "/images/thumbnails/o01.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/o01-1.jpg",
-					"croppedImage": "/images/o01-1.jpg",
+					"originalImage": "http://lorempixel.com/918/454/?r=27",
+					"croppedImage": "http://lorempixel.com/918/454/?r=28",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -541,17 +516,16 @@ module.exports = {
 			0,
 			12
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>"
 	},
 	"26": {
 		"id": 26,
-		"thumb": "/images/thumbnails/k06.png",
 		"fields": {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k06-1.jpg",
-					"croppedImage": "/images/k06-1.jpg",
+					"originalImage": "http://lorempixel.com/190/190/?r=29",
+					"croppedImage": "http://lorempixel.com/190/190/?r=30",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -566,8 +540,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k06-2.jpg",
-					"croppedImage": "/images/k06-2.jpg",
+					"originalImage": "http://lorempixel.com/190/190/?r=31",
+					"croppedImage": "http://lorempixel.com/190/190/?r=32",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -584,13 +558,12 @@ module.exports = {
 	},
 	"27": {
 		"id": 27,
-		"thumb": "/images/thumbnails/k02.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k02-2.jpg",
-					"croppedImage": "/images/k02-2.jpg",
+					"originalImage": "http://lorempixel.com/250/139/?r=35",
+					"croppedImage": "http://lorempixel.com/250/139/?r=36",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -609,8 +582,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k02-3.jpg",
-					"croppedImage": "/images/k02-3.jpg",
+					"originalImage": "http://lorempixel.com/250/139/?r=37",
+					"croppedImage": "http://lorempixel.com/250/139/?r=38",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -631,13 +604,12 @@ module.exports = {
 	},
 	"28": {
 		"id": 28,
-		"thumb": "/images/thumbnails/k01.png",
 		"fields": {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k01-1.jpg",
-					"croppedImage": "/images/k01-1.jpg",
+					"originalImage": "http://lorempixel.com/395/250/?r=39",
+					"croppedImage": "http://lorempixel.com/395/250/?r=40",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -652,8 +624,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k01-2.jpg",
-					"croppedImage": "/images/k01-2.jpg",
+					"originalImage": "http://lorempixel.com/395/250/?r=41",
+					"croppedImage": "http://lorempixel.com/395/250/?r=42",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -674,13 +646,12 @@ module.exports = {
 	},
 	"29": {
 		"id": 29,
-		"thumb": "/images/thumbnails/p01.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p01-1.jpg",
-					"croppedImage": "/images/p01-1.jpg",
+					"originalImage": "http://lorempixel.com/433/428/?r=43",
+					"croppedImage": "http://lorempixel.com/433/428/?r=44",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -708,11 +679,10 @@ module.exports = {
 			0,
 			13
 		],
-		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n       \t \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n           \t\t<div class=\"display\">\n\n               \t\t\t<h1>{{ item.data.title }}</h1>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n                \t\t</div>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n       \t \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n           \t\t<div class=\"display\">\n\n               \t\t\t<h1>{{ item.data.title }}</h1>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n                \t\t</div>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
 	},
 	"30": {
 		"id": 30,
-		"thumb": "/images/thumbnails/p02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -732,8 +702,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p02-1.jpg",
-					"croppedImage": "/images/p02-1.jpg",
+					"originalImage": "http://lorempixel.com/433/428/?r=45",
+					"croppedImage": "http://lorempixel.com/433/428/?r=46",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -746,17 +716,16 @@ module.exports = {
 			0,
 			13
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"display\">\n\n                \t\t<h1>{{ item.data.title }}</h1>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n                \t\t</div>\n\n            \t\t</div>\n\n        \t</div>\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"display\">\n\n                \t\t<h1>{{ item.data.title }}</h1>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n                \t\t</div>\n\n            \t\t</div>\n\n        \t</div>\n\n        \t<div class=\"col-sm-6\">\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n        \t</div>\n\n\t</div>"
 	},
 	"31": {
 		"id": 31,
-		"thumb": "/images/thumbnails/p03.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p03-1.jpg",
-					"croppedImage": "/images/p03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/290/?r=47",
+					"croppedImage": "http://lorempixel.com/395/290/?r=48",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -783,11 +752,10 @@ module.exports = {
 		"categories": [
 			13
 		],
-		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<h1>{{ item.data.title }}</h1>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n\n            \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n       </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n        \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<h1>{{ item.data.title }}</h1>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n\n            \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n       </div>\n\n\t</div>"
 	},
 	"32": {
 		"id": 32,
-		"thumb": "/images/thumbnails/p04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -807,8 +775,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p04-1.jpg",
-					"croppedImage": "/images/p04-1.jpg",
+					"originalImage": "http://lorempixel.com/395/290/?r=49",
+					"croppedImage": "http://lorempixel.com/395/290/?r=50",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -820,11 +788,10 @@ module.exports = {
 		"categories": [
 			13
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<h1>{{ item.data.title }}</h1>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n\n            \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n        \t</div>\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<h1>{{ item.data.title }}</h1>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n\n            \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n        \t</div>\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n        \t</div>\n\n\t</div>"
 	},
 	"33": {
 		"id": 33,
-		"thumb": "/images/thumbnails/p05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -850,7 +817,6 @@ module.exports = {
 	},
 	"34": {
 		"id": 34,
-		"thumb": "/images/thumbnails/p06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -876,7 +842,6 @@ module.exports = {
 	},
 	"35": {
 		"id": 35,
-		"thumb": "/images/thumbnails/p07.png",
 		"fields": {
 			"button1": {
 				"editor": "link",
@@ -901,7 +866,6 @@ module.exports = {
 	},
 	"36": {
 		"id": 36,
-		"thumb": "/images/thumbnails/q01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -920,7 +884,6 @@ module.exports = {
 	},
 	"37": {
 		"id": 37,
-		"thumb": "/images/thumbnails/q02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -939,7 +902,6 @@ module.exports = {
 	},
 	"38": {
 		"id": 38,
-		"thumb": "/images/thumbnails/q30.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -958,7 +920,6 @@ module.exports = {
 	},
 	"39": {
 		"id": 39,
-		"thumb": "/images/thumbnails/q31.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -977,7 +938,6 @@ module.exports = {
 	},
 	"40": {
 		"id": 40,
-		"thumb": "/images/thumbnails/r01.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -992,7 +952,6 @@ module.exports = {
 	},
 	"41": {
 		"id": 41,
-		"thumb": "/images/thumbnails/r02.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -1007,13 +966,12 @@ module.exports = {
 	},
 	"42": {
 		"id": 42,
-		"thumb": "/images/thumbnails/r03.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r03-1.jpg",
-					"croppedImage": "/images/r03-1.jpg",
+					"originalImage": "http://lorempixel.com/250/250/?r=51",
+					"croppedImage": "http://lorempixel.com/250/250/?r=52",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1034,11 +992,10 @@ module.exports = {
 			0,
 			15
 		],
-		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6 text-center\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:1.5em\">\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"quote\">\n\n                \t\t<i class=\"icon ion-quote\"></i>\n\n\t            \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<small>{{ item.data.name }}</small>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-6 text-center\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:1.5em\">\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"quote\">\n\n                \t\t<i class=\"icon ion-quote\"></i>\n\n\t            \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<small>{{ item.data.name }}</small>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
 	},
 	"43": {
 		"id": 43,
-		"thumb": "/images/thumbnails/r04.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -1047,8 +1004,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r04-1.jpg",
-					"croppedImage": "/images/r04-1.jpg",
+					"originalImage": "http://lorempixel.com/250/250/?r=53",
+					"croppedImage": "http://lorempixel.com/250/250/?r=54",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1061,17 +1018,16 @@ module.exports = {
 			0,
 			15
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"quote\">\n\n                \t\t<i class=\"icon ion-quote\"></i>\n\n\t            \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<small>by Your Name</small>\n\n            \t\t</div>\n\n        \t</div>\n\n       \t\t<div class=\"col-sm-6 text-center\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:1.5em\">\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            \t\t<div class=\"quote\">\n\n                \t\t<i class=\"icon ion-quote\"></i>\n\n\t            \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<small>by Your Name</small>\n\n            \t\t</div>\n\n        \t</div>\n\n       \t\t<div class=\"col-sm-6 text-center\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:1.5em\">\n\n        \t</div>\n\n\t</div>"
 	},
 	"44": {
 		"id": 44,
-		"thumb": "/images/thumbnails/s01.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/s01-1.jpg",
-					"croppedImage": "/images/s01-1.jpg",
+					"originalImage": "http://lorempixel.com/90/90/?r=55",
+					"croppedImage": "http://lorempixel.com/90/90/?r=56",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1084,17 +1040,16 @@ module.exports = {
 			0,
 			16
 		],
-		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-2 text-center\">\n\n                <p><img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:5px;\"></p>\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-10\">\n\n            \t\t<p>\n\n                \t<b>Sara Phillipps</b><br>A freelance web designer &amp; developer based in Melbourne, Australia.\n\n            \t\t</p>\n\n            \t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<!--<a href=\"#\"><i class=\"icon ion-social-github\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-dribbble\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-pinterest\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-linkedin\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-instagram\"></i></a>-->\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n           \t \t</div>\n\n       \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        \t<div class=\"col-sm-2 text-center\">\n\n                <p><img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:5px;\"></p>\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-10\">\n\n            \t\t<p>\n\n                \t<b>Sara Phillipps</b><br>A freelance web designer &amp; developer based in Melbourne, Australia.\n\n            \t\t</p>\n\n            \t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<!--<a href=\"#\"><i class=\"icon ion-social-github\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-dribbble\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-pinterest\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-linkedin\"></i></a>\n\n                \t\t<a href=\"#\"><i class=\"icon ion-social-instagram\"></i></a>-->\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n           \t \t</div>\n\n       \t</div>\n\n\t</div>"
 	},
 	"45": {
 		"id": 45,
-		"thumb": "/images/thumbnails/s03.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/s03-1.jpg",
-					"croppedImage": "/images/s03-1.jpg",
+					"originalImage": "http://lorempixel.com/595/298/?r=57",
+					"croppedImage": "http://lorempixel.com/595/298/?r=58",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1115,17 +1070,16 @@ module.exports = {
 			0,
 			16
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-8\">\n          \n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n \t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<h2>{{ item.data.subheading }}</h2>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n       </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-8\">\n          \n\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n \t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<h2>{{ item.data.subheading }}</h2>\n\n            \t\t<p>{{ item.data.content }}</p>\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n       </div>\n\n\t</div>"
 	},
 	"46": {
 		"id": 46,
-		"thumb": "/images/thumbnails/s10.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/s10-2.jpg",
-					"croppedImage": "/images/s10-2.jpg",
+					"originalImage": "http://lorempixel.com/93/90/?r=61",
+					"croppedImage": "http://lorempixel.com/93/90/?r=62",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1142,11 +1096,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n\t        <div class=\"row\">\n\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\n\t\t\t\t    <p><img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:10px;\"></p>\n\n\t\t\t    </div>\n\n\t\t\t    <div class=\"col-sm-8\">\n\n\t\t\t\t    <p>{{ item.data.content }}</p>\n\n\t\t\t\t    <div class=\"is-social edit\">\n\n                \t\t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t\t    </div>\n\n\t\t\t    </div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n\t        <div class=\"row\">\n\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\n\t\t\t\t    <p><img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:10px;\"></p>\n\n\t\t\t    </div>\n\n\t\t\t    <div class=\"col-sm-8\">\n\n\t\t\t\t    <p>{{ item.data.content }}</p>\n\n\t\t\t\t    <div class=\"is-social edit\">\n\n                \t\t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t\t    </div>\n\n\t\t\t    </div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n\t        <div class=\"row\">\n\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\n\t\t\t\t    <p><img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:10px;\"></p>\n\n\t\t\t    </div>\n\n\t\t\t    <div class=\"col-sm-8\">\n\n\t\t\t\t    <p>{{ item.data.content }}</p>\n\n\t\t\t\t    <div class=\"is-social edit\">\n\n                \t\t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t\t    </div>\n\n\t\t\t    </div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n\t        <div class=\"row\">\n\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\n\t\t\t\t    <p><img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px;margin-top:10px;\"></p>\n\n\t\t\t    </div>\n\n\t\t\t    <div class=\"col-sm-8\">\n\n\t\t\t\t    <p>{{ item.data.content }}</p>\n\n\t\t\t\t    <div class=\"is-social edit\">\n\n                \t\t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t\t    </div>\n\n\t\t\t    </div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"47": {
 		"id": 47,
-		"thumb": "/images/thumbnails/t01.png",
 		"fields": {},
 		"categories": [
 			0,
@@ -1157,7 +1110,6 @@ module.exports = {
 	},
 	"48": {
 		"id": 48,
-		"thumb": "/images/thumbnails/t02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1189,7 +1141,6 @@ module.exports = {
 	},
 	"49": {
 		"id": 49,
-		"thumb": "/images/thumbnails/o02.png",
 		"fields": {
 			"video": {
 				"editor": "text",
@@ -1204,7 +1155,6 @@ module.exports = {
 	},
 	"50": {
 		"id": 50,
-		"thumb": "/images/thumbnails/e13.png",
 		"fields": {
 			"video": {
 				"editor": "text",
@@ -1228,7 +1178,6 @@ module.exports = {
 	},
 	"51": {
 		"id": 51,
-		"thumb": "/images/thumbnails/e14.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1252,7 +1201,6 @@ module.exports = {
 	},
 	"52": {
 		"id": 52,
-		"thumb": "/images/thumbnails/u04.png",
 		"fields": {},
 		"categories": [
 			0,
@@ -1262,13 +1210,12 @@ module.exports = {
 	},
 	"53": {
 		"id": 53,
-		"thumb": "/images/thumbnails/n15.png",
 		"fields": {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k01-1.jpg",
-					"croppedImage": "/images/k01-1.jpg",
+					"originalImage": "http://lorempixel.com/395/250/?r=63",
+					"croppedImage": "http://lorempixel.com/395/250/?r=64",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1279,8 +1226,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k01-2.jpg",
-					"croppedImage": "/images/k01-2.jpg",
+					"originalImage": "http://lorempixel.com/395/250/?r=65",
+					"croppedImage": "http://lorempixel.com/395/250/?r=66",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1296,13 +1243,12 @@ module.exports = {
 	},
 	"54": {
 		"id": 54,
-		"thumb": "/images/thumbnails/n16.png",
 		"fields": {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k02-1.jpg",
-					"croppedImage": "/images/k02-1.jpg",
+					"originalImage": "http://lorempixel.com/250/139/?r=67",
+					"croppedImage": "http://lorempixel.com/250/139/?r=68",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1313,8 +1259,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k02-2.jpg",
-					"croppedImage": "/images/k02-2.jpg",
+					"originalImage": "http://lorempixel.com/250/139/?r=69",
+					"croppedImage": "http://lorempixel.com/250/139/?r=70",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1325,8 +1271,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k02-3.jpg",
-					"croppedImage": "/images/k02-3.jpg",
+					"originalImage": "http://lorempixel.com/250/139/?r=71",
+					"croppedImage": "http://lorempixel.com/250/139/?r=72",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1342,7 +1288,6 @@ module.exports = {
 	},
 	"55": {
 		"id": 55,
-		"thumb": "/images/thumbnails/p34.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1355,8 +1300,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p34-1.png",
-					"croppedImage": "/images/p34-1.png",
+					"originalImage": "http://lorempixel.com/460/380/?r=73",
+					"croppedImage": "http://lorempixel.com/460/380/?r=74",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1384,11 +1329,10 @@ module.exports = {
 			0,
 			13
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-xs-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1 style=\"font-size: 3.5em\">{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n \t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n\t\t\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n      \n\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n                \t\t<h2>{{ item.data.subheading }}</h2>\n\n                \t\t<p>{{ item.data.subContent }}</p>\n\n                \t\t<div style=\"margin:1.3em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px;\">{{ item.data.buttonText.display }}</a>\n\n            \t\t\t</div>\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-xs-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1 style=\"font-size: 3.5em\">{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n \t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n\t\t\n                    <img :src=\"item.data.image.croppedImage\">\n      \n\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n                \t\t<h2>{{ item.data.subheading }}</h2>\n\n                \t\t<p>{{ item.data.subContent }}</p>\n\n                \t\t<div style=\"margin:1.3em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px;\">{{ item.data.buttonText.display }}</a>\n\n            \t\t\t</div>\n\n        \t</div>\n\n\t</div>"
 	},
 	"56": {
 		"id": 56,
-		"thumb": "/images/thumbnails/p35.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1407,7 +1351,6 @@ module.exports = {
 	},
 	"57": {
 		"id": 57,
-		"thumb": "/images/thumbnails/p36.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1425,7 +1368,6 @@ module.exports = {
 	},
 	"58": {
 		"id": 58,
-		"thumb": "/images/thumbnails/p38.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1448,13 +1390,12 @@ module.exports = {
 	},
 	"59": {
 		"id": 59,
-		"thumb": "/images/thumbnails/p42.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p42-1.jpg",
-					"croppedImage": "/images/p42-1.jpg",
+					"originalImage": "http://lorempixel.com/65/65/?r=75",
+					"croppedImage": "http://lorempixel.com/65/65/?r=76",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1471,11 +1412,10 @@ module.exports = {
 			0,
 			13
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t<h3>{{ item.data.title }}</h3>\n\t\t\t<div class=\"display\">\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div style=\"margin:0.5em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-default btn-lg edit\" style=\"border-radius:50px\">Read More</a> &nbsp;\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius:50px\">Download</a>\n            </div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t<h3>{{ item.data.title }}</h3>\n\t\t\t<div class=\"display\">\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div style=\"margin:0.5em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-default btn-lg edit\" style=\"border-radius:50px\">Read More</a> &nbsp;\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius:50px\">Download</a>\n            </div>\n        </div>\n\t</div>"
 	},
 	"60": {
 		"id": 60,
-		"thumb": "/images/thumbnails/p43.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1494,7 +1434,6 @@ module.exports = {
 	},
 	"61": {
 		"id": 61,
-		"thumb": "/images/thumbnails/p44.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1513,7 +1452,6 @@ module.exports = {
 	},
 	"62": {
 		"id": 62,
-		"thumb": "/images/thumbnails/p46.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1532,7 +1470,6 @@ module.exports = {
 	},
 	"63": {
 		"id": 63,
-		"thumb": "/images/thumbnails/p47.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1551,7 +1488,6 @@ module.exports = {
 	},
 	"64": {
 		"id": 64,
-		"thumb": "/images/thumbnails/p50.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1569,7 +1505,6 @@ module.exports = {
 	},
 	"65": {
 		"id": 65,
-		"thumb": "/images/thumbnails/q20.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1578,8 +1513,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/q20-1.png",
-					"croppedImage": "/images/q20-1.png",
+					"originalImage": "http://lorempixel.com/430/350/?r=77",
+					"croppedImage": "http://lorempixel.com/430/350/?r=78",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1615,11 +1550,10 @@ module.exports = {
 		"categories": [
 			14
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n                    <h1 style=\"text-align: center; font-size: 3em\">{{ item.data.title }}</h1>        \n\n                </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\n        \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n\t\t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title1 }}</h3>\n\n                \t\t<p>{{ item.data.content1 }}</p>\n\n            \t\t</div>\n\n\t\t\t<div class=\"list\">\n\n               \t \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title2 }}</h3>\n\n                \t\t<p>{{ item.data.content2 }}</p>\n\n            \t\t</div>\n\n\t\t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title3 }}</h3>\n\n                \t\t<p>{{ item.data.content3 }}</p>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n                    <h1 style=\"text-align: center; font-size: 3em\">{{ item.data.title }}</h1>        \n\n                </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n\n        \t</div>\n\n\t\t<div class=\"col-sm-6\">\n\n\t\t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title1 }}</h3>\n\n                \t\t<p>{{ item.data.content1 }}</p>\n\n            \t\t</div>\n\n\t\t\t<div class=\"list\">\n\n               \t \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title2 }}</h3>\n\n                \t\t<p>{{ item.data.content2 }}</p>\n\n            \t\t</div>\n\n\t\t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title3 }}</h3>\n\n                \t\t<p>{{ item.data.content3 }}</p>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>"
 	},
 	"66": {
 		"id": 66,
-		"thumb": "/images/thumbnails/q21.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1628,8 +1562,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/q21-3.jpg",
-					"croppedImage": "/images/q21-3.jpg",
+					"originalImage": "http://lorempixel.com/250/250/?r=83",
+					"croppedImage": "http://lorempixel.com/250/250/?r=84",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1665,11 +1599,10 @@ module.exports = {
 		"categories": [
 			14
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n                    <h1 style=\"text-align: center; font-size: 3em\">{{ item.data.title }}</h1>\n\n                </div>\n\n\t</div>\n\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title1 }}</h3>\n\n                \t\t<p>{{ item.data.content1 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n        <div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title2 }}</h3>\n\n                \t\t<p>{{ item.data.content2 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n        <div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title3 }}</h3>\n\n                \t\t<p>{{ item.data.content3 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n                    <h1 style=\"text-align: center; font-size: 3em\">{{ item.data.title }}</h1>\n\n                </div>\n\n\t</div>\n\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title1 }}</h3>\n\n                \t\t<p>{{ item.data.content1 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n        <div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title2 }}</h3>\n\n                \t\t<p>{{ item.data.content2 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n        <div class=\"col-sm-4\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t\t<br><br>\n            \t\t<div class=\"list\">\n\n                \t\t<i class=\"icon ion-checkmark\"></i>\n\n                \t\t<h3>{{ item.data.title3 }}</h3>\n\n                \t\t<p>{{ item.data.content3 }}</p>\n\n            \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t</div>"
 	},
 	"67": {
 		"id": 67,
-		"thumb": "/images/thumbnails/q24.png",
 		"fields": {
 			"title1": {
 				"editor": "text",
@@ -1695,7 +1628,6 @@ module.exports = {
 	},
 	"68": {
 		"id": 68,
-		"thumb": "/images/thumbnails/q25.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1709,7 +1641,6 @@ module.exports = {
 	},
 	"69": {
 		"id": 69,
-		"thumb": "/images/thumbnails/q26.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1718,8 +1649,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/q26-2.jpg",
-					"croppedImage": "/images/q26-2.jpg",
+					"originalImage": "http://lorempixel.com/355/185/?r=87",
+					"croppedImage": "http://lorempixel.com/355/185/?r=88",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1763,11 +1694,10 @@ module.exports = {
 		"categories": [
 			14
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title1 }}</h3>\n                \t\t<p>{{ item.data.content1 }}</p>\n            \t</div>\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title2 }}</h3>\n                \t\t<p>{{ item.data.content2 }}</p>\n            \t</div>\n\t\t</div>\n\t\t<div class=\"col-sm-6\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title3 }}</h3>\n                \t\t<p>{{ item.data.content3 }}</p>\n            \t</div>\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title4 }}</h3>\n                \t\t<p>{{ item.data.content4 }}</p>\n            \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title1 }}</h3>\n                \t\t<p>{{ item.data.content1 }}</p>\n            \t</div>\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title2 }}</h3>\n                \t\t<p>{{ item.data.content2 }}</p>\n            \t</div>\n\t\t</div>\n\t\t<div class=\"col-sm-6\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title3 }}</h3>\n                \t\t<p>{{ item.data.content3 }}</p>\n            \t</div>\n\t\t\t\t<div class=\"list\">\n                \t\t<i class=\"icon ion-checkmark\"></i>\n                \t\t<h3>{{ item.data.title4 }}</h3>\n                \t\t<p>{{ item.data.content4 }}</p>\n            \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"70": {
 		"id": 70,
-		"thumb": "/images/thumbnails/q27.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1805,7 +1735,6 @@ module.exports = {
 	},
 	"71": {
 		"id": 71,
-		"thumb": "/images/thumbnails/q28.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1823,7 +1752,6 @@ module.exports = {
 	},
 	"72": {
 		"id": 72,
-		"thumb": "/images/thumbnails/q29.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1841,7 +1769,6 @@ module.exports = {
 	},
 	"73": {
 		"id": 73,
-		"thumb": "/images/thumbnails/r22.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1860,7 +1787,6 @@ module.exports = {
 	},
 	"74": {
 		"id": 74,
-		"thumb": "/images/thumbnails/r23.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1869,8 +1795,8 @@ module.exports = {
 			"image1": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r23-1.jpg",
-					"croppedImage": "/images/r23-1.jpg",
+					"originalImage": "http://lorempixel.com/140/140/?r=89",
+					"croppedImage": "http://lorempixel.com/140/140/?r=90",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1889,8 +1815,8 @@ module.exports = {
 			"image2": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r23-2.jpg",
-					"croppedImage": "/images/r23-2.jpg",
+					"originalImage": "http://lorempixel.com/140/140/?r=91",
+					"croppedImage": "http://lorempixel.com/140/140/?r=92",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1909,8 +1835,8 @@ module.exports = {
 			"image3": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r23-3.jpg",
-					"croppedImage": "/images/r23-3.jpg",
+					"originalImage": "http://lorempixel.com/140/140/?r=93",
+					"croppedImage": "http://lorempixel.com/140/140/?r=94",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1935,7 +1861,6 @@ module.exports = {
 	},
 	"75": {
 		"id": 75,
-		"thumb": "/images/thumbnails/r25.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1944,8 +1869,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r25-2.jpg",
-					"croppedImage": "/images/r25-2.jpg",
+					"originalImage": "http://lorempixel.com/180/180/?r=97",
+					"croppedImage": "http://lorempixel.com/180/180/?r=98",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -1962,11 +1887,10 @@ module.exports = {
 			0,
 			15
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t<br>\n\t        <p>{{ item.data.content }}</p>\n            <p><b>Your Name, </b>Lorem Ipsum</p>\n        </div>\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t<br>\n\t        <p>{{ item.data.content }}</p>\n        \t<p><b>Your Name, </b>Lorem Ipsum</p>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t<br>\n\t        <p>{{ item.data.content }}</p>\n            <p><b>Your Name, </b>Lorem Ipsum</p>\n        </div>\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t<br>\n\t        <p>{{ item.data.content }}</p>\n        \t<p><b>Your Name, </b>Lorem Ipsum</p>\n        </div>\n\t</div>"
 	},
 	"76": {
 		"id": 76,
-		"thumb": "/images/thumbnails/r27.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1984,7 +1908,6 @@ module.exports = {
 	},
 	"77": {
 		"id": 77,
-		"thumb": "/images/thumbnails/r28.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -1993,8 +1916,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/r28-2.jpg",
-					"croppedImage": "/images/r28-2.jpg",
+					"originalImage": "http://lorempixel.com/94/94/?r=101",
+					"croppedImage": "http://lorempixel.com/94/94/?r=102",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2007,11 +1930,10 @@ module.exports = {
 			0,
 			15
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<p style=\"font-size:1.2em\"><i>\"Lorem ipsum dolor sit amet, adipiscing elit. Vivamus leo ante.\"</i></p>\n\t\t\t\t\t<p><b><i>By Your Name</i></b></p>\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<p style=\"font-size:1.2em\"><i>\"Lorem ipsum dolor sit amet, adipiscing elit. Vivamus leo ante.\"</i></p>\n\t\t\t\t\t<p><b><i>By Your Name</i></b></p>\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<p style=\"font-size:1.2em\"><i>\"Lorem ipsum dolor sit amet, adipiscing elit. Vivamus leo ante.\"</i></p>\n\t\t\t\t\t<p><b><i>By Your Name</i></b></p>\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n\t\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<p style=\"font-size:1.2em\"><i>\"Lorem ipsum dolor sit amet, adipiscing elit. Vivamus leo ante.\"</i></p>\n\t\t\t\t\t<p><b><i>By Your Name</i></b></p>\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
 	},
 	"78": {
 		"id": 78,
-		"thumb": "/images/thumbnails/u10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2030,7 +1952,6 @@ module.exports = {
 	},
 	"79": {
 		"id": 79,
-		"thumb": "/images/thumbnails/u11.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2045,7 +1966,6 @@ module.exports = {
 	},
 	"80": {
 		"id": 80,
-		"thumb": "/images/thumbnails/u12.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2064,7 +1984,6 @@ module.exports = {
 	},
 	"81": {
 		"id": 81,
-		"thumb": "/images/thumbnails/u13.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2083,7 +2002,6 @@ module.exports = {
 	},
 	"82": {
 		"id": 82,
-		"thumb": "/images/thumbnails/u14.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2101,7 +2019,6 @@ module.exports = {
 	},
 	"83": {
 		"id": 83,
-		"thumb": "/images/thumbnails/w01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2120,7 +2037,6 @@ module.exports = {
 	},
 	"84": {
 		"id": 84,
-		"thumb": "/images/thumbnails/w02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2135,7 +2051,6 @@ module.exports = {
 	},
 	"85": {
 		"id": 85,
-		"thumb": "/images/thumbnails/w04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2148,8 +2063,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/w04-1.png",
-					"croppedImage": "/images/w04-1.png",
+					"originalImage": "http://lorempixel.com/450/330/?r=103",
+					"croppedImage": "http://lorempixel.com/450/330/?r=104",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2162,11 +2077,10 @@ module.exports = {
 			0,
 			21
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n          \t\t\n            <div style=\"margin:30px 0 0 0\">\n                <p><i class=\"icon ion-ios-heart-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\n                <p><i class=\"icon ion-ios-compose-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\n                <p><i class=\"icon ion-ios-gear-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\t\t\t</div>\n\n     \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n          \t\t\n            <div style=\"margin:30px 0 0 0\">\n                <p><i class=\"icon ion-ios-heart-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\n                <p><i class=\"icon ion-ios-compose-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\n                <p><i class=\"icon ion-ios-gear-outline size-48\" style=\"vertical-align: middle;margin-right:30px;\"></i> Lorem Ipsum is simply dummy text.</p>\n\t\t\t</div>\n\n     \t</div>\n\n\t</div>"
 	},
 	"86": {
 		"id": 86,
-		"thumb": "/images/thumbnails/w05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2175,8 +2089,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/w05-1.png",
-					"croppedImage": "/images/w05-1.png",
+					"originalImage": "http://lorempixel.com/460/380/?r=105",
+					"croppedImage": "http://lorempixel.com/460/380/?r=106",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2199,11 +2113,10 @@ module.exports = {
 		"categories": [
 			21
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n                    <h1 style=\"font-size: 3em; margin: 1.2em 0\">{{ item.data.title }}</h1>\n\n                </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n                \t\t<h3>{{ item.data.title }}</h3>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-compose-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-camera-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\n        \t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-paperplane-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\n        \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n                    <h1 style=\"font-size: 3em; margin: 1.2em 0\">{{ item.data.title }}</h1>\n\n                </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n        \t<div class=\"col-sm-6\">\n\n            \t\t<img :src=\"item.data.image.croppedImage\">\n\n        \t</div>\n\n\t\t\t<div class=\"col-sm-6\">\n\n                \t\t<h3>{{ item.data.title }}</h3>\n\n                \t\t<p>{{ item.data.content }}</p>\n\n                \t\t<div style=\"margin:1em 0 2.5em;\">\n\n                \t\t\t<a :href=\"item.data.buttonText.href\" class=\"btn btn-primary btn-lg edit\">{{ item.data.buttonText.display }}</a>\n\n            \t\t</div>\n\n        \t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-compose-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-camera-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\n        \t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<i class=\"icon ion-ios-paperplane-outline size-80\"></i>\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\n        \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"87": {
 		"id": 87,
-		"thumb": "/images/thumbnails/w06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2218,7 +2131,6 @@ module.exports = {
 	},
 	"88": {
 		"id": 88,
-		"thumb": "/images/thumbnails/w07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2237,7 +2149,6 @@ module.exports = {
 	},
 	"89": {
 		"id": 89,
-		"thumb": "/images/thumbnails/w10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2256,7 +2167,6 @@ module.exports = {
 	},
 	"90": {
 		"id": 90,
-		"thumb": "/images/thumbnails/x01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2275,7 +2185,6 @@ module.exports = {
 	},
 	"91": {
 		"id": 91,
-		"thumb": "/images/thumbnails/x05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2293,7 +2202,6 @@ module.exports = {
 	},
 	"92": {
 		"id": 92,
-		"thumb": "/images/thumbnails/x09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2311,7 +2219,6 @@ module.exports = {
 	},
 	"93": {
 		"id": 93,
-		"thumb": "/images/thumbnails/x10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2331,7 +2238,6 @@ module.exports = {
 	},
 	"94": {
 		"id": 94,
-		"thumb": "/images/thumbnails/x11.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2350,7 +2256,6 @@ module.exports = {
 	},
 	"95": {
 		"id": 95,
-		"thumb": "/images/thumbnails/x12.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2363,8 +2268,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/x12-1.jpg",
-					"croppedImage": "/images/x12-1.jpg",
+					"originalImage": "http://lorempixel.com/395/230/?r=107",
+					"croppedImage": "http://lorempixel.com/395/230/?r=108",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2377,11 +2282,10 @@ module.exports = {
 			0,
 			22
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <h1>{{ item.data.title }}</h1>\n\t\t\t<p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"margin-top: 0px;\">\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <h3 style=\"margin-top:0\">{{ item.data.title }}</h3>\n\t\t\t<p>\n              123 Street, City<br>\n              State 12345<br>\n              P: (123) 456 7890 / 456 7891\n            </p>\n\t\t\t<div class=\"is-social edit\">\n                <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\t\t\t\t<a href=\"https://www.pinterest.com/\"><i class=\"icon ion-social-pinterest-outline\" style=\"margin-right: 1em\"></i></a>\n                <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\t\t\t\t<a href=\"https://www.instagram.com/\"><i class=\"icon ion-social-instagram-outline\"></i></a>\n\t\t\t</div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <h1>{{ item.data.title }}</h1>\n\t\t\t<p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\" style=\"margin-top: 0px;\">\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <h3 style=\"margin-top:0\">{{ item.data.title }}</h3>\n\t\t\t<p>\n              123 Street, City<br>\n              State 12345<br>\n              P: (123) 456 7890 / 456 7891\n            </p>\n\t\t\t<div class=\"is-social edit\">\n                <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\t\t\t\t<a href=\"https://www.pinterest.com/\"><i class=\"icon ion-social-pinterest-outline\" style=\"margin-right: 1em\"></i></a>\n                <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\t\t\t\t<a href=\"https://www.instagram.com/\"><i class=\"icon ion-social-instagram-outline\"></i></a>\n\t\t\t</div>\n        </div>\n\t</div>"
 	},
 	"96": {
 		"id": 96,
-		"thumb": "/images/thumbnails/y01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2400,7 +2304,6 @@ module.exports = {
 	},
 	"97": {
 		"id": 97,
-		"thumb": "/images/thumbnails/y02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2419,7 +2322,6 @@ module.exports = {
 	},
 	"98": {
 		"id": 98,
-		"thumb": "/images/thumbnails/y03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2438,7 +2340,6 @@ module.exports = {
 	},
 	"99": {
 		"id": 99,
-		"thumb": "/images/thumbnails/y04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2457,7 +2358,6 @@ module.exports = {
 	},
 	"100": {
 		"id": 100,
-		"thumb": "/images/thumbnails/y05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2472,7 +2372,6 @@ module.exports = {
 	},
 	"101": {
 		"id": 101,
-		"thumb": "/images/thumbnails/y06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2487,7 +2386,6 @@ module.exports = {
 	},
 	"102": {
 		"id": 102,
-		"thumb": "/images/thumbnails/y07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2510,7 +2408,6 @@ module.exports = {
 	},
 	"103": {
 		"id": 103,
-		"thumb": "/images/thumbnails/y08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2529,7 +2426,6 @@ module.exports = {
 	},
 	"104": {
 		"id": 104,
-		"thumb": "/images/thumbnails/y09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2544,7 +2440,6 @@ module.exports = {
 	},
 	"105": {
 		"id": 105,
-		"thumb": "/images/thumbnails/y10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2595,7 +2490,6 @@ module.exports = {
 	},
 	"106": {
 		"id": 106,
-		"thumb": "/images/thumbnails/z01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2604,8 +2498,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z01-2.jpg",
-					"croppedImage": "/images/z01-2.jpg",
+					"originalImage": "http://lorempixel.com/180/180/?r=111",
+					"croppedImage": "http://lorempixel.com/180/180/?r=112",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2622,11 +2516,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1 style=\"font-size: 3.5em\">{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px; margin-top: 1em\">\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t</div>          \n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px; margin-top: 1em\">\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t</div>         \n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n\t\t\t\t<h1 style=\"font-size: 3.5em\">{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px; margin-top: 1em\">\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t</div>          \n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px; margin-top: 1em\">\n\n\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t</div>         \n\n\t\t</div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"107": {
 		"id": 107,
-		"thumb": "/images/thumbnails/z02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2639,8 +2532,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z02-3.jpg",
-					"croppedImage": "/images/z02-3.jpg",
+					"originalImage": "http://lorempixel.com/93/90/?r=115",
+					"croppedImage": "http://lorempixel.com/93/90/?r=116",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2653,11 +2546,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            \t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\t\t    \t<p>{{ item.data.content }}</p>\n        \t</div>\n\t</div>\t\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\t\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t    </div>\n\t\t\t    <div class=\"col-sm-8\">\n\t\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t\t<div class=\"is-social edit\">\n                \t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n                \t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n                \t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n                \t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t        </div>\n\t\t\t    </div>\n\t\t    </div>\n\t    \t</div>\n\t    <div class=\"col-sm-6\">\n\t\t    <div class=\"row\">\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\t\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t    </div>\n\t\t\t    <div class=\"col-sm-8\">\n\t\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\t\t\t\t    \n\t\t\t\t<div class=\"is-social edit\">\n                \t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n                \t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n                \t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n                \t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t        </div>\n\t\t\t    </div>\n\t\t    </div>\n\t    </div>\n    \t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            \t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\t\t    \t<p>{{ item.data.content }}</p>\n        \t</div>\n\t</div>\t\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\t\t\t\t    <img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t    </div>\n\t\t\t    <div class=\"col-sm-8\">\n\t\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t\t<div class=\"is-social edit\">\n                \t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n                \t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n                \t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n                \t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t        </div>\n\t\t\t    </div>\n\t\t    </div>\n\t    \t</div>\n\t    <div class=\"col-sm-6\">\n\t\t    <div class=\"row\">\n\t\t\t    <div class=\"col-sm-4 text-center\">\n\t\t\t\t    <img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\t\t\t    </div>\n\t\t\t    <div class=\"col-sm-8\">\n\t\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\t\t\t\t    \n\t\t\t\t<div class=\"is-social edit\">\n                \t\t    <a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n                \t\t    <a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n                \t\t    <a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n                \t\t    <a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t        </div>\n\t\t\t    </div>\n\t\t    </div>\n\t    </div>\n    \t</div>"
 	},
 	"108": {
 		"id": 108,
-		"thumb": "/images/thumbnails/z03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2670,8 +2562,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z03-2.jpg",
-					"croppedImage": "/images/z03-2.jpg",
+					"originalImage": "http://lorempixel.com/250/250/?r=119",
+					"croppedImage": "http://lorempixel.com/250/250/?r=120",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2684,11 +2576,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius:500px\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div class=\"is-social edit\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>"
 	},
 	"109": {
 		"id": 109,
-		"thumb": "/images/thumbnails/z05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2697,8 +2588,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z05-3.jpg",
-					"croppedImage": "/images/z05-3.jpg",
+					"originalImage": "http://lorempixel.com/110/110/?r=125",
+					"croppedImage": "http://lorempixel.com/110/110/?r=126",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2715,11 +2606,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            \t<h1 style=\"margin:1.2em 0;font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\t\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>              \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n            \t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>    \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>         \n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            \t<h1 style=\"margin:1.2em 0;font-size:3em\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\t\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>              \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n            \t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>    \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>         \n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"110": {
 		"id": 110,
-		"thumb": "/images/thumbnails/z06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2732,8 +2622,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z06-4.jpg",
-					"croppedImage": "/images/z06-4.jpg",
+					"originalImage": "http://lorempixel.com/130/130/?r=133",
+					"croppedImage": "http://lorempixel.com/130/130/?r=134",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2746,11 +2636,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1>{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1>{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n            <p><b>Your Name</b><br>Lorem Ipsum is simply.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div> \n        </div>\n\t</div>"
 	},
 	"111": {
 		"id": 111,
-		"thumb": "/images/thumbnails/z07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2763,8 +2652,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z07-2.jpg",
-					"croppedImage": "/images/z07-2.jpg",
+					"originalImage": "http://lorempixel.com/160/160/?r=137",
+					"croppedImage": "http://lorempixel.com/160/160/?r=138",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2777,11 +2666,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"display\">\n                <h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3\">\n\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply dummy text of the printing industry.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div>   \n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3\">\n\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply dummy text of the printing industry.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div>   \n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"display\">\n                <h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3\">\n\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply dummy text of the printing industry.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div>   \n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3 text-center\">\n\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t</div>\n\t\n\t\t<div class=\"col-sm-3\">\n\t\t\t<p><b>Your Name</b><br>Lorem Ipsum is simply dummy text of the printing industry.</p>\n\t\t\t<div class=\"is-social edit\">\n                \t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t</div>   \n\t\t</div>\n\t</div>"
 	},
 	"112": {
 		"id": 112,
-		"thumb": "/images/thumbnails/z09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2794,8 +2682,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z09-2.jpg",
-					"croppedImage": "/images/z09-2.jpg",
+					"originalImage": "http://lorempixel.com/140/140/?r=141",
+					"croppedImage": "http://lorempixel.com/140/140/?r=142",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2808,11 +2696,10 @@ module.exports = {
 			0,
 			24
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"display\">\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n\t\t\t<p>{{ item.data.content }}</p>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>  \n            \t</div>\n        \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"display\">\n\t\t\t\t<h1>{{ item.data.title }}</h1>\n\t\t\t</div>\n\t\t\t<p>{{ item.data.content }}</p>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>  \n            \t</div>\n        \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"113": {
 		"id": 113,
-		"thumb": "/images/thumbnails/ab01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2825,8 +2712,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab01-6.jpg",
-					"croppedImage": "/images/ab01-6.jpg",
+					"originalImage": "http://lorempixel.com/250/140/?r=153",
+					"croppedImage": "http://lorempixel.com/250/140/?r=154",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2839,11 +2726,10 @@ module.exports = {
 			0,
 			25
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n\t\t\t<div class=\"display text-center\">\n\n            \t<h1>{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\t\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\t\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12\">\n\n\t\t\t<div class=\"display text-center\">\n\n            \t<h1>{{ item.data.title }}</h1>\n\n\t\t\t</div>\n\n\t\t\t<p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n            <img :src=\"item.data.image.croppedImage\">\t\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n            <img :src=\"item.data.image.croppedImage\">\t\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n        <div class=\"col-sm-4\">\n\n\t\t    <img :src=\"item.data.image.croppedImage\">\n\n        </div>\n\n\t</div>"
 	},
 	"114": {
 		"id": 114,
-		"thumb": "/images/thumbnails/ab02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2856,8 +2742,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab02-3.jpg",
-					"croppedImage": "/images/ab02-3.jpg",
+					"originalImage": "http://lorempixel.com/280/190/?r=159",
+					"croppedImage": "http://lorempixel.com/280/190/?r=160",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2870,11 +2756,10 @@ module.exports = {
 			0,
 			25
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n          \n            <div class=\"padding-20\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t    <p><b>Beautiful Content</b><br>Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>\n            </div>\n\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\n            <div class=\"padding-20\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t    <p><b>Printing and Typesetting</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.</p>\n            </div>\n\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\n            <div class=\"padding-20\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t    <p><b>Simply Dummy Text</b><br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Vivamus leo ante, consectetur sit amet vulputate vel. </p>\n            </div>\n\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n          \n            <div class=\"padding-20\">\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t    <p><b>Beautiful Content</b><br>Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>\n            </div>\n\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\n            <div class=\"padding-20\">\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t    <p><b>Printing and Typesetting</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.</p>\n            </div>\n\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\n            <div class=\"padding-20\">\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t    <p><b>Simply Dummy Text</b><br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Vivamus leo ante, consectetur sit amet vulputate vel. </p>\n            </div>\n\n        </div>\n\n\t</div>"
 	},
 	"115": {
 		"id": 115,
-		"thumb": "/images/thumbnails/ab03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2883,8 +2768,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab03-3.jpg",
-					"croppedImage": "/images/ab03-3.jpg",
+					"originalImage": "http://lorempixel.com/200/200/?r=165",
+					"croppedImage": "http://lorempixel.com/200/200/?r=166",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2904,17 +2789,16 @@ module.exports = {
 		"categories": [
 			25
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n           \t    \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n           \t \t</div>\n\t\t\t</div>\n    \t</div>   \t\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n            \t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n            \t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n            \t</div>\n\t\t\t</div>\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n           \t    \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n           \t \t</div>\n\t\t\t</div>\n    \t</div>   \t\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n            \t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n\t\t\t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n            \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\n\t\t\t\t<h2 style=\"font-size: 1.7em\">{{ item.data.subheading }}</h2>\n\n\t\t\t\t<p>{{ item.data.content }}</p>\n\n\t\t\t\t<div style=\"margin:2em 0 2.5em;\">\n\n            \t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\" style=\"border-radius: 50px\">Buy Now</a>\n\n            \t</div>\n\t\t\t</div>\n        </div>\n\n\t</div>"
 	},
 	"116": {
 		"id": 116,
-		"thumb": "/images/thumbnails/ab06.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab06-3.jpg",
-					"croppedImage": "/images/ab06-3.jpg",
+					"originalImage": "http://lorempixel.com/280/250/?r=171",
+					"croppedImage": "http://lorempixel.com/280/250/?r=172",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2935,11 +2819,10 @@ module.exports = {
 			0,
 			25
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\"><img :src=\"config.assetRoot + item.data.image.croppedImage\"><img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"display\">\n                <h1 style=\"font-size:3.3em\">{{ item.data.title }}</h1>\n                <p>{{ item.data.content }}</p>\n            </div>\n\t\t\t<p>{{ item.data.content }}</p>\n         </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div style=\"margin:1em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">VIEW PROJECT</a>\n            </div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\"><img :src=\"item.data.image.croppedImage\"><img :src=\"item.data.image.croppedImage\">\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"display\">\n                <h1 style=\"font-size:3.3em\">{{ item.data.title }}</h1>\n                <p>{{ item.data.content }}</p>\n            </div>\n\t\t\t<p>{{ item.data.content }}</p>\n         </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div style=\"margin:1em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">VIEW PROJECT</a>\n            </div>\n        </div>\n\t</div>"
 	},
 	"117": {
 		"id": 117,
-		"thumb": "/images/thumbnails/ab07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2952,8 +2835,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab07-3.jpg",
-					"croppedImage": "/images/ab07-3.jpg",
+					"originalImage": "http://lorempixel.com/120/120/?r=177",
+					"croppedImage": "http://lorempixel.com/120/120/?r=178",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2966,11 +2849,10 @@ module.exports = {
 			0,
 			25
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n            \t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n            \t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px\">\t\t\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n     \t\t\t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n            \t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n            \t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px\">\t\t\t\t\n\t\t\t    \t<h3 style=\"font-size:1.5em\">{{ item.data.title }}</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n     \t\t\t\t<div style=\"margin:2em 0\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">Buy Now</a>\n\t\t\t\t\t</div>\n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"118": {
 		"id": 118,
-		"thumb": "/images/thumbnails/ab10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -2983,8 +2865,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ab10-2.jpg",
-					"croppedImage": "/images/ab10-2.jpg",
+					"originalImage": "http://lorempixel.com/380/270/?r=181",
+					"croppedImage": "http://lorempixel.com/380/270/?r=182",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -2997,11 +2879,10 @@ module.exports = {
 			0,
 			25
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<i class=\"icon ion-ios-cart size-64\" style=\"color: #333\"></i>\n            <h1 class=\"size-64\" style=\"margin-top:0\">{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n        </div>\n\t\t<div class=\"col-sm-6\">\n            <h1>{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n            <div style=\"margin:1em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">BUY NOW</a>\n            </div>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            \t\t<h1>{{ item.data.title }}</h1>\n            \t\t<p>{{ item.data.content }}</p>\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n            \t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">BUY NOW</a>\n            \t\t</div>\n        \t</div>\n        \t<div class=\"col-sm-6\">\n            \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n        \t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<i class=\"icon ion-ios-cart size-64\" style=\"color: #333\"></i>\n            <h1 class=\"size-64\" style=\"margin-top:0\">{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\">\n        </div>\n\t\t<div class=\"col-sm-6\">\n            <h1>{{ item.data.title }}</h1>\n            <p>{{ item.data.content }}</p>\n            <div style=\"margin:1em 0 2.5em;\">\n            \t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">BUY NOW</a>\n            </div>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <br>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            \t\t<h1>{{ item.data.title }}</h1>\n            \t\t<p>{{ item.data.content }}</p>\n            \t\t<div style=\"margin:1em 0 2.5em;\">\n            \t\t\t<a href=\"#\" class=\"btn btn-primary btn-lg edit\">BUY NOW</a>\n            \t\t</div>\n        \t</div>\n        \t<div class=\"col-sm-6\">\n            \t\t<img :src=\"item.data.image.croppedImage\">\n        \t</div>\n\t</div>"
 	},
 	"119": {
 		"id": 119,
-		"thumb": "/images/thumbnails/cd01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3020,7 +2901,6 @@ module.exports = {
 	},
 	"120": {
 		"id": 120,
-		"thumb": "/images/thumbnails/cd03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3039,7 +2919,6 @@ module.exports = {
 	},
 	"121": {
 		"id": 121,
-		"thumb": "/images/thumbnails/cd04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3058,7 +2937,6 @@ module.exports = {
 	},
 	"122": {
 		"id": 122,
-		"thumb": "/images/thumbnails/cd06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3077,7 +2955,6 @@ module.exports = {
 	},
 	"123": {
 		"id": 123,
-		"thumb": "/images/thumbnails/cd07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3096,7 +2973,6 @@ module.exports = {
 	},
 	"124": {
 		"id": 124,
-		"thumb": "/images/thumbnails/cd08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3111,7 +2987,6 @@ module.exports = {
 	},
 	"125": {
 		"id": 125,
-		"thumb": "/images/thumbnails/cd09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3130,7 +3005,6 @@ module.exports = {
 	},
 	"126": {
 		"id": 126,
-		"thumb": "/images/thumbnails/cd10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3149,7 +3023,6 @@ module.exports = {
 	},
 	"127": {
 		"id": 127,
-		"thumb": "/images/thumbnails/ef01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3162,8 +3035,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef01-3.png",
-					"croppedImage": "/images/ef01-3.png",
+					"originalImage": "http://lorempixel.com/65/65/?r=187",
+					"croppedImage": "http://lorempixel.com/65/65/?r=188",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3176,11 +3049,10 @@ module.exports = {
 			0,
 			27
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                  \t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company One</p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                   <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company Two</p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                   <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company Three</p>\n\n\t\t\t\t</div>\n\n            </div>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t\t<div class=\"col-sm-8\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                  \t<img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company One</p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                   <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company Two</p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-4 text-center\">\n\n                   <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t\t<p>Company Three</p>\n\n\t\t\t\t</div>\n\n            </div>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"128": {
 		"id": 128,
-		"thumb": "/images/thumbnails/ef02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3193,8 +3065,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef02-5.png",
-					"croppedImage": "/images/ef02-5.png",
+					"originalImage": "http://lorempixel.com/65/65/?r=197",
+					"croppedImage": "http://lorempixel.com/65/65/?r=198",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3207,11 +3079,10 @@ module.exports = {
 			0,
 			27
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n                <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n            </div>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t    <p>Company One</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n               <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Two</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Three</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n               <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Four</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Five</p>\n\n\t\t    </div>\n\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<div class=\"display\">\n\n                <h1 style=\"font-size: 3em\">{{ item.data.title }}</h1>\n\n            </div>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t    <p>Company One</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n               <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Two</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Three</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n               <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Four</p>\n\n\t\t    </div>\n\n\t\t    <div class=\"text-center\" style=\"display:inline-block;width:18%\">\n\n                <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t    <p>Company Five</p>\n\n\t\t    </div>\n\n        </div>\n\n\t</div>"
 	},
 	"129": {
 		"id": 129,
-		"thumb": "/images/thumbnails/ef03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3220,8 +3091,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef03-4.png",
-					"croppedImage": "/images/ef03-4.png",
+					"originalImage": "http://lorempixel.com/65/65/?r=205",
+					"croppedImage": "http://lorempixel.com/65/65/?r=206",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3234,11 +3105,10 @@ module.exports = {
 			0,
 			27
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <div class=\"display\">\n\n                <h1 style=\"font-size: 3.5em; margin:0.2em 0.5em\">{{ item.data.title }}</h1>\n\n            </div>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Three</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Four</p>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <div class=\"display\">\n\n                <h1 style=\"font-size: 3.5em; margin:0.2em 0.5em\">{{ item.data.title }}</h1>\n\n            </div>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Three</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Four</p>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"130": {
 		"id": 130,
-		"thumb": "/images/thumbnails/ef05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3251,8 +3121,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef05-3.png",
-					"croppedImage": "/images/ef05-3.png",
+					"originalImage": "http://lorempixel.com/65/65/?r=211",
+					"croppedImage": "http://lorempixel.com/65/65/?r=212",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3264,11 +3134,10 @@ module.exports = {
 		"categories": [
 			27
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <h1>{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n             <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n           \n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Three</p>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n            <h1>{{ item.data.title }}</h1>\n\n            <p>{{ item.data.content }}</p>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n             <img :src=\"item.data.image.croppedImage\">\n           \n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Three</p>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"131": {
 		"id": 131,
-		"thumb": "/images/thumbnails/ef08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3277,8 +3146,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef08-5.png",
-					"croppedImage": "/images/ef08-5.png",
+					"originalImage": "http://lorempixel.com/110/110/?r=221",
+					"croppedImage": "http://lorempixel.com/110/110/?r=222",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3290,11 +3159,10 @@ module.exports = {
 		"categories": [
 			27
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.5em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t</div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.5em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t</div>\n\t\t\t<div class=\"text-center\" style=\"display:inline-block;width:18%\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t</div>\n        </div>\n\t</div>"
 	},
 	"132": {
 		"id": 132,
-		"thumb": "/images/thumbnails/ef09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3307,8 +3175,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/ef09-4.png",
-					"croppedImage": "/images/ef09-4.png",
+					"originalImage": "http://lorempixel.com/140/140/?r=229",
+					"croppedImage": "http://lorempixel.com/140/140/?r=230",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3321,11 +3189,10 @@ module.exports = {
 			0,
 			27
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n\t\t\t<p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n        \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em\">{{ item.data.title }}</h1>\n\t\t\t<p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n            </div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-3\">\n \t\t\t <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-20 text-center\">\n                    <img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n        \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"133": {
 		"id": 133,
-		"thumb": "/images/thumbnails/gh01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3334,8 +3201,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh01-3.png",
-					"croppedImage": "/images/gh01-3.png",
+					"originalImage": "http://lorempixel.com/70/70/?r=235",
+					"croppedImage": "http://lorempixel.com/70/70/?r=236",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3348,11 +3215,10 @@ module.exports = {
 			0,
 			28
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\t\n\n\t</div>\t\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company One</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company Two</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company Three</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\t\n\n\t</div>\t\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company One</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company Two</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n\n\t\t\t<div class=\"row\">\n\n\t\t\t\t<div class=\"col-sm-6 text-center\">\n\n                    <p style=\"line-height:1;margin-top:0\">\n                        <img :src=\"item.data.image.croppedImage\">\n                    </p>\n\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"col-sm-6\">\n\n\t\t\t\t\t<p style=\"line-height:1;margin-top:30px; font-size:15px;\">Company Three</p>\n\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"134": {
 		"id": 134,
-		"thumb": "/images/thumbnails/gh02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3361,8 +3227,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh02-4.png",
-					"croppedImage": "/images/gh02-4.png",
+					"originalImage": "http://lorempixel.com/70/70/?r=243",
+					"croppedImage": "http://lorempixel.com/70/70/?r=244",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3375,11 +3241,10 @@ module.exports = {
 			0,
 			28
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t    <p>Company Three</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t    <p>Company Four</p>\n\n\t\t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company One</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t\t<p>Company Two</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t    <p>Company Three</p>\n\n\t\t</div>\n\n\t\t<div class=\"col-sm-3 text-center\">\n\n            <img :src=\"item.data.image.croppedImage\">\n\n\t\t    <p>Company Four</p>\n\n\t\t</div>\n\n\t</div>"
 	},
 	"135": {
 		"id": 135,
-		"thumb": "/images/thumbnails/gh03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3388,8 +3253,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh03-4.png",
-					"croppedImage": "/images/gh03-4.png",
+					"originalImage": "http://lorempixel.com/65/65/?r=251",
+					"croppedImage": "http://lorempixel.com/65/65/?r=252",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3402,11 +3267,10 @@ module.exports = {
 			0,
 			28
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\t\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\t\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<h3>{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n        </div>\n\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\t\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t\t<h3 style=\"margin-top:20px\">{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\t\n\t\t<div class=\"col-sm-6\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-sm-4\">\n          \t\t\t<img :src=\"item.data.image.croppedImage\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-8\">\n\t\t\t\t\t<h3>{{ item.data.title }}</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
 	},
 	"136": {
 		"id": 136,
-		"thumb": "/images/thumbnails/gh05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3415,8 +3279,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh05-3.png",
-					"croppedImage": "/images/gh05-3.png",
+					"originalImage": "http://lorempixel.com/80/80/?r=257",
+					"croppedImage": "http://lorempixel.com/80/80/?r=258",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3432,11 +3296,10 @@ module.exports = {
 		"categories": [
 			28
 		],
-		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n        \t\t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n    \t\t\t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n    \t</div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n\t\t<div class=\"col-sm-12 text-center\">\n\n\t\t\t<h1>{{ item.data.title }}</h1>\n\n\t\t</div>\n\n\t</div>\n\n\t<div class=\"row\">\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n            \t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n        \t\t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4 text-center\">\n\t\t\t<div class=\"padding-20\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\">\n\n\t\t\t\t<h3>{{ item.data.title }}</h3>\n\n    \t\t\t<p>{{ item.data.content }}</p>\n\t\t\t</div>\n    \t</div>\n\n\t</div>"
 	},
 	"137": {
 		"id": 137,
-		"thumb": "/images/thumbnails/gh07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3445,8 +3308,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh07-3.png",
-					"croppedImage": "/images/gh07-3.png",
+					"originalImage": "http://lorempixel.com/90/90/?r=263",
+					"croppedImage": "http://lorempixel.com/90/90/?r=264",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3462,11 +3325,10 @@ module.exports = {
 		"categories": [
 			28
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n\t\t\t<img :src=\"item.data.image.croppedImage\">\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>"
 	},
 	"138": {
 		"id": 138,
-		"thumb": "/images/thumbnails/gh08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3475,8 +3337,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh08-4.png",
-					"croppedImage": "/images/gh08-4.png",
+					"originalImage": "http://lorempixel.com/90/90/?r=271",
+					"croppedImage": "http://lorempixel.com/90/90/?r=272",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3493,11 +3355,10 @@ module.exports = {
 			0,
 			28
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"config.assetRoot + item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n            <img :src=\"item.data.image.croppedImage\">\n\t\t\t<h3 style=\"font-size:1.5em;margin-top:0\">{{ item.data.title }}</h3>\n            <p>{{ item.data.content }}</p>\n        </div>\n\t</div>"
 	},
 	"139": {
 		"id": 139,
-		"thumb": "/images/thumbnails/gh09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3506,8 +3367,8 @@ module.exports = {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/gh09-3.png",
-					"croppedImage": "/images/gh09-3.png",
+					"originalImage": "http://lorempixel.com/90/90/?r=277",
+					"croppedImage": "http://lorempixel.com/90/90/?r=278",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -3520,11 +3381,10 @@ module.exports = {
 			0,
 			28
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t   \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\t\t\t\n\t\t\t    \t<h3>{{ item.data.title }}</h3> \n            \t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\t\t\t\n\t\t\t    \t<h3>{{ item.data.title }}</h3>\t\t\t  \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\">\t\t\n\t\t\t \t\t<h3>{{ item.data.title }}</h3>\t\t\t \n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12 text-center\">\n            <h1 style=\"font-size:3em;margin:1.2em 0\">{{ item.data.title }}</h1>\n        </div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t   \t\t<img :src=\"item.data.image.croppedImage\">\t\t\t\n\t\t\t    \t<h3>{{ item.data.title }}</h3> \n            \t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"item.data.image.croppedImage\">\t\t\t\n\t\t\t    \t<h3>{{ item.data.title }}</h3>\t\t\t  \n        \t\t</div>\n        \t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"item.data.image.croppedImage\">\t\t\n\t\t\t \t\t<h3>{{ item.data.title }}</h3>\t\t\t \n        \t\t</div>\n         \t</div>\n\t\t</div>\n\t</div>"
 	},
 	"140": {
 		"id": 140,
-		"thumb": "/images/thumbnails/ij01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3543,7 +3403,6 @@ module.exports = {
 	},
 	"141": {
 		"id": 141,
-		"thumb": "/images/thumbnails/ij02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3558,7 +3417,6 @@ module.exports = {
 	},
 	"142": {
 		"id": 142,
-		"thumb": "/images/thumbnails/ij03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3577,7 +3435,6 @@ module.exports = {
 	},
 	"143": {
 		"id": 143,
-		"thumb": "/images/thumbnails/ij04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3592,7 +3449,6 @@ module.exports = {
 	},
 	"144": {
 		"id": 144,
-		"thumb": "/images/thumbnails/ij05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3607,7 +3463,6 @@ module.exports = {
 	},
 	"145": {
 		"id": 145,
-		"thumb": "/images/thumbnails/ij06.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3626,7 +3481,6 @@ module.exports = {
 	},
 	"146": {
 		"id": 146,
-		"thumb": "/images/thumbnails/ij07.png",
 		"fields": {
 			"subheading": {
 				"editor": "text",
@@ -3645,7 +3499,6 @@ module.exports = {
 	},
 	"147": {
 		"id": 147,
-		"thumb": "/images/thumbnails/ij08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3668,7 +3521,6 @@ module.exports = {
 	},
 	"148": {
 		"id": 148,
-		"thumb": "/images/thumbnails/ij09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3686,7 +3538,6 @@ module.exports = {
 	},
 	"149": {
 		"id": 149,
-		"thumb": "/images/thumbnails/ij10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3712,7 +3563,6 @@ module.exports = {
 	},
 	"150": {
 		"id": 150,
-		"thumb": "/images/thumbnails/kl01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3731,7 +3581,6 @@ module.exports = {
 	},
 	"151": {
 		"id": 151,
-		"thumb": "/images/thumbnails/kl02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3746,7 +3595,6 @@ module.exports = {
 	},
 	"152": {
 		"id": 152,
-		"thumb": "/images/thumbnails/kl03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3765,7 +3613,6 @@ module.exports = {
 	},
 	"153": {
 		"id": 153,
-		"thumb": "/images/thumbnails/kl04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3783,7 +3630,6 @@ module.exports = {
 	},
 	"154": {
 		"id": 154,
-		"thumb": "/images/thumbnails/kl05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3801,7 +3647,6 @@ module.exports = {
 	},
 	"155": {
 		"id": 155,
-		"thumb": "/images/thumbnails/kl07.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3820,7 +3665,6 @@ module.exports = {
 	},
 	"156": {
 		"id": 156,
-		"thumb": "/images/thumbnails/kl08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3839,7 +3683,6 @@ module.exports = {
 	},
 	"157": {
 		"id": 157,
-		"thumb": "/images/thumbnails/kl09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3858,7 +3701,6 @@ module.exports = {
 	},
 	"158": {
 		"id": 158,
-		"thumb": "/images/thumbnails/kl10.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3872,7 +3714,6 @@ module.exports = {
 	},
 	"159": {
 		"id": 159,
-		"thumb": "/images/thumbnails/mn01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3891,7 +3732,6 @@ module.exports = {
 	},
 	"160": {
 		"id": 160,
-		"thumb": "/images/thumbnails/mn02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3910,7 +3750,6 @@ module.exports = {
 	},
 	"161": {
 		"id": 161,
-		"thumb": "/images/thumbnails/mn03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3925,7 +3764,6 @@ module.exports = {
 	},
 	"162": {
 		"id": 162,
-		"thumb": "/images/thumbnails/mn04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3940,7 +3778,6 @@ module.exports = {
 	},
 	"163": {
 		"id": 163,
-		"thumb": "/images/thumbnails/mn05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3959,7 +3796,6 @@ module.exports = {
 	},
 	"164": {
 		"id": 164,
-		"thumb": "/images/thumbnails/mn08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3973,7 +3809,6 @@ module.exports = {
 	},
 	"165": {
 		"id": 165,
-		"thumb": "/images/thumbnails/mn09.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -3988,7 +3823,6 @@ module.exports = {
 	},
 	"166": {
 		"id": 166,
-		"thumb": "/images/thumbnails/op01.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4007,7 +3841,6 @@ module.exports = {
 	},
 	"167": {
 		"id": 167,
-		"thumb": "/images/thumbnails/op02.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4026,7 +3859,6 @@ module.exports = {
 	},
 	"168": {
 		"id": 168,
-		"thumb": "/images/thumbnails/op03.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4045,7 +3877,6 @@ module.exports = {
 	},
 	"169": {
 		"id": 169,
-		"thumb": "/images/thumbnails/op04.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4096,7 +3927,6 @@ module.exports = {
 	},
 	"170": {
 		"id": 170,
-		"thumb": "/images/thumbnails/op05.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4139,7 +3969,6 @@ module.exports = {
 	},
 	"171": {
 		"id": 171,
-		"thumb": "/images/thumbnails/op07.png",
 		"fields": {
 			"subheading": {
 				"editor": "text",
@@ -4161,7 +3990,6 @@ module.exports = {
 	},
 	"172": {
 		"id": 172,
-		"thumb": "/images/thumbnails/op08.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4183,7 +4011,6 @@ module.exports = {
 	},
 	"173": {
 		"id": 173,
-		"thumb": "/images/thumbnails/b15.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4201,7 +4028,6 @@ module.exports = {
 	},
 	"174": {
 		"id": 174,
-		"thumb": "/images/thumbnails/b16.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4219,7 +4045,6 @@ module.exports = {
 	},
 	"175": {
 		"id": 175,
-		"thumb": "/images/thumbnails/b17.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4237,7 +4062,6 @@ module.exports = {
 	},
 	"176": {
 		"id": 176,
-		"thumb": "/images/thumbnails/b18.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4255,7 +4079,6 @@ module.exports = {
 	},
 	"177": {
 		"id": 177,
-		"thumb": "/images/thumbnails/b19.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4273,7 +4096,6 @@ module.exports = {
 	},
 	"178": {
 		"id": 178,
-		"thumb": "/images/thumbnails/b20.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4291,7 +4113,6 @@ module.exports = {
 	},
 	"179": {
 		"id": 179,
-		"thumb": "/images/thumbnails/b21.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4309,7 +4130,6 @@ module.exports = {
 	},
 	"180": {
 		"id": 180,
-		"thumb": "/images/thumbnails/b22.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4327,7 +4147,6 @@ module.exports = {
 	},
 	"181": {
 		"id": 181,
-		"thumb": "/images/thumbnails/b23.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4345,7 +4164,6 @@ module.exports = {
 	},
 	"182": {
 		"id": 182,
-		"thumb": "/images/thumbnails/b24.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4363,7 +4181,6 @@ module.exports = {
 	},
 	"183": {
 		"id": 183,
-		"thumb": "/images/thumbnails/b25.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4381,7 +4198,6 @@ module.exports = {
 	},
 	"184": {
 		"id": 184,
-		"thumb": "/images/thumbnails/b26.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4399,7 +4215,6 @@ module.exports = {
 	},
 	"185": {
 		"id": 185,
-		"thumb": "/images/thumbnails/b27.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4417,7 +4232,6 @@ module.exports = {
 	},
 	"186": {
 		"id": 186,
-		"thumb": "/images/thumbnails/b28.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4435,7 +4249,6 @@ module.exports = {
 	},
 	"187": {
 		"id": 187,
-		"thumb": "/images/thumbnails/b29.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4453,7 +4266,6 @@ module.exports = {
 	},
 	"188": {
 		"id": 188,
-		"thumb": "/images/thumbnails/b30.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4471,7 +4283,6 @@ module.exports = {
 	},
 	"189": {
 		"id": 189,
-		"thumb": "/images/thumbnails/b31.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4489,7 +4300,6 @@ module.exports = {
 	},
 	"190": {
 		"id": 190,
-		"thumb": "/images/thumbnails/b32.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4507,7 +4317,6 @@ module.exports = {
 	},
 	"191": {
 		"id": 191,
-		"thumb": "/images/thumbnails/b33.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4525,7 +4334,6 @@ module.exports = {
 	},
 	"192": {
 		"id": 192,
-		"thumb": "/images/thumbnails/b34.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4543,7 +4351,6 @@ module.exports = {
 	},
 	"193": {
 		"id": 193,
-		"thumb": "/images/thumbnails/b35.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4561,7 +4368,6 @@ module.exports = {
 	},
 	"194": {
 		"id": 194,
-		"thumb": "/images/thumbnails/b36.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4579,7 +4385,6 @@ module.exports = {
 	},
 	"195": {
 		"id": 195,
-		"thumb": "/images/thumbnails/b37.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4597,7 +4402,6 @@ module.exports = {
 	},
 	"196": {
 		"id": 196,
-		"thumb": "/images/thumbnails/b38.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4615,7 +4419,6 @@ module.exports = {
 	},
 	"197": {
 		"id": 197,
-		"thumb": "/images/thumbnails/b39.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4633,7 +4436,6 @@ module.exports = {
 	},
 	"198": {
 		"id": 198,
-		"thumb": "/images/thumbnails/b40.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4651,7 +4453,6 @@ module.exports = {
 	},
 	"199": {
 		"id": 199,
-		"thumb": "/images/thumbnails/b41.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4669,7 +4470,6 @@ module.exports = {
 	},
 	"200": {
 		"id": 200,
-		"thumb": "/images/thumbnails/b42.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4687,7 +4487,6 @@ module.exports = {
 	},
 	"201": {
 		"id": 201,
-		"thumb": "/images/thumbnails/b43.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4705,7 +4504,6 @@ module.exports = {
 	},
 	"202": {
 		"id": 202,
-		"thumb": "/images/thumbnails/b44.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4723,7 +4521,6 @@ module.exports = {
 	},
 	"203": {
 		"id": 203,
-		"thumb": "/images/thumbnails/b45.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4741,7 +4538,6 @@ module.exports = {
 	},
 	"204": {
 		"id": 204,
-		"thumb": "/images/thumbnails/b46.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4759,7 +4555,6 @@ module.exports = {
 	},
 	"205": {
 		"id": 205,
-		"thumb": "/images/thumbnails/b47.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4777,7 +4572,6 @@ module.exports = {
 	},
 	"206": {
 		"id": 206,
-		"thumb": "/images/thumbnails/b48.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4795,7 +4589,6 @@ module.exports = {
 	},
 	"207": {
 		"id": 207,
-		"thumb": "/images/thumbnails/b49.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4813,7 +4606,6 @@ module.exports = {
 	},
 	"208": {
 		"id": 208,
-		"thumb": "/images/thumbnails/b50.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4831,7 +4623,6 @@ module.exports = {
 	},
 	"209": {
 		"id": 209,
-		"thumb": "/images/thumbnails/b51.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4849,7 +4640,6 @@ module.exports = {
 	},
 	"210": {
 		"id": 210,
-		"thumb": "/images/thumbnails/b52.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4867,7 +4657,6 @@ module.exports = {
 	},
 	"211": {
 		"id": 211,
-		"thumb": "/images/thumbnails/b53.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4885,7 +4674,6 @@ module.exports = {
 	},
 	"212": {
 		"id": 212,
-		"thumb": "/images/thumbnails/b54.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -4903,7 +4691,6 @@ module.exports = {
 	},
 	"213": {
 		"id": 213,
-		"thumb": "/images/thumbnails/c02.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -4921,7 +4708,6 @@ module.exports = {
 	},
 	"214": {
 		"id": 214,
-		"thumb": "/images/thumbnails/c03.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -4939,7 +4725,6 @@ module.exports = {
 	},
 	"215": {
 		"id": 215,
-		"thumb": "/images/thumbnails/c04.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -4957,7 +4742,6 @@ module.exports = {
 	},
 	"216": {
 		"id": 216,
-		"thumb": "/images/thumbnails/c05.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -4975,7 +4759,6 @@ module.exports = {
 	},
 	"217": {
 		"id": 217,
-		"thumb": "/images/thumbnails/c06.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -4993,7 +4776,6 @@ module.exports = {
 	},
 	"218": {
 		"id": 218,
-		"thumb": "/images/thumbnails/c07.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5011,7 +4793,6 @@ module.exports = {
 	},
 	"219": {
 		"id": 219,
-		"thumb": "/images/thumbnails/c08.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5029,7 +4810,6 @@ module.exports = {
 	},
 	"220": {
 		"id": 220,
-		"thumb": "/images/thumbnails/c09.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5047,7 +4827,6 @@ module.exports = {
 	},
 	"221": {
 		"id": 221,
-		"thumb": "/images/thumbnails/c10.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5065,7 +4844,6 @@ module.exports = {
 	},
 	"222": {
 		"id": 222,
-		"thumb": "/images/thumbnails/c11.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5083,7 +4861,6 @@ module.exports = {
 	},
 	"223": {
 		"id": 223,
-		"thumb": "/images/thumbnails/c12.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5101,7 +4878,6 @@ module.exports = {
 	},
 	"224": {
 		"id": 224,
-		"thumb": "/images/thumbnails/c13.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5119,7 +4895,6 @@ module.exports = {
 	},
 	"225": {
 		"id": 225,
-		"thumb": "/images/thumbnails/c14.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5137,7 +4912,6 @@ module.exports = {
 	},
 	"226": {
 		"id": 226,
-		"thumb": "/images/thumbnails/c15.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5155,7 +4929,6 @@ module.exports = {
 	},
 	"227": {
 		"id": 227,
-		"thumb": "/images/thumbnails/c16.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5173,7 +4946,6 @@ module.exports = {
 	},
 	"228": {
 		"id": 228,
-		"thumb": "/images/thumbnails/c17.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5191,7 +4963,6 @@ module.exports = {
 	},
 	"229": {
 		"id": 229,
-		"thumb": "/images/thumbnails/c18.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5209,7 +4980,6 @@ module.exports = {
 	},
 	"230": {
 		"id": 230,
-		"thumb": "/images/thumbnails/c19.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5227,7 +4997,6 @@ module.exports = {
 	},
 	"231": {
 		"id": 231,
-		"thumb": "/images/thumbnails/c20.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5245,7 +5014,6 @@ module.exports = {
 	},
 	"232": {
 		"id": 232,
-		"thumb": "/images/thumbnails/c21.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5263,7 +5031,6 @@ module.exports = {
 	},
 	"233": {
 		"id": 233,
-		"thumb": "/images/thumbnails/c22.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5281,7 +5048,6 @@ module.exports = {
 	},
 	"234": {
 		"id": 234,
-		"thumb": "/images/thumbnails/c23.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5299,7 +5065,6 @@ module.exports = {
 	},
 	"235": {
 		"id": 235,
-		"thumb": "/images/thumbnails/c24.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5317,7 +5082,6 @@ module.exports = {
 	},
 	"236": {
 		"id": 236,
-		"thumb": "/images/thumbnails/c25.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5335,7 +5099,6 @@ module.exports = {
 	},
 	"237": {
 		"id": 237,
-		"thumb": "/images/thumbnails/c26.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5353,7 +5116,6 @@ module.exports = {
 	},
 	"238": {
 		"id": 238,
-		"thumb": "/images/thumbnails/c27.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5371,7 +5133,6 @@ module.exports = {
 	},
 	"239": {
 		"id": 239,
-		"thumb": "/images/thumbnails/c28.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5389,7 +5150,6 @@ module.exports = {
 	},
 	"240": {
 		"id": 240,
-		"thumb": "/images/thumbnails/c29.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5407,7 +5167,6 @@ module.exports = {
 	},
 	"241": {
 		"id": 241,
-		"thumb": "/images/thumbnails/c30.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5425,7 +5184,6 @@ module.exports = {
 	},
 	"242": {
 		"id": 242,
-		"thumb": "/images/thumbnails/c31.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5443,7 +5201,6 @@ module.exports = {
 	},
 	"243": {
 		"id": 243,
-		"thumb": "/images/thumbnails/c32.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5461,7 +5218,6 @@ module.exports = {
 	},
 	"244": {
 		"id": 244,
-		"thumb": "/images/thumbnails/c33.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5479,7 +5235,6 @@ module.exports = {
 	},
 	"245": {
 		"id": 245,
-		"thumb": "/images/thumbnails/c34.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5497,7 +5252,6 @@ module.exports = {
 	},
 	"246": {
 		"id": 246,
-		"thumb": "/images/thumbnails/c35.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5515,7 +5269,6 @@ module.exports = {
 	},
 	"247": {
 		"id": 247,
-		"thumb": "/images/thumbnails/c36.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5533,7 +5286,6 @@ module.exports = {
 	},
 	"248": {
 		"id": 248,
-		"thumb": "/images/thumbnails/c37.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5551,7 +5303,6 @@ module.exports = {
 	},
 	"249": {
 		"id": 249,
-		"thumb": "/images/thumbnails/c38.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5569,7 +5320,6 @@ module.exports = {
 	},
 	"250": {
 		"id": 250,
-		"thumb": "/images/thumbnails/c39.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5587,7 +5337,6 @@ module.exports = {
 	},
 	"251": {
 		"id": 251,
-		"thumb": "/images/thumbnails/c40.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5605,7 +5354,6 @@ module.exports = {
 	},
 	"252": {
 		"id": 252,
-		"thumb": "/images/thumbnails/c41.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5623,7 +5371,6 @@ module.exports = {
 	},
 	"253": {
 		"id": 253,
-		"thumb": "/images/thumbnails/ce01.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5632,7 +5379,6 @@ module.exports = {
 	},
 	"254": {
 		"id": 254,
-		"thumb": "/images/thumbnails/ce02.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5641,7 +5387,6 @@ module.exports = {
 	},
 	"255": {
 		"id": 255,
-		"thumb": "/images/thumbnails/ce03.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5650,7 +5395,6 @@ module.exports = {
 	},
 	"256": {
 		"id": 256,
-		"thumb": "/images/thumbnails/ce04.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5659,7 +5403,6 @@ module.exports = {
 	},
 	"257": {
 		"id": 257,
-		"thumb": "/images/thumbnails/ce05.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5668,7 +5411,6 @@ module.exports = {
 	},
 	"258": {
 		"id": 258,
-		"thumb": "/images/thumbnails/ce06.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5677,7 +5419,6 @@ module.exports = {
 	},
 	"259": {
 		"id": 259,
-		"thumb": "/images/thumbnails/ce07.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5686,7 +5427,6 @@ module.exports = {
 	},
 	"260": {
 		"id": 260,
-		"thumb": "/images/thumbnails/ce08.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5695,7 +5435,6 @@ module.exports = {
 	},
 	"261": {
 		"id": 261,
-		"thumb": "/images/thumbnails/ce09.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5704,7 +5443,6 @@ module.exports = {
 	},
 	"262": {
 		"id": 262,
-		"thumb": "/images/thumbnails/ce10.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5713,7 +5451,6 @@ module.exports = {
 	},
 	"263": {
 		"id": 263,
-		"thumb": "/images/thumbnails/ce11.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5722,7 +5459,6 @@ module.exports = {
 	},
 	"264": {
 		"id": 264,
-		"thumb": "/images/thumbnails/ce12.png",
 		"fields": {},
 		"categories": [
 			33
@@ -5731,13 +5467,12 @@ module.exports = {
 	},
 	"265": {
 		"id": 265,
-		"thumb": "/images/thumbnails/de01.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/z05-3.jpg",
-					"croppedImage": "/images/z05-3.jpg",
+					"originalImage": "http://lorempixel.com/110/110/?r=283",
+					"croppedImage": "http://lorempixel.com/110/110/?r=284",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -5753,17 +5488,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t    \t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>              \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t    \t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n            \t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>    \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>         \n        \t\t</div>\n\t\t\t</div>\n         </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t\t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t    \t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>              \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t    \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t    \t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n            \t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>    \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-25 text-center\">\n\t\t\t  \t\t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-28 is-title1-28 is-title-lite\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>         \n        \t\t</div>\n\t\t\t</div>\n         </div>\n\t</div>"
 	},
 	"266": {
 		"id": 266,
-		"thumb": "/images/thumbnails/de02.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k06-2.jpg",
-					"croppedImage": "/images/k06-2.jpg",
+					"originalImage": "http://lorempixel.com/190/190/?r=287",
+					"croppedImage": "http://lorempixel.com/190/190/?r=288",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -5779,17 +5513,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n     \t\t<div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t     \t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>  \n            \t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n     \t\t<div class=\"is-card is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t     \t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>  \n            \t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
 	},
 	"267": {
 		"id": 267,
-		"thumb": "/images/thumbnails/de03.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/k06-1.jpg",
-					"croppedImage": "/images/k06-1.jpg",
+					"originalImage": "http://lorempixel.com/190/190/?r=289",
+					"croppedImage": "http://lorempixel.com/190/190/?r=290",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -5805,11 +5538,10 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"config.assetRoot + item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<div class=\"margin-30 text-center\">\n                \t<img :src=\"item.data.image.croppedImage\" style=\"border-radius: 500px;\" alt=\"\">\n\t\t\t   \t\t<h3 class=\"size-32 is-title1-32 is-title-lite\">LOREM IPSUM </h3>\n            \t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0\">\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\" style=\"margin-right: 1em\"></i></a>\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email\"></i></a>\n\t\t\t\t\t</div>     \n        \t\t</div>\n\t\t\t</div>\n        </div>\n\t</div>"
 	},
 	"268": {
 		"id": 268,
-		"thumb": "/images/thumbnails/de04.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5823,7 +5555,6 @@ module.exports = {
 	},
 	"269": {
 		"id": 269,
-		"thumb": "/images/thumbnails/de05.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5837,7 +5568,6 @@ module.exports = {
 	},
 	"270": {
 		"id": 270,
-		"thumb": "/images/thumbnails/de06.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5851,7 +5581,6 @@ module.exports = {
 	},
 	"271": {
 		"id": 271,
-		"thumb": "/images/thumbnails/de07.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5865,7 +5594,6 @@ module.exports = {
 	},
 	"272": {
 		"id": 272,
-		"thumb": "/images/thumbnails/de08.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5879,7 +5607,6 @@ module.exports = {
 	},
 	"273": {
 		"id": 273,
-		"thumb": "/images/thumbnails/de09.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5893,7 +5620,6 @@ module.exports = {
 	},
 	"274": {
 		"id": 274,
-		"thumb": "/images/thumbnails/de10.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5907,7 +5633,6 @@ module.exports = {
 	},
 	"275": {
 		"id": 275,
-		"thumb": "/images/thumbnails/de11.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5921,7 +5646,6 @@ module.exports = {
 	},
 	"276": {
 		"id": 276,
-		"thumb": "/images/thumbnails/de12.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5935,7 +5659,6 @@ module.exports = {
 	},
 	"277": {
 		"id": 277,
-		"thumb": "/images/thumbnails/de13.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5949,7 +5672,6 @@ module.exports = {
 	},
 	"278": {
 		"id": 278,
-		"thumb": "/images/thumbnails/de14.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5963,7 +5685,6 @@ module.exports = {
 	},
 	"279": {
 		"id": 279,
-		"thumb": "/images/thumbnails/de15.png",
 		"fields": {
 			"content": {
 				"editor": "textarea",
@@ -5977,13 +5698,12 @@ module.exports = {
 	},
 	"280": {
 		"id": 280,
-		"thumb": "/images/thumbnails/de16.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p02-1.jpg",
-					"croppedImage": "/images/p02-1.jpg",
+					"originalImage": "http://lorempixel.com/433/428/?r=295",
+					"croppedImage": "http://lorempixel.com/433/428/?r=296",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -5999,17 +5719,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n             </div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n      \n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n             </div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n      \n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
 	},
 	"281": {
 		"id": 281,
-		"thumb": "/images/thumbnails/de17.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g03-1.jpg",
-					"croppedImage": "/images/g03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=299",
+					"croppedImage": "http://lorempixel.com/395/220/?r=300",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6025,17 +5744,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n           <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n           <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
 	},
 	"282": {
 		"id": 282,
-		"thumb": "/images/thumbnails/de18.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g03-1.jpg",
-					"croppedImage": "/images/g03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=301",
+					"croppedImage": "http://lorempixel.com/395/220/?r=302",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6051,17 +5769,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n            </div>\n        </div>\n\t</div>"
 	},
 	"283": {
 		"id": 283,
-		"thumb": "/images/thumbnails/de19.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/p02-1.jpg",
-					"croppedImage": "/images/p02-1.jpg",
+					"originalImage": "http://lorempixel.com/433/428/?r=307",
+					"croppedImage": "http://lorempixel.com/433/428/?r=308",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6077,17 +5794,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
 	},
 	"284": {
 		"id": 284,
-		"thumb": "/images/thumbnails/de20.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g03-1.jpg",
-					"croppedImage": "/images/g03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=311",
+					"croppedImage": "http://lorempixel.com/395/220/?r=312",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6103,17 +5819,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"col-sm-6\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
 	},
 	"285": {
 		"id": 285,
-		"thumb": "/images/thumbnails/de21.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/g03-1.jpg",
-					"croppedImage": "/images/g03-1.jpg",
+					"originalImage": "http://lorempixel.com/395/220/?r=313",
+					"croppedImage": "http://lorempixel.com/395/220/?r=314",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6129,11 +5844,10 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
+		"template": "<div class=\"row\">\n\t\t<div class=\"col-sm-12\">\n            <div class=\"is-card max-390 is-dark-text\">\t\t\t\t\n\t\t\t    <img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t    \t<h3 class=\"size-28 margin-0 is-title-bold\">LOREM IPSUM</h3>\n            \t\t<p>{{ item.data.content }}</p>\n \t\t\t\t\t<div style=\"margin:2em 0 0.5em\">\n\t\t\t\t\t\t<a href=\"#\" class=\"is-btn is-btn-small is-btn-ghost1 is-upper edit\">Read More</a>\n\t\t\t\t\t</div>\n            \t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>"
 	},
 	"286": {
 		"id": 286,
-		"thumb": "/images/thumbnails/de22.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6151,7 +5865,6 @@ module.exports = {
 	},
 	"287": {
 		"id": 287,
-		"thumb": "/images/thumbnails/de23.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6169,7 +5882,6 @@ module.exports = {
 	},
 	"288": {
 		"id": 288,
-		"thumb": "/images/thumbnails/de24.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6187,7 +5899,6 @@ module.exports = {
 	},
 	"289": {
 		"id": 289,
-		"thumb": "/images/thumbnails/de25.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6205,7 +5916,6 @@ module.exports = {
 	},
 	"290": {
 		"id": 290,
-		"thumb": "/images/thumbnails/de26.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6223,7 +5933,6 @@ module.exports = {
 	},
 	"291": {
 		"id": 291,
-		"thumb": "/images/thumbnails/de27.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6241,7 +5950,6 @@ module.exports = {
 	},
 	"292": {
 		"id": 292,
-		"thumb": "/images/thumbnails/de28.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6259,7 +5967,6 @@ module.exports = {
 	},
 	"293": {
 		"id": 293,
-		"thumb": "/images/thumbnails/de29.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6277,13 +5984,12 @@ module.exports = {
 	},
 	"294": {
 		"id": 294,
-		"thumb": "/images/thumbnails/de30.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/de01-3.jpg",
-					"croppedImage": "/images/de01-3.jpg",
+					"originalImage": "http://lorempixel.com/431/426/?r=319",
+					"croppedImage": "http://lorempixel.com/431/426/?r=320",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6299,17 +6005,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n             </div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n      \n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-4\">\n            <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n             </div>\n        </div>\n\n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n      \n\t\t<div class=\"col-sm-4\">\n           <div class=\"is-card is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-25\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
 	},
 	"295": {
 		"id": 295,
-		"thumb": "/images/thumbnails/de31.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/de02-2.jpg",
-					"croppedImage": "/images/de02-2.jpg",
+					"originalImage": "http://lorempixel.com/387/210/?r=323",
+					"croppedImage": "http://lorempixel.com/387/210/?r=324",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6325,17 +6030,16 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-6\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n           <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-6\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t\t<div class=\"col-sm-6\">\n           <div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
 	},
 	"296": {
 		"id": 296,
-		"thumb": "/images/thumbnails/de32.png",
 		"fields": {
 			"image": {
 				"editor": "image",
 				"defaultValue": {
-					"originalImage": "/images/de02-1.jpg",
-					"croppedImage": "/images/de02-1.jpg",
+					"originalImage": "http://lorempixel.com/390/213/?r=325",
+					"croppedImage": "http://lorempixel.com/390/213/?r=326",
 					"offset": {
 						"x": 0,
 						"y": 0
@@ -6351,11 +6055,10 @@ module.exports = {
 		"categories": [
 			34
 		],
-		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-12\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"config.assetRoot + item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
+		"template": "<div class=\"row\">\n\n        <div class=\"col-sm-12\">\n    \t\t<div class=\"is-card max-390 is-dark-text\">\n\t\t\t\t<img :src=\"item.data.image.croppedImage\" class=\"margin-0\" alt=\"\">\t\t\t\t\n\t\t\t\t<div class=\"margin-30\">\t\t\t\t\n\t\t\t\t\t<h3 class=\"size-28 margin-0 is-title-lite\">LOREM IPSUM</h3>\n\t\t\t\t\t<p>{{ item.data.content }}</p>\n\t\t\t\t\t<div class=\"is-social edit\" style=\"margin:2em 0 0.5em\">\n\n                \t\t<a href=\"https://twitter.com/\"><i class=\"icon ion-social-twitter\"></i></a>\n\n                \t\t<a href=\"https://www.facebook.com/\"><i class=\"icon ion-social-facebook\"></i></a>\n\n                \t\t<a href=\"https://plus.google.com/\"><i class=\"icon ion-social-googleplus\"></i></a>\n\n                \t\t<a href=\"mailto:you@example.com\"><i class=\"icon ion-ios-email-outline\"></i></a>\n\n\t\t\t</div>\n\n\t\t\t\t</div>\n            </div>\n        </div>\n\n\t</div>"
 	},
 	"297": {
 		"id": 297,
-		"thumb": "/images/thumbnails/de33.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6373,7 +6076,6 @@ module.exports = {
 	},
 	"298": {
 		"id": 298,
-		"thumb": "/images/thumbnails/de34.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6391,7 +6093,6 @@ module.exports = {
 	},
 	"299": {
 		"id": 299,
-		"thumb": "/images/thumbnails/de35.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6409,7 +6110,6 @@ module.exports = {
 	},
 	"300": {
 		"id": 300,
-		"thumb": "/images/thumbnails/de36.png",
 		"fields": {
 			"title": {
 				"editor": "text",
@@ -6428,7 +6128,6 @@ module.exports = {
 	},
 	"301": {
 		"id": 301,
-		"thumb": "/images/forms.jpg",
 		"fields": {
 			"form": {
 				"editor": "forms"

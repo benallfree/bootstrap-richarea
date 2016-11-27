@@ -33,14 +33,15 @@ module.exports = function(layout) {
     <script>
     ${c.js};
     ${c.layouts};
+    // setTimeout(function() {
+    //   window.callPhantom('takeShot');
+    // },5000);
     </script>
   </head>
   <body>
-    <div id="richarea"></div>
     <script>
     $(function() {
       $('#richarea').richarea({
-        assetRoot: '/dist',
         items: [
           {"layout_id":${layout.id},},
         ],
