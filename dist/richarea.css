@@ -57,9 +57,9 @@
           cursor: pointer; }
         .richarea .richarea-app .richarea-editor ul.sortable li.active .item:after {
           background: rgba(238, 238, 238, 0.44); }
-    .richarea .richarea-app .richarea-editor .modal-dialog.layout-settings .image-editor img {
+    .richarea .richarea-app .richarea-editor .modal.layout-settings .image-editor img {
       max-width: initial; }
-    .richarea .richarea-app .richarea-editor .modal-dialog.layout-selector .modal-body {
+    .richarea .richarea-app .richarea-editor .modal.layout-selector .modal-body {
       background-color: #eeeeee;
       color: #222222; }
     .richarea .richarea-app .richarea-editor img.layout {

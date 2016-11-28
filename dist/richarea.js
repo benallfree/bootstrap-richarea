@@ -352,7 +352,7 @@
 	          },
 	          close: function close() {
 	            $editor().find('.modal.in').modal('hide');
-	            this.calc();
+	            setTimeout(this.calc, 0);
 	          },
 	          calc: function calc() {
 	            var _this = this;
@@ -529,14 +529,11 @@
 	    $modal.on('shown.bs.modal', function () {
 	      if (_this.isCropperInitialized) return;
 
-	      var initializingCount = 0;
 	      var $e = $el.find('.image-editor');
 	      var $r = $e.find('.reference');
 	      var w = Math.floor($r.actual('width'));
 	      var h = Math.floor($r.actual('height'));
-	      var $export = $e.find('.export');
 	      var shouldSave = false;
-	      initializingCount++;
 	      $e.cropit({
 	        exportZoom: $r.get(0).naturalWidth / w,
 	        imageBackground: false,
@@ -556,10 +553,7 @@
 	          if (!_this.isCropperInitialized) {
 	            $e.cropit('zoom', _this.field.zoom);
 	            $e.cropit('offset', _this.field.offset);
-	            initializingCount--;
-	            if (initializingCount == 0) {
-	              _this.isCropperInitialized = true;
-	            }
+	            _this.isCropperInitialized = true;
 	            $modal.find('.image-editor').visible();
 	          } else {
 	            shouldSave = true;

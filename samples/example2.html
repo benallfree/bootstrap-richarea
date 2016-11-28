@@ -22,8 +22,10 @@
     <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
     -->
 
-    <script src="../dist/richarea-with-layouts.js"></script>    
+    <script src="../dist/richarea.js"></script>    
+    <script src="../dist/richarea-layouts.js"></script>    
   </head>
+  
   <body>
     <h1>File upload to server</h1>
     <p style="color:red">Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</p>
@@ -33,7 +35,11 @@
     <script>
     $(function() {
       $('#richarea').richarea({
+        assetRoot: '/dist',
         imageUploadUrl: '/server/upload.php',
+        items: [
+          {layout_id: 25}
+        ]
       });
     });
     </script>

@@ -28,14 +28,11 @@ module.exports = {
     $modal.on('shown.bs.modal', ()=>{
       if(this.isCropperInitialized) return;
   
-      let initializingCount = 0;
       let $e = $el.find('.image-editor');
       let $r = $e.find('.reference');
       let w = Math.floor($r.actual('width'));
       let h = Math.floor($r.actual('height'));
-      let $export = $e.find('.export');
       let shouldSave = false;
-      initializingCount++;
       $e.cropit({
         exportZoom: $r.get(0).naturalWidth / w,
         imageBackground: false,
@@ -52,11 +49,7 @@ module.exports = {
           {
             $e.cropit('zoom', this.field.zoom);
             $e.cropit('offset', this.field.offset);
-            initializingCount--;
-            if(initializingCount==0)
-            {
-              this.isCropperInitialized = true;
-            }
+            this.isCropperInitialized = true;
             $modal.find('.image-editor').visible();
           } else {
             shouldSave = true;

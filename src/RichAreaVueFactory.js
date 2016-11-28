@@ -195,7 +195,7 @@ class RichAreaVueFactory
         close: function()
         {
           $editor().find('.modal.in').modal('hide');
-          this.calc();
+          setTimeout(this.calc,0);
         },
         calc: function()
         {
