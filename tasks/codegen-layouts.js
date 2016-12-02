@@ -5,7 +5,6 @@ module.exports = function()
   let Q = require('q');
   let fs = require('fs');
   var file = require('gulp-file'); 
-  var plumber = require('gulp-plumber');
 
   let d = Q.defer();
   var layouts_html = fs.readFileSync('./src/templates/layouts.html', 'utf8');
@@ -36,11 +35,15 @@ module.exports = function()
         $e.find('['+attr+']').removeAttr(attr);
       });
       var html = $e.html().trim();
-    
+      let cats = $e.data('cat');
+      if(typeof(cats) == 'string')
+      {
+        cats = JSON.parse(cats.replace(/'/g, '"'));
+      }
       layouts[layout_id] = {
         id: $e.data('id'),
         fields: $.extend(true, {}, fields),
-        categories: $e.data('cat'),
+        categories: cats,
         template: html,
       };
     });

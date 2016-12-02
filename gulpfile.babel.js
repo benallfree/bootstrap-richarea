@@ -65,7 +65,7 @@ function packer()
 
 task('js-compress', ['js'], [
   [
-    gulp.src(['./dist/richarea.js','./dist/richarea-layouts.js']),
+    gulp.src(['./dist/richarea.js',]),
     babel({
       presets: ['es2015']
     }),
@@ -89,52 +89,50 @@ task('sass-compress', ['sass'], [
   ],
 ]);
 
+gulp.task('js', function() {
+  return gulp.src('./src/index.js')
+    .pipe(packer())
+    .pipe(rename('richarea.js'))
+    .pipe(gulp.dest('./dist'))
+  ;
+});
 
-task('js', ['codegen'], [
-  [
-    gulp.src('./src/index.js'),
-    packer(),
-    rename('richarea.js'),
-    gulp.dest('./dist'),
-  ],
-  [
-    gulp.src('./src/layouts.js'),
-    packer(),
-    rename('richarea-layouts.js'),
-    gulp.dest('./dist'),
-  ],
-]);
+
+gulp.task('sass', function() {
+  return gulp.src('./src/sass/richarea.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./dist'))
+  ;
+});
+
 
 gulp.task('clean', function() {
   return del(['./dist/**/*', './build/**/*']);
 });
 
-task('codegen', [], [
-  [
-    file('editor.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/editor.html', 'utf8')) + ';', { src: true }),
-    gulp.dest('./build')
-  ],
-  [
-    file('viewer.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/viewer.html', 'utf8')) + ';', { src: true }),
-    gulp.dest('./build')
-  ],
-  require('./tasks/codegen-layouts')
-]);
+// task('codegen', [], [
+//   [
+//     file('editor.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/editor.html', 'utf8')) + ';', { src: true }),
+//     gulp.dest('./build')
+//   ],
+//   [
+//     file('viewer.js', 'module.exports = ' + JSON.stringify(fs.readFileSync('./src/templates/viewer.html', 'utf8')) + ';', { src: true }),
+//     gulp.dest('./build')
+//   ],
+// ]);
 
 
-task('sass', [], [
-  [
-    gulp.src('./src/sass/richarea.scss'),
-    sass().on('error', sass.logError),
-    gulp.dest('./dist'),
-  ],
-]);
 
-task('images', [], [
+task('static', [], [
   [
     gulp.src('./src/images/**/*'),
     gulp.dest('./dist/images'),
-  ]
+  ],
+  [
+    gulp.src('./src/templates/**/*'),
+    gulp.dest('./dist'),
+  ],
+  
 ]);
  
 gulp.task('watch', function () {
@@ -142,7 +140,7 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('thumbnails', ['codegen', 'js', 'sass'], function (cb) {
+gulp.task('thumbnails', ['js', 'sass'], function (cb) {
   let RichAreaConfig
   var layouts = require('./build/layouts');
   let Thumbnailer = require('./src/codegen/Thumbnailer');
@@ -182,4 +180,4 @@ gulp.task('lorem', function(cb) {
 });
 
 
-gulp.task('default', ['images', 'js', 'sass', 'codegen', 'js-compress', 'sass-compress']);
+gulp.task('default', ['static', 'js', 'sass', 'js-compress', 'sass-compress']);

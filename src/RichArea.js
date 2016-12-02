@@ -1,101 +1,110 @@
-class RichAreaVueFactory
+let LayoutParser = require('./LayoutParser');
+let VueComponentFactory = require('./VueComponentFactory');
+let Q = require('q');
+
+class RichArea
 {
+  static registerEditor(klass)
+  {
+    let name = klass.name;
+    if(this.editors[name]) throw TypeError(`Editor ${name} is already registered with RichArea.`);
+    this.editors[name] = klass;
+    this.localVueComponents[name] = klass.getVueData();
+  }
+  
+  static ensureLayouts(layoutUrls)
+  {
+    let d = Q.defer();
+    let qs = [];
+    layoutUrls.forEach((url)=> {
+      if(this.layoutUrls[url]) return;
+      qs.push(LayoutParser.parse(url).then((layouts) => {
+        // Init layout fields
+        for(let layout_id in layouts)
+        {
+          let layout = layouts[layout_id];
+          for(let field_key in layout.fields)
+          {
+            let field = layout.fields[field_key];
+            if(!this.editors[field.editor]) {
+              throw new TypeError(`Editor ${field.editor} has not been registered.`);
+            }
+            this.editors[field.editor].initField(field, layout);
+          }
+        }
+        this.layoutUrls[url] = layouts;
+        Object.keys(layouts).forEach((cid)=> {
+          this.localVueComponents['c'+cid] = VueComponentFactory.createFromLayout(layouts[cid]);
+          $.extend(this.layoutCategorieslayouts, layouts[cid].categories);
+        });        
+        this.layouts = $.extend(true, {}, layouts, this.layouts);
+      }));
+    });
+    Q.all(qs).then(function() { d.resolve(); }).fail(function(err) { d.reject(err); });
+    return d.promise;
+  }
+  
   static create(options)
   {
     options = $.extend(true, {}, {
+      container: null,
+      root: null,
       assetRoot: '',
-      layoutCategories: require('./categories.js'),
       imageUploadUrl: null,
-      layouts: RichAreaConfig.layouts,
+      layouts: [],
       items: [],
-      extraLayouts: [],
-      editors: {
-        'edit-text': require('./editors/text'),
-        'edit-textarea': require('./editors/textarea'),
-        'edit-link': require('./editors/link'),
-        'edit-image': require('./editors/image'),
-      },
       mode: 'edit',
     },options);
     
-    if(Object.keys(options.layouts).length==0)
+    if(!options.container)
     {
-      throw new TypeError("You must define at least one layout.");
+      throw new TypeError("RichArea must be attached to a DOM element container.");
+    }
+    if(options.layouts.length==0)
+    {
+      throw new TypeError("RichArea must have at least one layout file defined.");
     }
     
-    let localVueComponents = options.editors;
-    
-    options.extraLayouts.forEach(function(o) {
-      options.layouts[o.id] = o;
-    })
-    
-    // Fix up default asset paths
-    for(let layout_id in options.layouts)
-    {
-      let layout = options.layouts[layout_id];
-      for(let field_key in layout.fields)
-      {
-        let field = layout.fields[field_key];
-        if(field.editor=='image')
+    let qs = [
+      $.get(options.assetRoot + '/'+options.mode+'.html').then(function(html) {
+        options.root = $("<div class='richarea'>"+html+"</div>");
+        options.container.append(options.root);
+      }),
+      this.ensureLayouts(options.layouts).then(function() {
+        if(Object.keys(options.layouts).length==0)
         {
-          field.defaultValue.originalImage = options.assetRoot + field.defaultValue.originalImage;
-          field.defaultValue.croppedImage = options.assetRoot + field.defaultValue.croppedImage;
+          throw new TypeError("You must define at least one layout.");
         }
-      }
-    }
-    
-    // Create Vue components
-    Object.keys(options.layouts).forEach(function(cid) {
-      let c = options.layouts[cid];
-      localVueComponents['c'+c.id] = {
-        props: ['item', 'config'],
-        template: "<div class='layout-container'>"+c.template+"</div>",
-        filters: {
-          embedify: (url)=> {
-            function getId(url) {
-              var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-              var match = url.match(regExp);
+      }),
+    ];
+    Q.all(qs).then(()=> {
+      this.initVue(options);
+    }).done();
+  }
 
-              if (match && match[2].length == 11) {
-                  return match[2];
-              } else {
-                  return 'error';
-              }
-            }
-            var myId = getId(url);
-
-            return '//www.youtube.com/embed/'+myId;
-          },
-          linebreak: function(v)
-          {
-            return v.replace("\n", "<br/>");
-          }
-        }
-      };
-    });
-    
-    function ensureDefaultValues(item)
+  static ensureDefaultValues(item)
+  {
+    if(item instanceof Array)
     {
-      if(item instanceof Array)
-      {
-        item.forEach((item)=>{
-          ensureDefaultValues(item);
-        });
-        return item;
-      }
-      $.extend(true, item, {data: {}});
-      let layout = options.layouts[item.layout_id];
-      if(!layout) return;
-      let fields = layout.fields;
-      Object.keys(fields).forEach((key)=> {
-        if(key in item.data) return;
-        item.data[key] = fields[key].defaultValue;
+      item.forEach((item)=>{
+        this.ensureDefaultValues(item);
       });
       return item;
     }
-
-    
-    let items = ensureDefaultValues($.extend(true, [], options.items));
+    $.extend(true, item, {data: {}});
+    let layout = this.layouts[item.layout_id];
+    if(!layout) throw new TypeError(`Undefined layout ${item.layout_id}`);
+    let fields = layout.fields;
+    Object.keys(fields).forEach((key)=> {
+      if(key in item.data) return;
+      item.data[key] = fields[key].defaultValue;
+    });
+    return item;
+  } 
+   
+  static initVue(options)
+  {
+    let items = this.ensureDefaultValues($.extend(true, [], options.items));
 
     function $app()
     {
@@ -112,17 +121,19 @@ class RichAreaVueFactory
       return $editor().find('.sortable');
     }
     
-    let appData = $.extend(true, {
+    let appData = $.extend(true, options, {
       content: null,
       itemsJson: null,
       currentIdx: null,
       $currentLayout: null,
       items: items,
-      selectedCategory: 0,
-    }, options);
+      selectedCategory: 'default',
+      layoutCategories: this.layoutCategories,
+      layouts: this.layouts,
+    });
     
     let app = new Vue({
-      components: localVueComponents,
+      components: this.localVueComponents,
       el: options.root.find('.richarea-app').get(0),
       data: appData,
       computed: {
@@ -169,6 +180,7 @@ class RichAreaVueFactory
         },
       },
       methods: {
+        ensureDefaultValues: this.ensureDefaultValues,
         add: function(idx) {
           this.currentIdx = idx;
           let $modal = $editor().find('.layouts-modal');
@@ -180,13 +192,7 @@ class RichAreaVueFactory
         inActiveCategories: function(layout)
         {
           if(this.selectedCategory==-1) return true;
-          if(!layout.categories) debugger;
-          for(var i=0;i<layout.categories.length; i++)
-          {
-            let id = layout.categories[i];
-            if(this.selectedCategory == id) return true;
-          }
-          return false;
+          return layout.categories[this.selectedCategory];
         },
         notifyChange: function() {
           if(!options.onChange) return;
@@ -237,7 +243,7 @@ class RichAreaVueFactory
         },
         insert: function(layout_id)
         {
-          var o = ensureDefaultValues({layout_id: layout_id});
+          var o = this.ensureDefaultValues({layout_id: layout_id});
           var idx = $sortable().find('li.active').index();
           if(idx>=0)
           {
@@ -292,17 +298,68 @@ class RichAreaVueFactory
         {
           $editor().find('.layouts-modal').fullscreen();
         }
+        console.log('mount');
         // A little hack to wait for all images to finish loading before telling Webshot it's okay to take a screen shot.
         // http://phantomjs.org/api/webpage/handler/on-callback.html
         if (typeof window.callPhantom === 'function') {
           setTimeout(function() {
             window.callPhantom('takeShot');
-          },2000);
+          },10000);
         }
         
       }
     });      
   }
-}
+  
+  static get(url) {
 
-module.exports = RichAreaVueFactory;
+      if (URL.resolve(window.location, url).indexOf(FILE_PROTOCOL) === 0) {
+          throw new Error("XHR does not function for file: protocol");
+      }
+
+      var request = new XMLHttpRequest();
+      var response = Promise.defer();
+
+      function onload() {
+          if (xhrSuccess(request)) {
+              response.resolve(request.responseText);
+          } else {
+              onerror();
+          }
+      }
+
+      function onerror() {
+          response.reject("Can't XHR " + JSON.stringify(url));
+      }
+
+      try {
+          request.open(GET, url, true);
+          if (request.overrideMimeType) {
+              request.overrideMimeType(APPLICATION_JAVASCRIPT_MIMETYPE);
+          }
+          request.onreadystatechange = function () {
+              if (request.readyState === 4) {
+                  onload();
+              }
+          };
+          request.onload = request.load = onload;
+          request.onerror = request.error = onerror;
+      } catch (exception) {
+          response.reject(exception.message, exception);
+      }
+
+      request.send();
+      return response.promise;
+  };  
+}
+RichArea.editors = {};
+RichArea.layoutUrls = {};
+RichArea.layouts = {};
+RichArea.layoutCategories = {};
+RichArea.localVueComponents = {};
+
+RichArea.registerEditor(require('./editors/TextEditor.js'));
+RichArea.registerEditor(require('./editors/TextareaEditor.js'));
+RichArea.registerEditor(require('./editors/LinkEditor.js'));
+
+module.exports = RichArea;

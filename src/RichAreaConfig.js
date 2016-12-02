@@ -1,5 +1,0 @@
-class RichArea
-{
-  
-}
-RichArea.layouts = {};

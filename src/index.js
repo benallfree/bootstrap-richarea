@@ -1,9 +1,6 @@
 require('./array.js');
 require('./jquery.visibility.js');
-
-
-window.RichAreaConfig = require('./RichAreaConfig.js');
-
+let RichArea = require('./RichArea');
 
 (($ => {
   $(() => {
@@ -15,24 +12,10 @@ window.RichAreaConfig = require('./RichAreaConfig.js');
       
       let $e = $(this);
       
-      $e.hide();
-  
-      let $root = null;
-      if(options.mode=='view')
-      {
-        $root = $("<div class='richarea'>"+require('../build/viewer')+"</div>");
-      } else {
-        $root = $("<div class='richarea'>"+require('../build/editor')+"</div>");
-      }
-      $e.after($root);
-  
-      let RichAreaVueFactory = require('./RichAreaVueFactory');
       options = $.extend(true, {}, {
-        root: $root,
-        items: [],
+        container: $e,
       }, options)
-      RichAreaVueFactory.create(options);
-
+      let ra = RichArea.create(options);
     }
   });
 }))(jQuery);

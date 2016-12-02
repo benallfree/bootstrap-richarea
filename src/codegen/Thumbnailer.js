@@ -25,7 +25,7 @@ class Thumbnailer
     
       var template = require('./webshot-template')(layout);
 
-      let src = `./dist/images/${layout.id}.png`;
+      let src = `./build/images/${layout.id}.png`;
       let dst = `./src/images/${layout.id}.png`;
     
       console.log(`${src}->${dst}`);

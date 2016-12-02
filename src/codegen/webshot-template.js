@@ -5,7 +5,8 @@ module.exports = function(layout) {
     js: fs.readFileSync('./dist/richarea.js', 'utf8'),
     layouts: fs.readFileSync('./dist/richarea-layouts.js', 'utf8'),
   }
-
+  
+  let assetRoot = 'file://'+process.cwd()+'/dist';
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +18,7 @@ module.exports = function(layout) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
-    <style>
-    ${c.css}
-    </style>
+    <link rel="stylesheet" href="${assetRoot}/richarea.css">
 
     <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
@@ -29,19 +28,21 @@ module.exports = function(layout) {
     <script src="https://cdn.jsdelivr.net/jquery.actual/1.0.18/jquery.actual.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
+    <!--
+    <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
+    -->
 
-    <script>
-    ${c.js};
-    ${c.layouts};
-    </script>
+    <script src="${assetRoot}/richarea.js"></script>    
+    <script src="${assetRoot}/richarea-layouts.js"></script>    
   </head>
   <body>
     <div id="richarea"></div>
     <script>
     $(function() {
       $('#richarea').richarea({
+        assetRoot: '${assetRoot}',
         items: [
-          {"layout_id":${layout.id},},
+          {"layout_id": ${layout.id},},
         ],
         mode: 'view',
       });
