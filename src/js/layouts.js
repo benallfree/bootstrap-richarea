@@ -1,1 +1,0 @@
-window.RichAreaConfig.layouts = require('../build/layouts');

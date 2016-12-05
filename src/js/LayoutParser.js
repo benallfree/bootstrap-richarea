@@ -24,6 +24,10 @@ class LayoutParser
       var $e = $(e);
       var fields = {};
       var layout_id = $e.data('id');
+      if(!layout_id)
+      {
+        throw new TypeError(`Layout ID must not be null for ${$e.html()}`);
+      }
       $e.find('[data-editor]').each( (idx,e) => {
         var $e = $(e);
         var defaultValue = $(e).data('default-value');
@@ -37,6 +41,10 @@ class LayoutParser
       });
       var html = $e.html().trim();
       let cats = $e.data('cat');
+      if(!cats)
+      {
+        throw new TypeError(`cats must not be null for ${$layout_id}`);
+      }
       if(typeof(cats) == 'string')
       {
         cats = JSON.parse(cats.replace(/'/g, '"'));

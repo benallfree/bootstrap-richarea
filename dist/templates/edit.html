@@ -63,8 +63,8 @@
           </div>
           <div class="modal-body">
             <div>
-              <div :class="{'btn-success': selectedCategory == cat[0], 'btn-primary': selectedCategory != cat[0] }" @click="selectCat(cat)" class="btn btn-xs" style="margin: 2px;" v-for="cat in layoutCategories">
-                {{cat[1]}}
+              <div :class="{'btn-success': selectedCategory == k, 'btn-primary': selectedCategory != k }" @click="selectCat(k)" class="btn btn-xs" style="margin: 2px;" v-for="k in layoutCategories">
+                {{k | titleize }}
               </div>
             </div>
             <img class="layout" data-dismiss="modal" :data-layout-id="layout.id" :src="`${config.assetRoot}/images/${layout.id}.png`" v-for="(layout,index) in layouts" v-if="inActiveCategories(layout)" v-on:click="insert(layout.id)"/>

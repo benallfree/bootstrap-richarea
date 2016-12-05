@@ -1,6 +1,6 @@
 class BaseEditor
 {
-  static initField(field, layout) {
+  static initField(field, layout, options) {
     
   }
   

@@ -1,19 +1,22 @@
 let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
 let Q = require('q');
+let changeCase = changeCase = require('change-case');
 
 class RichArea
 {
-  static registerEditor(klass)
+  static registerEditor(klass, options = {})
   {
     let name = klass.name;
     if(this.editors[name]) throw TypeError(`Editor ${name} is already registered with RichArea.`);
     this.editors[name] = klass;
     this.localVueComponents[name] = klass.getVueData();
+    this.options.editors[name] = options;
   }
   
-  static ensureLayouts(layoutUrls)
+  static ensureLayouts(options)
   {
+    let layoutUrls = options.layouts;
     let d = Q.defer();
     let qs = [];
     layoutUrls.forEach((url)=> {
@@ -29,13 +32,13 @@ class RichArea
             if(!this.editors[field.editor]) {
               throw new TypeError(`Editor ${field.editor} has not been registered.`);
             }
-            this.editors[field.editor].initField(field, layout);
+            this.editors[field.editor].initField(field, layout, options);
           }
         }
         this.layoutUrls[url] = layouts;
         Object.keys(layouts).forEach((cid)=> {
           this.localVueComponents['c'+cid] = VueComponentFactory.createFromLayout(layouts[cid]);
-          $.extend(this.layoutCategorieslayouts, layouts[cid].categories);
+          $.extend(this.layoutCategories, layouts[cid].categories);
         });        
         this.layouts = $.extend(true, {}, layouts, this.layouts);
       }));
@@ -70,7 +73,7 @@ class RichArea
         options.root = $("<div class='richarea'>"+html+"</div>");
         options.container.append(options.root);
       }),
-      this.ensureLayouts(options.layouts).then(function() {
+      this.ensureLayouts(options).then(function() {
         if(Object.keys(options.layouts).length==0)
         {
           throw new TypeError("You must define at least one layout.");
@@ -128,7 +131,7 @@ class RichArea
       $currentLayout: null,
       items: items,
       selectedCategory: 'default',
-      layoutCategories: this.layoutCategories,
+      layoutCategories: Object.keys(this.layoutCategories).sort(),
       layouts: this.layouts,
     });
     
@@ -161,6 +164,9 @@ class RichArea
         jsonify: (obj)=> {
           return JSON.stringify(obj);
         },                   
+        titleize: (s)=> {
+          return changeCase.title(s);
+        }
       },
       watch: {
         currentIdx: function(v)
@@ -186,8 +192,8 @@ class RichArea
           let $modal = $editor().find('.layouts-modal');
           $modal.modal('show');
         },
-        selectCat: function(cat) {
-          this.selectedCategory = cat[0];
+        selectCat: function(k) {
+          this.selectedCategory = k;
         },
         inActiveCategories: function(layout)
         {
@@ -355,6 +361,11 @@ class RichArea
       return response.promise;
   };  
 }
+RichArea.options = {
+  editors: {
+    
+  }
+};
 RichArea.editors = {};
 RichArea.layoutUrls = {};
 RichArea.layouts = {};
