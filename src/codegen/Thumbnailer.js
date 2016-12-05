@@ -1,3 +1,5 @@
+'use strict'
+
 let fs = require('fs');
 let Q = require('q');
 
@@ -13,12 +15,19 @@ class Thumbnailer
 
       var options = {
         screenSize: {
-          width: 1024
-          , height: 768
+          width: 1024,
+          height: 768
         },
-        siteType: 'html',
+        shotSize: {
+          width: 1024,
+          height: 768-140,
+        },
+        shotOffset: {
+          top: 140,
+        },
+        // siteType: 'html',
         // userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36',
-        // phantomPath: './node_modules/.bin/phantomjs',
+        phantomPath: './node_modules/.bin/phantomjs',
         takeShotOnCallback: true,
         errorIfJSException: true,
       };
@@ -26,10 +35,10 @@ class Thumbnailer
       var template = require('./webshot-template')(layout);
 
       let src = `./build/images/${layout.id}.png`;
-      let dst = `./src/images/${layout.id}.png`;
+      let dst = `./src/assets/images/${layout.id}.png`;
     
       console.log(`${src}->${dst}`);
-      webshot(template, src, options, function(err) {
+      webshot('http://richarea.dev/samples/example4.html?l='+layout.id, src, options, function(err) {
         if(err)
         {
           console.log(err);
@@ -37,8 +46,6 @@ class Thumbnailer
           return;
         }
         var gm = require('gm');
-        var canvasWidth = 1024;
-        var canvasHeight = 768;
         gm(src)
           .trim()
           .resize(320,240)

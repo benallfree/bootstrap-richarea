@@ -199,7 +199,7 @@
 	        throw new TypeError("RichArea must have at least one layout file defined.");
 	      }
 
-	      var qs = [$.get(options.assetRoot + '/' + options.mode + '.html').then(function (html) {
+	      var qs = [$.get(options.assetRoot + '/templates/' + options.mode + '.html').then(function (html) {
 	        options.root = $("<div class='richarea'>" + html + "</div>");
 	        options.container.append(options.root);
 	      }), this.ensureLayouts(options.layouts).then(function () {
@@ -395,23 +395,25 @@
 
 	          this.calc();
 	          $app().show();
-	          $sortable().sortable({
-	            placeholder: "alert alert-warning",
-	            items: 'li:not(.disabled)',
-	            handle: '.move',
-	            helper: 'clone',
-	            stop: function stop(event, ui) {
-	              ui.placeholder.height(ui.item.height());
-	              ui.placeholder.width(ui.item[0].offsetWidth);
-	              var $e = $(ui.item);
-	              var oidx = $e.data('index');
-	              var nidx = $e.index();
-	              _this5.items.move(oidx, nidx);
-	              _this5.currentIdx = nidx;
-	              $sortable().sortable('cancel');
-	            },
-	            cursor: 'move'
-	          });
+	          if ($.prototype.sortable) {
+	            $sortable().sortable({
+	              placeholder: "alert alert-warning",
+	              items: 'li:not(.disabled)',
+	              handle: '.move',
+	              helper: 'clone',
+	              stop: function stop(event, ui) {
+	                ui.placeholder.height(ui.item.height());
+	                ui.placeholder.width(ui.item[0].offsetWidth);
+	                var $e = $(ui.item);
+	                var oidx = $e.data('index');
+	                var nidx = $e.index();
+	                _this5.items.move(oidx, nidx);
+	                _this5.currentIdx = nidx;
+	                $sortable().sortable('cancel');
+	              },
+	              cursor: 'move'
+	            });
+	          }
 	          if ($.prototype.fullscreen) {
 	            $editor().find('.layouts-modal').fullscreen();
 	          }
@@ -505,47 +507,54 @@
 	  _createClass(LayoutParser, null, [{
 	    key: 'parse',
 	    value: function parse(url) {
+	      var _this = this;
+
 	      var d = Q.defer();
 
 	      $.get(url, function (layouts_html) {
-	        var layouts = {};
-	        var $tree = $('<div>');
-	        $tree.html(layouts_html);
-	        $tree.children('div').each(function (idx, e) {
-	          var $e = $(e);
-	          var fields = {};
-	          var layout_id = $e.data('id');
-	          $e.find('[data-editor]').each(function (idx, e) {
-	            var $e = $(e);
-	            var defaultValue = $(e).data('default-value');
-	            fields[$(e).data('field')] = {
-	              editor: $(e).data('editor'),
-	              defaultValue: defaultValue
-	            };
-	          });
-	          ['data-editor', 'data-field', 'data-default-value'].forEach(function (attr) {
-	            $e.find('[' + attr + ']').removeAttr(attr);
-	          });
-	          var html = $e.html().trim();
-	          var cats = $e.data('cat');
-	          if (typeof cats == 'string') {
-	            cats = JSON.parse(cats.replace(/'/g, '"'));
-	          }
-	          var catsHash = {};
-	          cats.forEach(function (c) {
-	            catsHash[c] = true;
-	          });
-	          layouts[layout_id] = {
-	            id: $e.data('id'),
-	            fields: $.extend(true, {}, fields),
-	            categories: catsHash,
-	            template: html
-	          };
-	        });
-
+	        var layouts = _this.parseFromString(layouts_html, $);
 	        d.resolve(layouts);
 	      });
 	      return d.promise;
+	    }
+	  }, {
+	    key: 'parseFromString',
+	    value: function parseFromString(layouts_html, $) {
+	      var layouts = {};
+	      var $tree = $('<div>');
+	      $tree.html(layouts_html);
+	      $tree.children('div').each(function (idx, e) {
+	        var $e = $(e);
+	        var fields = {};
+	        var layout_id = $e.data('id');
+	        $e.find('[data-editor]').each(function (idx, e) {
+	          var $e = $(e);
+	          var defaultValue = $(e).data('default-value');
+	          fields[$(e).data('field')] = {
+	            editor: $(e).data('editor'),
+	            defaultValue: defaultValue
+	          };
+	        });
+	        ['data-editor', 'data-field', 'data-default-value'].forEach(function (attr) {
+	          $e.find('[' + attr + ']').removeAttr(attr);
+	        });
+	        var html = $e.html().trim();
+	        var cats = $e.data('cat');
+	        if (typeof cats == 'string') {
+	          cats = JSON.parse(cats.replace(/'/g, '"'));
+	        }
+	        var catsHash = {};
+	        cats.forEach(function (c) {
+	          catsHash[c] = true;
+	        });
+	        layouts[layout_id] = {
+	          id: $e.data('id'),
+	          fields: $.extend(true, {}, fields),
+	          categories: catsHash,
+	          template: html
+	        };
+	      });
+	      return layouts;
 	    }
 	  }]);
 

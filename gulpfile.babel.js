@@ -141,8 +141,8 @@ gulp.task('watch', function () {
 
 
 gulp.task('thumbnails', ['js', 'sass'], function (cb) {
-  let RichAreaConfig
-  var layouts = require('./build/layouts');
+  let LayoutParser = require('./src/LayoutParser');
+  let layouts = LayoutParser.parseFromFile('./src/templates/layouts.html');
   let Thumbnailer = require('./src/codegen/Thumbnailer');
 
   let tasks = [];

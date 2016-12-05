@@ -1,11 +1,4 @@
 module.exports = function(layout) {
-  var fs = require('fs');
-  var c = {
-    css: fs.readFileSync('./dist/richarea.css', 'utf8'),
-    js: fs.readFileSync('./dist/richarea.js', 'utf8'),
-    layouts: fs.readFileSync('./dist/richarea-layouts.js', 'utf8'),
-  }
-  
   let assetRoot = 'file://'+process.cwd()+'/dist';
   return `
 <!DOCTYPE html>
@@ -21,28 +14,22 @@ module.exports = function(layout) {
     <link rel="stylesheet" href="${assetRoot}/richarea.css">
 
     <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/tether/1.3.7/tether.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.cropit/0.5.1/jquery.cropit.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.actual/1.0.18/jquery.actual.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
-    <!--
-    <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
-    -->
 
     <script src="${assetRoot}/richarea.js"></script>    
-    <script src="${assetRoot}/richarea-layouts.js"></script>    
   </head>
   <body>
     <div id="richarea"></div>
     <script>
     $(function() {
       $('#richarea').richarea({
-        assetRoot: '${assetRoot}',
+        assetRoot: '../dist',
+        layouts: [
+          '../dist/templates/layouts.html'
+        ],
         items: [
-          {"layout_id": ${layout.id},},
+          {layout_id: 'richarea-1'}
         ],
         mode: 'view',
       });
