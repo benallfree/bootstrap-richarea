@@ -7,7 +7,7 @@ let scripts = document.getElementsByTagName("script"),
 src = scripts[scripts.length-1].src;
 let parser = document.createElement('a');
 parser.href = src;
-let assetRoot = parser.pathname.replace(/\/richarea.js/, "");
+let assetRoot = parser.href.replace(/\/[^\/]+$/, "")
 RichArea.options = $.extend({
   mode: 'edit',
   assetRoot: assetRoot,

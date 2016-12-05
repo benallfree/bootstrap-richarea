@@ -55,7 +55,7 @@
 	    src = scripts[scripts.length - 1].src;
 	var parser = document.createElement('a');
 	parser.href = src;
-	var assetRoot = parser.pathname.replace(/\/richarea.js/, "");
+	var assetRoot = parser.href.replace(/\/[^\/]+$/, "");
 	RichArea.options = $.extend({
 	  mode: 'edit',
 	  assetRoot: assetRoot,
@@ -533,14 +533,18 @@
 	      var d = Q.defer();
 
 	      $.get(url, function (layouts_html) {
-	        var layouts = _this.parseFromString(layouts_html, $);
+	        var layouts = _this.parseFromString(url, layouts_html, $);
 	        d.resolve(layouts);
 	      });
 	      return d.promise;
 	    }
 	  }, {
 	    key: 'parseFromString',
-	    value: function parseFromString(layouts_html, $) {
+	    value: function parseFromString(url, layouts_html, $) {
+	      var parser = document.createElement('a');
+	      parser.href = url.replace(/\/[^\/]+$/, "") + '/../images';
+	      var thumbnailRoot = parser.href;
+
 	      var layouts = {};
 	      var $tree = $('<div>');
 	      $tree.html(layouts_html);
@@ -575,10 +579,11 @@
 	          catsHash[c] = true;
 	        });
 	        layouts[layout_id] = {
-	          id: $e.data('id'),
+	          id: layout_id,
 	          fields: $.extend(true, {}, fields),
 	          categories: catsHash,
-	          template: html
+	          template: html,
+	          thumbnailUrl: thumbnailRoot + '/' + layout_id + '.png'
 	        };
 	      });
 	      return layouts;

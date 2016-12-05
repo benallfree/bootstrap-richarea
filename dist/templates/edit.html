@@ -67,7 +67,7 @@
                 {{k | titleize }}
               </div>
             </div>
-            <img class="layout" data-dismiss="modal" :data-layout-id="layout.id" :src="`${config.assetRoot}/images/${layout.id}.png`" v-for="(layout,index) in layouts" v-if="inActiveCategories(layout)" v-on:click="insert(layout.id)"/>
+            <img class="layout" data-dismiss="modal" :data-layout-id="layout.id" :src="`${layout.thumbnailUrl}`" v-for="(layout,index) in layouts" v-if="inActiveCategories(layout)" v-on:click="insert(layout.id)"/>
           </div>
           <div class="modal-footer">
             <button class="btn btn-default" data-dismiss="modal">Close</button>

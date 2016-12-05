@@ -9,14 +9,18 @@ class LayoutParser
     let d = Q.defer();
     
     $.get(url, (layouts_html)=> {
-      let layouts = this.parseFromString(layouts_html, $);
+      let layouts = this.parseFromString(url, layouts_html, $);
       d.resolve(layouts);
     });
     return d.promise;
   }
   
-  static parseFromString(layouts_html, $)
+  static parseFromString(url, layouts_html, $)
   {
+    let parser = document.createElement('a');
+    parser.href = url.replace(/\/[^\/]+$/, "") + '/../images';
+    let thumbnailRoot = parser.href;
+    
     let layouts = {};
     var $tree = $('<div>');
     $tree.html(layouts_html);
@@ -52,10 +56,11 @@ class LayoutParser
       let catsHash = {};
       cats.forEach(function(c) { catsHash[c]=true; });
       layouts[layout_id] = {
-        id: $e.data('id'),
+        id: layout_id,
         fields: $.extend(true, {}, fields),
         categories: catsHash,
         template: html,
+        thumbnailUrl: `${thumbnailRoot}/${layout_id}.png`
       };
     });
     return layouts;
