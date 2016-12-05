@@ -1,6 +1,7 @@
 'use strict'
 
 let Q = require('q');
+let _ = require('lodash');
 
 class LayoutParser
 {
@@ -57,7 +58,7 @@ class LayoutParser
       cats.forEach(function(c) { catsHash[c]=true; });
       layouts[layout_id] = {
         id: layout_id,
-        fields: $.extend(true, {}, fields),
+        fields: _.merge({}, fields),
         categories: catsHash,
         template: html,
         thumbnailUrl: `${thumbnailRoot}/${layout_id}.png`

@@ -1,5 +1,7 @@
 require('./array.js');
 require('./jquery.visibility.js');
+let _ = require('lodash');
+
 window.RichArea = require('./RichArea');
 window.RichAreaBaseEditor = require('./editors/BaseEditor');
 
@@ -8,10 +10,11 @@ src = scripts[scripts.length-1].src;
 let parser = document.createElement('a');
 parser.href = src;
 let assetRoot = parser.href.replace(/\/[^\/]+$/, "")
-RichArea.options = $.extend({
+
+_.merge(RichArea.options, {
   mode: 'edit',
   assetRoot: assetRoot,
-  layouts: [
+  layoutUrls: [
     assetRoot + '/templates/layouts.html',
   ],
   editors: {},
@@ -23,7 +26,7 @@ RichArea.options = $.extend({
     {
       let $e = $(this);
 
-      options = $.extend({}, RichArea.options, options, {
+      options = _.merge({}, RichArea.options, options, {
         container: $e,
       });
       

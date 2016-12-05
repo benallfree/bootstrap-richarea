@@ -2,6 +2,7 @@ let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
 let Q = require('q');
 let changeCase = changeCase = require('change-case');
+let _ = require('lodash');
 
 class RichArea
 {
@@ -14,9 +15,9 @@ class RichArea
     this.options.editors[name] = options;
   }
   
-  static ensureLayouts(options)
+  static ensureLayoutsLoaded(options)
   {
-    let layoutUrls = options.layouts;
+    let layoutUrls = options.layoutUrls;
     let d = Q.defer();
     let qs = [];
     layoutUrls.forEach((url)=> {
@@ -38,9 +39,9 @@ class RichArea
         this.layoutUrls[url] = layouts;
         Object.keys(layouts).forEach((cid)=> {
           this.localVueComponents['c'+cid] = VueComponentFactory.createFromLayout(layouts[cid]);
-          $.extend(this.layoutCategories, layouts[cid].categories);
+          _.merge(this.layoutCategories, layouts[cid].categories);
         });        
-        this.layouts = $.extend(true, {}, layouts, this.layouts);
+        this.layouts = _.merge({}, layouts, this.layouts);
       }));
     });
     Q.all(qs).then(function() { d.resolve(); }).fail(function(err) { d.reject(err); });
@@ -49,12 +50,13 @@ class RichArea
   
   static create(options)
   {
-    options = $.extend(true, {}, {
+    options = _.merge({}, {
       container: null,
       root: null,
       assetRoot: '',
       imageUploadUrl: null,
-      layouts: [],
+      layoutUrls: [],
+      layouts: {},
       items: [],
       mode: 'edit',
     },options);
@@ -63,18 +65,18 @@ class RichArea
     {
       throw new TypeError("RichArea must be attached to a DOM element container.");
     }
-    if(options.layouts.length==0)
+    if(options.layoutUrls.length==0)
     {
       throw new TypeError("RichArea must have at least one layout file defined.");
     }
     
     let qs = [
-      $.get(options.assetRoot + '/templates/'+options.mode+'.html').then(function(html) {
+      $.get(options.assetRoot + '/templates/'+options.mode+'.html').then((html)=> {
         options.root = $("<div class='richarea'>"+html+"</div>");
         options.container.append(options.root);
       }),
-      this.ensureLayouts(options).then(function() {
-        if(Object.keys(options.layouts).length==0)
+      this.ensureLayoutsLoaded(options).then(() =>{
+        if(Object.keys(this.layouts).length==0)
         {
           throw new TypeError("You must define at least one layout.");
         }
@@ -94,7 +96,7 @@ class RichArea
       });
       return item;
     }
-    $.extend(true, item, {data: {}});
+    _.merge(item, {data: {}});
     let layout = this.layouts[item.layout_id];
     if(!layout) throw new TypeError(`Undefined layout ${item.layout_id}`);
     let fields = layout.fields;
@@ -107,7 +109,7 @@ class RichArea
    
   static initVue(options)
   {
-    let items = this.ensureDefaultValues($.extend(true, [], options.items));
+    let items = this.ensureDefaultValues(_.union([], options.items));
 
     function $app()
     {
@@ -124,7 +126,7 @@ class RichArea
       return $editor().find('.sortable');
     }
     
-    let appData = $.extend(true, options, {
+    let appData = _.merge({}, options, {
       content: null,
       itemsJson: null,
       currentIdx: null,
@@ -149,10 +151,7 @@ class RichArea
           return this.layouts[currentItem.layout_id];
         },
         config: function() {
-          return {
-            assetRoot: this.assetRoot,
-            imageUploadUrl: this.imageUploadUrl,
-          }
+          return options;
         }
       },
       filters: {
@@ -268,7 +267,7 @@ class RichArea
         
         duplicate: function(event)
         {
-          this.items.splice(this.currentIdx,0,$.extend(true, {}, this.items[this.currentIdx]));
+          this.items.splice(this.currentIdx,0,_.merge({}, this.items[this.currentIdx]));
         },
         remove: function(event)
         {
