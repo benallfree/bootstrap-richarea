@@ -22,7 +22,11 @@
     "assets": "parallelshell 'npm run assets:images' 'npm run assets:templates'",
     "assets:images": "cp -r src/assets/images dist",
     "assets:templates": "cp -r src/assets/templates dist",
-    "notify": "notify -m 'Build finished' -s Glass"
+    "notify": "notify -m 'Build finished' -s Glass",
+    "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
+  },
+  "bin": {
+    "richarea-thumbnails": "./scripts/thumbnails.js"
   },
   "repository": {
     "type": "git",

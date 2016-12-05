@@ -5,7 +5,7 @@ let Q = require('q');
 
 class Thumbnailer
 {
-  static createAsync(layout)
+  static createAsync(url, layout)
   {
     return function(cb)
     {
@@ -23,7 +23,7 @@ class Thumbnailer
           height: 768-140,
         },
         shotOffset: {
-          top: 140,
+          top: 130,
         },
         // siteType: 'html',
         // userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36',
@@ -32,13 +32,11 @@ class Thumbnailer
         errorIfJSException: true,
       };
     
-      var template = require('./webshot-template')(layout);
-
       let src = `./build/images/${layout.id}.png`;
       let dst = `./src/assets/images/${layout.id}.png`;
     
       console.log(`${src}->${dst}`);
-      webshot('http://richarea.dev/samples/example4.html?l='+layout.id, src, options, function(err) {
+      webshot(url, src, options, function(err) {
         if(err)
         {
           console.log(err);
