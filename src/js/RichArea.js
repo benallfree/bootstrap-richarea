@@ -54,7 +54,6 @@ class RichArea
       container: null,
       root: null,
       assetRoot: '',
-      imageUploadUrl: null,
       layoutUrls: [],
       layouts: {},
       items: [],
