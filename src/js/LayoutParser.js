@@ -10,17 +10,20 @@ class LayoutParser
     let d = Q.defer();
     
     $.get(url, (layouts_html)=> {
-      let layouts = this.parseFromString(url, layouts_html, $);
+      let layouts = this.parseFromString(layouts_html, url);
       d.resolve(layouts);
     });
     return d.promise;
   }
   
-  static parseFromString(url, layouts_html, $)
+  static parseFromString(layouts_html, urlRoot = null)
   {
-    let parser = document.createElement('a');
-    parser.href = url.replace(/\/[^\/]+$/, "") + '/../images';
-    let urlRoot = parser.href;
+    if(urlRoot)
+    {
+      let parser = document.createElement('a');
+      parser.href = urlRoot.replace(/\/[^\/]+$/, "") + '/../images';
+      urlRoot = parser.href;
+    }
     
     let layouts = {};
     var $tree = $('<div>');
@@ -44,8 +47,9 @@ class LayoutParser
       ['data-editor', 'data-field', 'data-default-value',].forEach(function(attr) {
         $e.find('['+attr+']').removeAttr(attr);
       });
-      var html = $e.html().trim();
+      let html = $e.html().trim();
       let cats = $e.data('cat');
+      let thumbnailUrl = $e.data('thumbnail');
       if(!cats)
       {
         throw new TypeError(`cats must not be null for ${$layout_id}`);
@@ -61,7 +65,7 @@ class LayoutParser
         fields: _.merge({}, fields),
         categories: catsHash,
         template: html,
-        thumbnailUrl: `${urlRoot}/${layout_id}.png`
+        thumbnailUrl: thumbnailUrl || `${urlRoot}/${layout_id}.png`,
       };
     });
     return layouts;

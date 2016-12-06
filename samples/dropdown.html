@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/richarea.css">
+
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
+
+    <script src="vendor/bootstrap-modal-fullscreen/bs-modal-fullscreen.js"></script>    
+    <script src="../dist/richarea.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+       
+  </head>
+  <body>
+    <h1>Basic Demo</h1>
+    <p style="color:red">Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</p>
+    <hr/>
+    <form>
+      <div id="richarea"></div>
+    
+      <script type="text/babel">
+      $(function() {
+        let ddConfig = {
+          "value": "headlinea",
+          "options": {
+            "headlinea": "Headline A",
+            "headlineb": "Headline B"
+          }
+        };
+        function htmlEscape(str) {
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+        
+        let ddEscaped = htmlEscape(JSON.stringify(ddConfig));
+        $('#richarea').richarea({
+          layoutUrls: [
+            '../dist/templates/layouts.html'
+          ],
+          extraLayouts: `
+            <div data-id="dropdown" data-cat="['dropdown']">
+            	<div class="row">
+            		<div class="col-sm-12">
+            			<h1 data-editor="DropdownEditor" data-field="headline" data-default-value="${ddEscaped}">{{ item.data.headline.options[item.data.headline.value] }}</h1>
+                </div>
+            	</div>
+            </div>
+          `,
+          items: [
+            {layout_id: "dropdown"}
+          ],
+          onChange: function(o)
+          {
+            $('#html').val(o.html);
+            $('#data').val(JSON.stringify(o.data));
+          }
+        });
+      });
+      </script>
+    
+      <textarea id="html" style="width:300px;height:300px"></textarea>
+      <textarea id="data" style="width:300px;height:300px"></textarea>
+    </form>
+  </body>
+</html>

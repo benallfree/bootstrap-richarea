@@ -3,6 +3,7 @@ let VueComponentFactory = require('./VueComponentFactory');
 let Q = require('q');
 let changeCase = changeCase = require('change-case');
 let _ = require('lodash');
+let md5 = require('md5');
 
 class RichArea
 {
@@ -40,11 +41,23 @@ class RichArea
         Object.keys(layouts).forEach((cid)=> {
           this.localVueComponents['c'+cid] = VueComponentFactory.createFromLayout(layouts[cid]);
           _.merge(this.layoutCategories, layouts[cid].categories);
-        });        
-        this.layouts = _.merge({}, layouts, this.layouts);
+        });
+        _.merge(this.layouts, layouts);
       }));
     });
     Q.all(qs).then(function() { d.resolve(); }).fail(function(err) { d.reject(err); });
+    if(options.extraLayouts)
+    {
+      let hash = md5(options.extraLayouts);
+      if(this.layoutUrls[hash]) return;
+      let layouts = LayoutParser.parseFromString(options.extraLayouts);
+      this.layoutUrls[hash] = layouts;
+      Object.keys(layouts).forEach((cid)=> {
+        this.localVueComponents['c'+cid] = VueComponentFactory.createFromLayout(layouts[cid]);
+        _.merge(this.layoutCategories, layouts[cid].categories);
+      });
+      _.merge(this.layouts, layouts);
+    }
     return d.promise;
   }
   
@@ -55,6 +68,7 @@ class RichArea
       root: null,
       assetRoot: '',
       layoutUrls: [],
+      extraLayouts: null,
       layouts: {},
       items: [],
       mode: 'edit',
@@ -374,5 +388,6 @@ RichArea.localVueComponents = {};
 RichArea.registerEditor(require('./editors/TextEditor.js'));
 RichArea.registerEditor(require('./editors/TextareaEditor.js'));
 RichArea.registerEditor(require('./editors/LinkEditor.js'));
+RichArea.registerEditor(require('./editors/DropdownEditor.js'));
 
 module.exports = RichArea;
