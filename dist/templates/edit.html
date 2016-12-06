@@ -34,7 +34,7 @@
                     <div class="form-group">
                       <label class="col-xs-2 control-label">{{fieldName | titlecase}}</label>
                       <div class="col-xs-10">
-                        <component :is="field.editor" :item="currentItem" :field-name="fieldName" :config="config"></component>
+                        <component :is="field.editor" :item="currentItem" :field-name="fieldName" :config="config" :key="'elem'+currentIdx"></component>
                       </div>
                     </div>
                   </div>

@@ -25,8 +25,8 @@
     "assets:templates": "cp -r src/assets/templates dist",
     "samples": "concurrently 'npm run samples:bsmf'",
     "samples:bsmf": "rm -rf ./samples/vendor/bootstrap-modal-fullscreen && cp -R node_modules/bootstrap-modal-fullscreen/dist ./samples/vendor/bootstrap-modal-fullscreen",
-    
-    "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
+    "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html",
+    "layouts:generate": "babel-node ./scripts/layouts.js"
   },
   "bin": {
     "richarea-thumbnails": "./scripts/thumbnails.js"
@@ -56,6 +56,7 @@
     "change-case": "^3.0.0",
     "clean-css": "^3.4.21",
     "concurrently": "^3.1.0",
+    "glob": "^7.1.1",
     "gm": "^1.23.0",
     "jquery": "^3.1.1",
     "jsdom": "^9.8.3",

@@ -20,7 +20,7 @@ class LayoutParser
   {
     let parser = document.createElement('a');
     parser.href = url.replace(/\/[^\/]+$/, "") + '/../images';
-    let thumbnailRoot = parser.href;
+    let urlRoot = parser.href;
     
     let layouts = {};
     var $tree = $('<div>');
@@ -61,7 +61,7 @@ class LayoutParser
         fields: _.merge({}, fields),
         categories: catsHash,
         template: html,
-        thumbnailUrl: `${thumbnailRoot}/${layout_id}.png`
+        thumbnailUrl: `${urlRoot}/${layout_id}.png`
       };
     });
     return layouts;
