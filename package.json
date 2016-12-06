@@ -7,7 +7,7 @@
     "package:sass": "npm run build:sass && npm run optimize:css",
     "package:js": "npm run build:js && npm run optimize:js",
     "prepackage": "npm run clean",
-    "package": "concurrently 'npm run package:sass' 'npm run package:js' 'npm run assets'",
+    "package": "concurrently 'npm run package:sass' 'npm run package:js' 'npm run assets' 'npm run samples'",
     "build:sass": "node-sass src/sass/richarea.scss > dist/richarea.css",
     "build:js": "webpack",
     "watch": "concurrently 'npm run watch:sass' 'npm run watch:js' 'npm run watch:assets'",
@@ -23,6 +23,9 @@
     "assets": "concurrently 'npm run assets:images' 'npm run assets:templates'",
     "assets:images": "cp -r src/assets/images dist",
     "assets:templates": "cp -r src/assets/templates dist",
+    "samples": "concurrently 'npm run samples:bsmf'",
+    "samples:bsmf": "rm -rf ./samples/vendor/bootstrap-modal-fullscreen && cp -R node_modules/bootstrap-modal-fullscreen/dist ./samples/vendor/bootstrap-modal-fullscreen",
+    
     "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
   },
   "bin": {

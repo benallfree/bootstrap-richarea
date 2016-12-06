@@ -21,7 +21,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button class="close" @click="close">
+            <button class="close" @click.prevent="close">
               <span class="glyphicon glyphicon-remove"></span>
             </button>
             <h4 class="modal-title">Edit Component</h4>
@@ -46,7 +46,7 @@
             </template>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-default"  @click="close">Close</button>
+            <button class="btn btn-default"  @click.prevent="close">Close</button>
           </div>
         </div>
       </div>

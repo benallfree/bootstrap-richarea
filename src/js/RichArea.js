@@ -202,10 +202,11 @@ class RichArea
           if(!options.onChange) return;
           options.onChange({html: this.content, data: this.items});
         },
-        close: function()
+        close: function(e)
         {
           $editor().find('.modal.in').modal('hide');
           setTimeout(this.calc,0);
+          e.preventDefault();
         },
         calc: function()
         {
@@ -241,14 +242,14 @@ class RichArea
         },
         select: function(event)
         {
-          var $li = $(event.target).closest('li');
+          let $li = $(event.target).closest('li');
           this.currentIdx = $li.index();
           this.$currentLayout = $li;
         },
         insert: function(layout_id)
         {
-          var o = this.ensureDefaultValues({layout_id: layout_id});
-          var idx = $sortable().find('li.active').index();
+          let o = this.ensureDefaultValues({layout_id: layout_id});
+          let idx = $sortable().find('li.active').index();
           if(idx>=0)
           {
             this.items.splice(idx,0,o);

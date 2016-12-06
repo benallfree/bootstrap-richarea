@@ -17430,9 +17430,10 @@
 	            if (!options.onChange) return;
 	            options.onChange({ html: this.content, data: this.items });
 	          },
-	          close: function close() {
+	          close: function close(e) {
 	            $editor().find('.modal.in').modal('hide');
 	            setTimeout(this.calc, 0);
+	            e.preventDefault();
 	          },
 	          calc: function calc() {
 	            var _this4 = this;
