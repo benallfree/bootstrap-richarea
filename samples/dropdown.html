@@ -50,8 +50,8 @@
             '../dist/templates/layouts.html'
           ],
           extraLayouts: `
-            <div data-id="dropdown" data-cat="['dropdown']">
-            	<div class="row">
+            <div data-id="dropdown" data-cat="[&quot;dropdown&quot;]">
+            	<div class="row" data-render="hello">
             		<div class="col-sm-12">
             			<h1 data-editor="DropdownEditor" data-field="headline" data-default-value="${ddEscaped}">{{ item.data.headline.options[item.data.headline.value] }}</h1>
                 </div>
