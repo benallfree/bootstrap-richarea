@@ -17352,12 +17352,17 @@
 	      }
 	      _.merge(item, { data: {} });
 	      var layout = this.layouts[item.layout_id];
-	      if (!layout) throw new TypeError('Undefined layout ' + item.layout_id);
-	      var fields = layout.fields;
-	      Object.keys(fields).forEach(function (key) {
-	        if (key in item.data) return;
-	        item.data[key] = fields[key].defaultValue;
-	      });
+	      if (layout) {
+	        (function () {
+	          var fields = layout.fields;
+	          Object.keys(fields).forEach(function (key) {
+	            if (key in item.data) return;
+	            item.data[key] = fields[key].defaultValue;
+	          });
+	        })();
+	      } else {
+	        console.log('Warning: Undefined layout for ' + JSON.stringify(item));
+	      }
 	      return item;
 	    }
 	  }, {

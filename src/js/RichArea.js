@@ -111,12 +111,16 @@ class RichArea
     }
     _.merge(item, {data: {}});
     let layout = this.layouts[item.layout_id];
-    if(!layout) throw new TypeError(`Undefined layout ${item.layout_id}`);
-    let fields = layout.fields;
-    Object.keys(fields).forEach((key)=> {
-      if(key in item.data) return;
-      item.data[key] = fields[key].defaultValue;
-    });
+    if(layout)
+    {
+      let fields = layout.fields;
+      Object.keys(fields).forEach((key)=> {
+        if(key in item.data) return;
+        item.data[key] = fields[key].defaultValue;
+      });
+    } else {
+      console.log(`Warning: Undefined layout for ${JSON.stringify(item)}`);
+    }
     return item;
   } 
    
