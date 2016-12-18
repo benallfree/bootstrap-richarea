@@ -38,9 +38,9 @@ class LayoutParser
       }
       $e.find('[data-editor]').each( (idx,e) => {
         var $e = $(e);
-        var defaultValue = $(e).data('default-value');
-        fields[$(e).data('field')] = {
-          editor: $(e).data('editor'),
+        var defaultValue = $e.data('default-value');
+        fields[$e.data('field')] = {
+          editor: $e.data('editor'),
           defaultValue: defaultValue,
         };
       });
