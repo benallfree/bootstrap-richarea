@@ -1,8 +1,6 @@
 let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
-let Q = require('q');
 let changeCase = changeCase = require('change-case');
-let _ = require('lodash');
 let md5 = require('md5');
 
 class RichArea
@@ -154,7 +152,7 @@ class RichArea
       layouts: this.layouts,
     });
     
-    let app = new Vue({
+    new Vue({
       components: this.localVueComponents,
       el: options.root.find('.richarea-app').get(0),
       data: appData,
@@ -324,7 +322,9 @@ class RichArea
         {
           $editor().find('.layouts-modal').fullscreen();
         }
-        console.log('mount');
+        let e = $editor().find('.modal .modal-header').get(0);
+        new Draggable (e);
+
         // A little hack to wait for all images to finish loading before telling Webshot it's okay to take a screen shot.
         // http://phantomjs.org/api/webpage/handler/on-callback.html
         if (typeof window.callPhantom === 'function') {
