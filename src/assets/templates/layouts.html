@@ -764,17 +764,17 @@
 
 		<div class="col-sm-6">
 
-            		<h3 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum is simply dummy text">{{ item.data.title }}</h3>
+            		<h3 data-editor="TextEditor" data-field="title2" data-default-value="Lorem Ipsum is simply dummy text">{{ item.data.title2 }}</h3>
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">{{ item.data.content }}</p>
+            		<p data-editor="TextareaEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">{{ item.data.content2 }}</p>
 
 
 
 			<div style="margin:1em 0 2.5em;">
 
-           		   <a href="#" class="btn btn-default btn-lg edit">Read More</a> &nbsp;
+           		   <a href="{{ item.data.readMore.href }}" class="btn btn-default btn-lg edit" data-editor="LinkEditor" data-field="readMore" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}" >{{ item.data.readMore.display }}</a> &nbsp;
 
-            		   <a href="#" class="btn btn-primary btn-lg edit">Download</a>
+            		 <a href="{{ item.data.download.href }}" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="download" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Download&quot;}">{{ item.data.download.display }}</a>
 
             		</div>
 
