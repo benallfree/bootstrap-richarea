@@ -1,18 +1,20 @@
 <div class="richarea-app">
   <div class="richarea-editor">
     <ul class="sortable">
-      <li :class="{active: currentIdx==index }" :data-index="index" @click="select" @dblclick="edit" v-for="(item,index) in items">
-        <div class="tools">
-          <span class="move btn btn-success btn-xs glyphicon glyphicon-resize-vertical"></span>
-          <span @click="add(index)" class="add btn btn-default btn-xs glyphicon glyphicon-plus"></span>
-          <span @click="edit" class="settings btn btn-default btn-xs glyphicon glyphicon-cog"></span>
-          <span @click="duplicate" class="duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate"></span>
-          <span @click="remove" class="delete btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
-        </div>
-        <div class="item">
-          <layout :is="'c'+item.layout_id" :item="item" :config="config"></layout>
-        </div>
-      </li>
+      <draggable :list="items" :options="{handle: '.glyphicon-resize-vertical'}">
+        <li :class="{active: currentIdx==index }" :data-index="index" @click="select" @dblclick="edit" v-for="(item,index) in items">
+          <div class="tools">
+            <span class="move btn btn-success btn-xs glyphicon glyphicon-resize-vertical"></span>
+            <span @click="add(index)" class="add btn btn-default btn-xs glyphicon glyphicon-plus"></span>
+            <span @click="edit" class="settings btn btn-default btn-xs glyphicon glyphicon-cog"></span>
+            <span @click="duplicate" class="duplicate btn btn-default btn-xs glyphicon glyphicon-duplicate"></span>
+            <span @click="remove" class="delete btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
+          </div>
+          <div class="item">
+            <layout :is="'c'+item.layout_id" :item="item" :config="config"></layout>
+          </div>
+        </li>
+      </draggable>
       <li class="disabled add text-center">
         <button @click.prevent="add(null)" class="btn btn-primary btn-xl">+</button>
       </li>

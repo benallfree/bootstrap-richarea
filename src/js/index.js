@@ -1,15 +1,12 @@
-require('./array.js');
-require('./jquery.visibility.js');
 let _ = require('lodash');
-
-window.RichArea = require('./RichArea');
-window.RichAreaBaseEditor = require('./editors/BaseEditor');
 
 let scripts = document.getElementsByTagName("script"),
 src = scripts[scripts.length-1].src;
 let parser = document.createElement('a');
 parser.href = src;
 let assetRoot = parser.href.replace(/\/[^\/]+$/, "")
+
+let RichArea = require('./RichArea');
 
 _.merge(RichArea.options, {
   mode: 'edit',
@@ -20,17 +17,16 @@ _.merge(RichArea.options, {
   editors: {},
 });
 
-(($ => {
-  $(() => {
-    $.fn.richarea = function(options)
-    {
-      let $e = $(this);
+module.exports = ($) => {
+  $.fn.richarea = function(options)
+  {
+    
+    let $e = $(this);
 
-      options = _.merge({}, RichArea.options, options, {
-        container: $e,
-      });
-      
-      let ra = RichArea.create(options);
-    }
-  });
-}))(jQuery);
+    options = _.merge({}, RichArea.options, options, {
+      container: $e,
+    });
+    
+    RichArea.create(options);
+  }
+};

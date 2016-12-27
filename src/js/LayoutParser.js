@@ -1,7 +1,6 @@
-'use strict'
-
 let Q = require('q');
 let _ = require('lodash');
+let $ = require('jquery');
 
 class LayoutParser
 {

@@ -1,7 +1,12 @@
+let $ = require('jquery');
 let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
 let changeCase = changeCase = require('change-case');
 let md5 = require('md5');
+let Q = require('q');
+let Vue = require('vue');
+let draggable = require('vuedraggable');
+Vue.component('draggable', draggable);
 
 class RichArea
 {
@@ -61,6 +66,7 @@ class RichArea
   
   static create(options)
   {
+    
     options = _.merge({}, {
       container: null,
       root: null,
@@ -70,6 +76,7 @@ class RichArea
       layouts: {},
       items: [],
       mode: 'edit',
+      editors: this.options.editors,
     },options);
     
     if(!options.container)
@@ -81,19 +88,18 @@ class RichArea
       throw new TypeError("RichArea must have at least one layout file defined.");
     }
     
-    let qs = [
-      $.get(options.assetRoot + '/templates/'+options.mode+'.html').then((html)=> {
-        options.root = $("<div class='richarea'>"+html+"</div>");
-        options.container.append(options.root);
-      }),
-      this.ensureLayoutsLoaded(options).then(() =>{
-        if(Object.keys(this.layouts).length==0)
-        {
-          throw new TypeError("You must define at least one layout.");
-        }
-      }),
-    ];
-    Q.all(qs).then(()=> {
+    let templates = {
+      edit: require("../templates/edit.html"),
+      view: require("../templates/view.html"),
+    };
+    
+    options.root = $("<div class='richarea'>"+templates[options.mode]+"</div>");
+    options.container.append(options.root);
+    this.ensureLayoutsLoaded(options).then(() =>{
+      if(Object.keys(this.layouts).length==0)
+      {
+        throw new TypeError("You must define at least one layout.");
+      }
       this.initVue(options);
     }).done();
   }
@@ -320,10 +326,13 @@ class RichArea
         }
         if($.prototype.fullscreen)
         {
-          $editor().find('.layouts-modal').fullscreen();
+          $editor().find('.modal-fullscreen').fullscreen();
         }
-        let e = $editor().find('.modal .modal-header').get(0);
-        new Draggable (e);
+        let e = $editor().find('.layout-settings .modal-dialog').get(0);
+        var Draggable = require ('draggable');
+        new Draggable (e, {
+          handle: $(e).find('.modal-header').get(0),
+        });
 
         // A little hack to wait for all images to finish loading before telling Webshot it's okay to take a screen shot.
         // http://phantomjs.org/api/webpage/handler/on-callback.html
