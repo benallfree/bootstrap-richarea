@@ -4,12 +4,10 @@
   "description": "A Bootstrap-based rich content editor",
   "main": "src/js/index.js",
   "scripts": {
-    "dist": "npm run clean && concurrently 'npm run build' 'npm run package' 'npm run assets'",
-    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-    "package": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dist": "npm run clean && concurrently 'npm run assets'",
     "clean": "rm -rf dist/*",
     "assets": "cp -r layouts/* dist",
-    "watch": "watch 'npm run build' src",
+    "watch": "watch 'npm run build' layouts",
     "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
   },
   "bin": {
