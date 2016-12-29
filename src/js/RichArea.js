@@ -1,4 +1,3 @@
-let $ = require('jquery');
 let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
 let changeCase = changeCase = require('change-case');
@@ -13,6 +12,7 @@ class RichArea
   static registerEditor(klass, options = {})
   {
     let name = klass.name;
+    console.log("Registering ", name);
     if(this.editors[name]) throw TypeError(`Editor ${name} is already registered with RichArea.`);
     this.editors[name] = klass;
     this.localVueComponents[name] = klass.getVueData();
@@ -94,7 +94,7 @@ class RichArea
     };
     
     options.root = $("<div class='richarea'>"+templates[options.mode]+"</div>");
-    options.container.append(options.root);
+    $(options.container).append(options.root);
     this.ensureLayoutsLoaded(options).then(() =>{
       if(Object.keys(this.layouts).length==0)
       {
@@ -402,5 +402,6 @@ RichArea.registerEditor(require('./editors/TextEditor.js'));
 RichArea.registerEditor(require('./editors/TextareaEditor.js'));
 RichArea.registerEditor(require('./editors/LinkEditor.js'));
 RichArea.registerEditor(require('./editors/DropdownEditor.js'));
+RichArea.registerEditor(require('./editors/MarkdownEditor.js'));
 
 module.exports = RichArea;

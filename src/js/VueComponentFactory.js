@@ -6,20 +6,18 @@ class VueComponentFactory
       props: ['item', 'config'],
       template: "<div class='layout-container'>"+c.template+"</div>",
       filters: {
-        embedify: (url)=> {
-          function getId(url) {
-            var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-            var match = url.match(regExp);
-
-            if (match && match[2].length == 11) {
-                return match[2];
-            } else {
-                return 'error';
-            }
-          }
-          var myId = getId(url);
-
-          return '//www.youtube.com/embed/'+myId;
+        embedify: (urlString)=> {
+          let url = require('url');
+          let parts = url.parse(urlString, true, true);
+          let m = parts.pathname.match(/embed\/(.*)/);
+          let id = parts.query.v || (m.length == 2 ? m[1] : '');
+          let list = parts.query.list
+          let args = {
+            pathname: '//www.youtube.com/embed/'+id,
+          };
+          if(list) args.query = {list: list};
+          let ret = url.format(args);
+          return ret;
         },
         linebreak: function(v)
         {

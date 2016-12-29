@@ -50,7 +50,7 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [path.resolve(__dirname, "../../repos"), "node_modules"],
+    modules: ["node_modules"],
     alias: {
       'vue$': 'vue/dist/vue'
     }
