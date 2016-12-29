@@ -9,5 +9,6 @@ class TextareaEditor extends BaseEditor
     };
   }
 }
+TextareaEditor.slug = 'TextareaEditor'
 
 module.exports = TextareaEditor;

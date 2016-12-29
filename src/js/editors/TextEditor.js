@@ -9,5 +9,6 @@ class TextEditor extends BaseEditor
     };
   };
 }
+TextEditor.slug = 'TextEditor'
 
 module.exports = TextEditor;

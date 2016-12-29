@@ -11,7 +11,7 @@ class RichArea
 {
   static registerEditor(klass, options = {})
   {
-    let name = klass.name;
+    let name = klass.slug;
     console.log("Registering ", name);
     if(this.editors[name]) throw TypeError(`Editor ${name} is already registered with RichArea.`);
     this.editors[name] = klass;

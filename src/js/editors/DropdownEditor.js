@@ -14,5 +14,6 @@ class DropdownEditor extends BaseEditor
     };
   };
 }
+DropdownEditor.slug = 'DropdownEditor'
 
 module.exports = DropdownEditor;

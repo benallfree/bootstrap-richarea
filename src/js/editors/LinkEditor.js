@@ -15,5 +15,6 @@ class LinkEditor extends BaseEditor
     };
   }
 }
+LinkEditor.slug = 'LinkEditor'
 
 module.exports = LinkEditor;

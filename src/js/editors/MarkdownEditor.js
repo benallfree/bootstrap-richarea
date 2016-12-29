@@ -75,5 +75,6 @@ class MarkdownEditor extends BaseEditor
     };
   }
 }
+MarkdownEditor.slug = 'MarkdownEditor'
 
 module.exports = MarkdownEditor;
