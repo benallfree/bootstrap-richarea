@@ -2,13 +2,15 @@
   "name": "bootstrap-richarea",
   "version": "1.2.0",
   "description": "A Bootstrap-based rich content editor",
-  "main": "src/js/index.js",
+  "main": "dist/richarea.min.js",
   "scripts": {
-    "dist": "npm run clean && concurrently 'npm run assets'",
+    "build": "npm run clean && concurrently 'npm run assets' 'npm run build:dev' 'npm run build:prod'",
     "clean": "rm -rf dist/*",
-    "assets": "cp -r layouts/* dist",
-    "watch": "watch 'npm run assets' layouts",
-    "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
+    "build:dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "build:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "assets": "cp -r ./src/layouts/* dist",
+    "watch": "watch 'npm run build' ./src",
+    "thumbnails": "node ./scripts/thumbnails.js ./src/layouts/layouts.html http://richarea.dev/samples/example1.html"
   },
   "bin": {
     "richarea-thumbnails": "./scripts/thumbnails.js"
@@ -29,12 +31,9 @@
     "url": "https://github.com/benallfree/bootstrap-richarea/issues"
   },
   "homepage": "https://github.com/benallfree/bootstrap-richarea#readme",
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "bootstrap-modal-fullscreen": "^1.0.4",
+  "devDependencies": {
     "cropit": "^0.5.1",
     "draggable": "^4.1.2",
-    "jquery": "^3.1.1",
     "jquery.actual": "^1.0.18",
     "lodash": "^4.17.2",
     "marked": "^0.3.6",
@@ -47,9 +46,7 @@
     "url": "^0.11.0",
     "vue": "^2.0.1",
     "vuedraggable": "^2.4.0",
-    "webshot": "^0.18.0"
-  },
-  "devDependencies": {
+    "webshot": "^0.18.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
@@ -63,6 +60,7 @@
     "gm": "^1.23.0",
     "haml-loader": "^0.1.0",
     "html-loader": "^0.4.4",
+    "jquery-migrate": "^3.0.0",
     "jsdom": "^9.8.3",
     "jslint": "^0.10.3",
     "mkdirp": "^0.5.1",
@@ -72,6 +70,7 @@
     "pug-loader": "^2.3.0",
     "sass-loader": "^4.1.1",
     "scss-loader": "0.0.1",
+    "string-replace-loader": "^1.0.5",
     "style-loader": "^0.13.1",
     "vue-loader": "^9.7.0",
     "watch": "^1.0.1",

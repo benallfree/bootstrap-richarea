@@ -1,6 +1,7 @@
 let BaseEditor = require('./BaseEditor');
-require('jquery.actual/jquery.actual.js');
-require('cropit/src/plugin.js');
+require('jquery.actual');
+require('jquery-migrate');
+require('cropit');
 
 class ImageEditor extends BaseEditor
 {

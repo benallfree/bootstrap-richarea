@@ -10,6 +10,8 @@ let assetRoot = parser.href.replace(/\/[^\/]+$/, "")
 
 let RichArea = require('./RichArea');
 
+if(window && !window.RichArea) window.RichArea = RichArea;
+
 _.merge(RichArea.options, {
   mode: 'edit',
   assetRoot: assetRoot,
