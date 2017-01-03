@@ -1,8 +1,5 @@
 let _ = require('lodash');
-import '../sass/richarea.scss'
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-modal-fullscreen'
+require('../sass/richarea.scss')
 
 
 let scripts = document.getElementsByTagName("script"),

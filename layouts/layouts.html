@@ -682,7 +682,7 @@
 
             		    <div style="margin:1em 0">
 
-           			 <a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">READ MORE</a>
+           			 <a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;READ MORE&quot;}">{{ item.data.link.display }}</a>
 
             		    </div>
 
@@ -732,7 +732,7 @@
 
             		<div style="margin:1em 0 2.5em;">
 
-            			<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Read More</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
             		</div>
 
@@ -772,9 +772,9 @@
 
 			<div style="margin:1em 0 2.5em;">
 
-           		   <a href="{{ item.data.readMore.href }}" class="btn btn-default btn-lg edit" data-editor="LinkEditor" data-field="readMore" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}" >{{ item.data.readMore.display }}</a> &nbsp;
+           		   <a :href="item.data.readMore.href" class="btn btn-default btn-lg edit" data-editor="LinkEditor" data-field="readMore" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}" >{{ item.data.readMore.display }}</a> &nbsp;
 
-            		 <a href="{{ item.data.download.href }}" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="download" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Download&quot;}">{{ item.data.download.display }}</a>
+            		 <a :href="item.data.download.href" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="download" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Download&quot;}">{{ item.data.download.display }}</a>
 
             		</div>
 
@@ -819,7 +819,7 @@
 	<div class="row">
 		<div class="col-sm-12">
             <div style="margin:1em 0;">        
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">GET STARTED</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;GET STARTED&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -850,8 +850,8 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <div style="margin:2em 0">
-            <a href="#" class="btn btn-default btn-lg edit" style="border-radius:50px">Read More</a> &nbsp;
-            <a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Download</a>
+            <a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            <a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Download&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -869,7 +869,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <div style="margin:1em 0">
-            	<a href="#" class="btn btn-primary btn-lg edit">Watch Video</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Watch Video&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -888,7 +888,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
            <div style="margin:1em 0 2.5em;">
-            <a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">GET STARTED TODAY</a>
+            <a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;GET STARTED TODAY&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -896,7 +896,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
            <div class="clearfix is-rounded-button-big">
-            			<a href="#" class="btn btn-default btn-lg edit" style="padding:0; width:80px; height:80px;"><i class="icon ion-android-arrow-dropright"></i> </a>
+            			<a :href="item.data.link" class="btn btn-default btn-lg edit" style="padding:0; width:80px; height:80px;" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;<i class="icon ion-android-arrow-dropright"></i> &quot;}">{{ item.data.link.display }}</a>
             	</div>
         </div>
 	</div>
@@ -906,7 +906,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             	<div class="clearfix is-rounded-button-big">
-            			<a href="#" class="btn btn-primary" style="padding:0; width:90px; height:90px;"><i class="icon ion-android-arrow-dropright"></i> </a>
+            			<a :href="item.data.link" class="btn btn-primary" style="padding:0; width:90px; height:90px;" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;<i class="icon ion-android-arrow-dropright"></i> &quot;}">{{ item.data.link.display }}</a>
             	</div>
         </div>
 	</div>
@@ -921,8 +921,8 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <div style="margin:2em 0">
-            	<a href="#" class="btn btn-default btn-lg edit" style="border-radius:50px">Read More</a> &nbsp;
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Get Started</a>
+            	<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Get Started&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -1079,7 +1079,7 @@
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Feature Item"  style="margin-top:0">{{ item.data.title }}</h3>
                 <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 				<div style="margin:2em 0 2.5em;">
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Read More</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
             	</div>
         </div>
 
@@ -1088,7 +1088,7 @@
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Feature Item"  style="margin-top:0">{{ item.data.title }}</h3>
                 <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 				<div style="margin:2em 0 2.5em;">
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Read More</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
             	</div>
         </div>
 	</div>
@@ -2024,7 +2024,7 @@
 					</div>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  					<div style="margin:2.5em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
             		</div>
         		</div>
 			</div>
@@ -2064,7 +2064,7 @@
 			    	</div>
                 	<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			   		<div style="margin:2.7em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2078,7 +2078,7 @@
 			    	</div>
                 	<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			    	<div style="margin:2.7em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>	
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>	
                 	</div>
            		</div>    
         	</div>
@@ -2115,7 +2115,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Personal">{{ item.data.title }}</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
  			    	<div style="margin:2.2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
                 	</div>
               	</div>
         	</div>
@@ -2130,7 +2130,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Professional">{{ item.data.title }}</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
  			    	<div style="margin:2.2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
                 	</div>
         		</div>
         	</div>
@@ -2146,7 +2146,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Business">{{ item.data.title }}</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
  			    	<div style="margin:2.2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Purchase</a>           		
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>           		
                 	</div>
         		</div>
          	</div>
@@ -2186,7 +2186,7 @@
 
  				<div style="margin:2em 0">
 
-            			<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Purchase</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
 
             	</div>
 			</div>
@@ -2208,7 +2208,7 @@
 
  				<div style="margin:2em 0">
 
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Purchase</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
 
             	</div>
 			</div>
@@ -2230,7 +2230,7 @@
 
  				<div style="margin:2em 0">
 
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Purchase</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Purchase&quot;}">{{ item.data.link.display }}</a>
 
             	</div>
 			</div>
@@ -2265,7 +2265,7 @@
 						<li>Vivamus leo ante</li>
 					</ul>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
                 	</div>
         		</div>
         	</div>
@@ -2284,7 +2284,7 @@
 						<li>Vivamus leo ante</li>
 					</ul>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2303,7 +2303,7 @@
 						<li>Vivamus leo ante</li>
 					</ul>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2332,7 +2332,7 @@
 				<li>Lorem Ipsum dolor sit amet</li>
 			</ul>
 			<div style="margin:2em 0 2.5em;">
-            	<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 
@@ -2347,7 +2347,7 @@
 				<li>Lorem Ipsum dolor sit amet</li>
 			</ul>
 			<div style="margin:2em 0 2.5em;">
-           		<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+           		<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 
@@ -2362,7 +2362,7 @@
 				<li>Lorem Ipsum dolor sit amet</li>
 			</ul>
 			<div style="margin:2em 0 2.5em;">
-            	<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -2381,11 +2381,11 @@
 		<div class="col-sm-4">
            <div class="is-card is-dark-text"> 
 				<div class="margin-25 text-center">
-			    	<h2 data-editor="TextEditor" data-field='subheading' data-default-value="PRO">{{ item.data.subheading }}</h2>
-					<p style="font-size:1.3em;color:#808080"><i>$29 per month</i></p>
-            		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+			    	<h2 data-editor="TextEditor" data-field='subheading1' data-default-value="PRO">{{ item.data.subheading1 }}</h2>
+            <p data-editor="TextEditor" data-field="price1" data-default-value="$29 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price1 }}</i></p>
+            		<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content1"></div>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Buy Now</a>
+                    <a :href="item.data.link1" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link1" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link1.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2394,12 +2394,12 @@
 		<div class="col-sm-4">
            <div class="is-card is-dark-text"> 
 				<div class="margin-25 text-center">
-			    	<h2 data-editor="TextEditor" data-field='subheading' data-default-value="BUSINESS">{{ item.data.subheading }}</h2>
-            		<p style="font-size:1.3em;color:#808080"><i>$39 per month</i></p>
-            		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+			    	<h2 data-editor="TextEditor" data-field='subheading2' data-default-value="BUSINESS">{{ item.data.subheading2 }}</h2>
+                <p data-editor="TextEditor" data-field="price1" data-default-value="$39 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price2 }}</i></p>
+            		<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content2"></div>
  			    	<div style="margin:2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Buy Now</a>
-                	</div>
+                  <a :href="item.data.link2" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link2" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link2.display }}</a>
+                </div>
         		</div>
         	</div>
 		</div>
@@ -2407,12 +2407,12 @@
 		<div class="col-sm-4">
            <div class="is-card is-dark-text"> 
 				<div class="margin-25 text-center">
-			    	<h2 data-editor="TextEditor" data-field='subheading' data-default-value="DEVELOPER">{{ item.data.subheading }}</h2>
-            		<p style="font-size:1.3em;color:#808080"><i>$59 per month</i></p>
-            		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+			    	<h2 data-editor="TextEditor" data-field='subheadin3' data-default-value="DEVELOPER">{{ item.data.subheading3}}</h2>
+                <p data-editor="TextEditor" data-field="price3" data-default-value="$59 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price3 }}</i></p>
+            		<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content3"></div>
  			    	<div style="margin:2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Buy Now</a>
-                	</div>
+                  <a :href="item.data.link3" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link3" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link3.display }}</a>
+                </div>
         		</div>
         	</div>
 		</div>
@@ -2438,7 +2438,7 @@
 			</div>
 			<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" v-html="item.data.content"></div>
 			<div style="margin:2em 0">
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Select Plan</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Select Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 
@@ -2449,7 +2449,7 @@
 			</div>
 			<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" v-html="item.data.content"></div>
 			<div style="margin:2em 0">
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Select Plan</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Select Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
 		</div>
 
@@ -2460,7 +2460,7 @@
 			</div>
 			<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" v-html="item.data.content"></div>
 			<div style="margin:2em 0">
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Select Plan</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Select Plan&quot;}">{{ item.data.link.display }}</a>
             </div>
 		</div>
 	</div>
@@ -2480,17 +2480,13 @@
 		<div class="col-sm-6">
            <div class="is-card is-dark-text"> 
 				<div class="margin-30 text-center">
-			    	<h1 data-editor="TextEditor" data-field="title" data-default-value="Basic">{{ item.data.title }}</h1>
+			    	<h1 data-editor="TextEditor" data-field="title1" data-default-value="Basic">{{ item.data.title1 }}</h1>
 			    	<div class="display">
-				    	<h1 data-editor="TextEditor" data-field="title" data-default-value="29"><span style="font-size: 2em;">29</span></h1>
+				    	<h1 data-editor="TextEditor" data-field="price1" data-default-value="29"><span style="font-size: 2em;">{{item.data.price1}}</span></h1>
 			    	</div>
-  					<ul style="text-align:left">
-						<li>Lorem Ipsum is simply text of the printing.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
-						<li>Vivamus leo ante, consectetur sit amet.</li>
-					</ul>
+            <div style="text-align:left" data-editor="MarkdownEditor" data-field="desc1" data-default-value="* Feature 1\n*Feature 2\n*Feature 3" v-html="item.data.desc1"></div>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Get Started</a>
+            	    	<a :href="item.data.link1" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link1" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Get Started&quot;}">{{ item.data.link1.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2499,17 +2495,13 @@
 		<div class="col-sm-6">
            <div class="is-card is-dark-text"> 
 				<div class="margin-30 text-center">
-			    	<h1 data-editor="TextEditor" data-field="title" data-default-value="Pro">{{ item.data.title }}</h1>
+			    	<h1 data-editor="TextEditor" data-field="title2" data-default-value="Pro">{{ item.data.title2 }}</h1>
 			    	<div class="display">
-				    	<h1 data-editor="TextEditor" data-field="title" data-default-value="39"><span style="font-size: 2em;">39</span></h1>
+				    	<h1 data-editor="TextEditor" data-field="price2" data-default-value="39"><span style="font-size: 2em;">{{item.data.price}22}</span></h1>
 			    	</div>
-  					<ul style="text-align:left">
-						<li>Lorem Ipsum is simply text of the printing.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
-						<li>Vivamus leo ante, consectetur sit amet.</li>
-					</ul>
+            <div style="text-align:left" data-editor="MarkdownEditor" data-field="desc2" data-default-value="* Feature 1\n*Feature 2\n*Feature 3" v-html="item.data.desc2"></div>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Get Started</a>
+            	    	<a :href="item.data.link2" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link2" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Get Started&quot;}">{{ item.data.link2.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2532,7 +2524,7 @@
             		<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			    	<h3 data-editor="TextEditor" data-field="price1" data-default-value="39/mo"><span style="font-size:3em;font-weight:600">{{ item.data.price1 }}</span></h3>
 					<div style="margin:2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             		</div>
         		</div>
             </div>
@@ -2545,7 +2537,7 @@
             		<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			    	<h3 data-editor="TextEditor" data-field="price2" data-default-value="49/mo"><span style="font-size:3em;font-weight:600">{{ item.data.price2 }}</span></h3>
 					<div style="margin:2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             		</div>
         		</div>
         	</div>
@@ -2558,7 +2550,7 @@
             		<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			    	<h3 data-editor="TextEditor" data-field="price3" data-default-value="59/mo"><span style="font-size:3em;font-weight:600">{{ item.data.price3 }}</span></h3>
 					<div style="margin:2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Choose Plan</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Choose Plan&quot;}">{{ item.data.link.display }}</a>
             		</div>
         		</div>
          	</div>
@@ -2594,7 +2586,7 @@
 
 				<div style="margin-top: 2em">
 
-            		<a href="#" class="btn btn-default btn-lg edit" style="border-radius: 50px">Read More</a>
+            		<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
 				</div>
 			</div>
@@ -2610,7 +2602,7 @@
 
 				<div style="margin-top: 2em">
 
-            		<a href="#" class="btn btn-default btn-lg edit" style="border-radius: 50px">Read More</a>
+            		<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
 				</div>
 			</div>
@@ -2626,7 +2618,7 @@
 
 				<div style="margin-top: 2em">
 
-            		<a href="#" class="btn btn-default btn-lg edit" style="border-radius: 50px">Read More</a>
+            		<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
 				</div>
 			</div>
@@ -2914,7 +2906,7 @@
 			    	<h1 data-editor="TextEditor" data-field="title" data-default-value="Step 01">{{ item.data.title }}</h1>
  					<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit. " v-html="item.data.content"></div>
  			    	<div style="margin:2em 0">
-            	    	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Read More</a>
+            	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2926,7 +2918,7 @@
 			    	<h1 data-editor="TextEditor" data-field="title" data-default-value="Step 02">{{ item.data.title }}</h1>
  					<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit. " v-html="item.data.content"></div>
  			    	<div style="margin:2em 0">
-            	   	 	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Read More</a>
+            	   	 	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
                 	</div>
               	</div>
         	</div>
@@ -3257,7 +3249,7 @@
         	<h2 data-editor="TextEditor" data-field='subheading' data-default-value="Achievements">{{ item.data.subheading }}</h2>
         	<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			<div style="margin:2em 0">
-            	<a href="#" class="btn btn-default btn-lg edit">Read More</a>
+            	<a :href="item.data.link" class="btn btn-default btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 
@@ -3266,7 +3258,7 @@
             <h2 data-editor="TextEditor" data-field='subheading' data-default-value="Awards">{{ item.data.subheading }}</h2>
             <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
  			<div style="margin:2em 0">
-            	<a href="#" class="btn btn-default btn-lg edit">Read More</a>
+            	<a :href="item.data.link" class="btn btn-default btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -3422,7 +3414,7 @@
 
             <div style="margin:1em 0 2.5em;">
 
-            	<a href="#" class="btn btn-primary btn-lg edit">GET UPDATES</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;GET UPDATES&quot;}">{{ item.data.link.display }}</a>
 
             </div>
 
@@ -3488,7 +3480,7 @@
 
 			<div style="margin:2em 0">
 
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">GET UPDATES</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;GET UPDATES&quot;}">{{ item.data.link.display }}</a>
 
             </div>
 
@@ -3602,7 +3594,7 @@
 
 			<div>
 
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Get Notified</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Get Notified&quot;}">{{ item.data.link.display }}</a>
 
             </div>
 
@@ -3696,10 +3688,10 @@
 					<h1 style="font-size:3em" data-editor="TextEditor" data-field="title" data-default-value="COMING SOON">{{ item.data.title }}</h1>
                 	<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit." v-html="item.data.content"></div>
 					<div style="margin:2em 0;">
-            			<a href="#" class="btn btn-default btn-lg edit" style="border-radius:50px">Read More</a>
+            			<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
             		</div>
 					<div style="margin:1em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Get Updates</a>          		
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Get Updates&quot;}">{{ item.data.link.display }}</a>          		
             		</div>
 				</div>
         	</div>
@@ -3750,7 +3742,7 @@
 
 			<div>
 
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Back to Home Page</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Back to Home Page&quot;}">{{ item.data.link.display }}</a>
 
            </div>
 
@@ -3809,7 +3801,7 @@
 					</div>
             		<h5>The page you are looking for doesn't exist.</h5>
  					<div style="margin:2.2em 0">
-            			<a href="#" class="btn btn-primary btn-lg edit">Back Home</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Back Home&quot;}">{{ item.data.link.display }}</a>
             		</div>
         		</div>
 			</div>
@@ -3870,7 +3862,7 @@
 
             <div style="margin:2em 0">
 
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">BACK HOME</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;BACK HOME&quot;}">{{ item.data.link.display }}</a>
 
             </div>
 
@@ -4939,9 +4931,9 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper edit">Read More</a> &nbsp;
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -4951,7 +4943,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper edit">Read More</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -4961,7 +4953,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -4973,9 +4965,9 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-btn-small edit">Read More</a> &nbsp;
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -4985,7 +4977,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-btn-small edit">Read More</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -4995,7 +4987,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5007,9 +4999,9 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-rounded-30 edit">Read More</a> &nbsp;
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-rounded-30 edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-rounded-30 edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-rounded-30 edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5019,7 +5011,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-rounded-30 edit">Read More</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-rounded-30 edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5029,7 +5021,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-rounded-30 edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-rounded-30 edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5041,9 +5033,9 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-rounded-30 is-btn-small edit">Read More</a> &nbsp;
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-rounded-30 is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-rounded-30 is-btn-small edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-rounded-30 is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5053,7 +5045,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost2 is-upper is-rounded-30 is-btn-small edit">Read More</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper is-rounded-30 is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5063,7 +5055,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 
-            <a href="#" class="is-btn is-btn-ghost1 is-upper is-rounded-30 is-btn-small edit">Buy Now</a>
+            <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-rounded-30 is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
         </div>
 	</div>
@@ -5223,7 +5215,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -5236,7 +5228,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               	</div>
 			</div>
@@ -5249,7 +5241,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               </div>
 			</div>
@@ -5266,7 +5258,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               </div>
 			</div>
@@ -5279,7 +5271,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               </div>
 			</div>
@@ -5296,7 +5288,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               </div>
 			</div>
@@ -5314,7 +5306,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -5327,7 +5319,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               	</div>
 			</div>
@@ -5340,7 +5332,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               	</div>
 			</div>
@@ -5357,7 +5349,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -5370,7 +5362,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
               	</div>
 			</div>
@@ -5387,7 +5379,7 @@
 			    	<h3 class="size-28 is-title1-28 is-title-bold">LOREM IPSUM</h3>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
  					<div style="margin:2em 0 1em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -5404,8 +5396,8 @@
             		<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
             		<p class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
- 						<a href="#" class="is-btn is-btn-ghost2 is-upper edit">Read More</a> &nbsp;
-            			<a href="#" class="is-btn is-btn-ghost1 is-upper edit">Buy Now</a>
+ 						<a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            			<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5421,7 +5413,7 @@
             		<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
             		<p class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-             			<a href="#" class="is-btn is-btn-ghost1 is-upper edit">Read More</a>
+             			<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5437,8 +5429,8 @@
             		<h1 class="size-32 is-title5-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
- 						<a href="#" class="is-btn is-btn-small is-btn-ghost2 is-upper edit">Read More</a> &nbsp;
-            			<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Buy Now</a>
+ 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            			<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5454,7 +5446,7 @@
             		<h1 class="size-32 is-title5-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
-            			<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Buy Now</a>
+            			<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5470,8 +5462,8 @@
             		<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
             		<p class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
- 						<a href="#" class="is-btn is-btn-ghost2 is-upper edit">Read More</a> &nbsp;
-            			<a href="#" class="is-btn is-btn-ghost1 is-upper edit">Buy Now</a>
+ 						<a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            			<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5487,7 +5479,7 @@
             		<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
             		<p class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
- 						<a href="#" class="is-btn is-btn-ghost1 is-upper edit">Read More</a>
+ 						<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>           
 				</div>
 			</div>
@@ -5503,8 +5495,8 @@
             		<h1 class="size-32 is-title2-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
- 						<a href="#" class="is-btn is-btn-small is-btn-ghost2 is-upper edit">Read More</a> &nbsp;
-            			<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Buy Now</a>
+ 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            			<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5520,7 +5512,7 @@
             		<h1 class="size-32 is-title2-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
             		<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
-            			<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Buy Now</a>
+            			<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
 			</div>
@@ -5539,7 +5531,7 @@
                     <h1 class="size-32 is-title1-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
                     <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
                     <div style="margin:1.2em 0 0">
-                        <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Read More</a>	
+                        <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>	
                     </div>	   
             	</div>                     
             </div>
@@ -5557,7 +5549,7 @@
                     <h1 class="size-32 is-title1-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
                     <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
                     <div style="margin:1.2em 0 0">
-                        <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Read More</a>	
+                        <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>	
                     </div>	   
             	</div>                     
             </div>
@@ -5575,7 +5567,7 @@
                     <h1 class="size-32 is-title1-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
                     <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
                     <div style="margin:1.2em 0 0">
-                        <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Read More</a>	
+                        <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>	
                     </div>	   
             	</div>                     
             </div>
@@ -5592,7 +5584,7 @@
                     <h1 class="size-32 is-title1-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
                     <div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
                     <div style="margin:1.2em 0 0">
-                        <a href="#" class="is-btn is-btn-ghost1 is-upper is-btn-small edit">Read More</a>	
+                        <a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper is-btn-small edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>	
                     </div>	   
             	</div>                     
             </div>
@@ -6453,8 +6445,8 @@
 	<div class="row">
 		<div class="col-sm-12">
             <div style="margin:0.5em 0 2.5em;">
-            	<a href="#" class="btn btn-default btn-lg edit" style="border-radius:50px">Read More</a> &nbsp;
-            	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius:50px">Download</a>
+            	<a :href="item.data.link" class="btn btn-default btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius:50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Download&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -7416,7 +7408,7 @@
 
 				<div style="margin:2em 0 2.5em;">
 
-           	    	<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Buy Now</a>
+           	    	<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
            	 	</div>
 			</div>
@@ -7432,7 +7424,7 @@
 
 				<div style="margin:2em 0 2.5em;">
 
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Buy Now</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
 				</div>
 			</div>
@@ -7448,7 +7440,7 @@
 
 				<div style="margin:2em 0 2.5em;">
 
-            		<a href="#" class="btn btn-primary btn-lg edit" style="border-radius: 50px">Buy Now</a>
+            		<a :href="item.data.link" class="btn btn-primary btn-lg edit" style="border-radius: 50px" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 
             	</div>
 			</div>
@@ -7480,7 +7472,7 @@
 	<div class="row">
 		<div class="col-sm-12">
             <div style="margin:1em 0 2.5em;">
-            	<a href="#" class="btn btn-primary btn-lg edit">VIEW PROJECT</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;VIEW PROJECT&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -7509,7 +7501,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product One"  style="font-size:1.5em">{{ item.data.title }}</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0">
-						<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
         	</div>
@@ -7522,7 +7514,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product Two"  style="font-size:1.5em">{{ item.data.title }}</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
             		<div style="margin:2em 0">
-						<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
         		</div>
         	</div>
@@ -7535,7 +7527,7 @@
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product Three"  style="font-size:1.5em">{{ item.data.title }}</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
      				<div style="margin:2em 0">
-						<a href="#" class="btn btn-primary btn-lg edit">Buy Now</a>
+						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
         		</div>
          	</div>
@@ -7567,7 +7559,7 @@
             <h1 data-editor="TextEditor" data-field="title" data-default-value="Product One">{{ item.data.title }}</h1>
             <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
             <div style="margin:1em 0 2.5em;">
-            	<a href="#" class="btn btn-primary btn-lg edit">BUY NOW</a>
+            	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;BUY NOW&quot;}">{{ item.data.link.display }}</a>
             </div>
         </div>
 	</div>
@@ -7583,7 +7575,7 @@
             		<h1 data-editor="TextEditor" data-field="title" data-default-value="Product Two">{{ item.data.title }}</h1>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
             		<div style="margin:1em 0 2.5em;">
-            			<a href="#" class="btn btn-primary btn-lg edit">BUY NOW</a>
+            			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;BUY NOW&quot;}">{{ item.data.link.display }}</a>
             		</div>
         	</div>
         	<div class="col-sm-6">
@@ -8348,7 +8340,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
              </div>
@@ -8361,7 +8353,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
             </div>
@@ -8374,7 +8366,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
             </div>
@@ -8391,7 +8383,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
             </div>
@@ -8404,7 +8396,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
             </div>
@@ -8421,7 +8413,7 @@
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
 					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
 					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
 				</div>
             </div>
@@ -8438,7 +8430,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -8451,7 +8443,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -8464,7 +8456,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -8481,7 +8473,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -8494,7 +8486,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>
@@ -8511,7 +8503,7 @@
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
             		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
  					<div style="margin:2em 0 0.5em">
-						<a href="#" class="is-btn is-btn-small is-btn-ghost1 is-upper edit">Read More</a>
+						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
             	</div>
 			</div>

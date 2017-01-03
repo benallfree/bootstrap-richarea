@@ -29,7 +29,7 @@ module.exports = function(layout) {
           '../dist/templates/layouts.html'
         ],
         items: [
-          {layout_id: 'richarea-1'}
+          {layoutId: 'richarea-1'}
         ],
         mode: 'view',
       });

@@ -19,9 +19,10 @@ class LayoutParser
     if(urlRoot)
     {
       let parser = document.createElement('a');
-      parser.href = urlRoot.replace(/\/[^\/]+$/, "") + '/../images';
+      parser.href = urlRoot.replace(/\/[^\/]+$/, "");
       urlRoot = parser.href;
     }
+    let imageRoot = urlRoot  + '/images';
     
     let layouts = {};
     var $tree = $('<div>');
@@ -29,8 +30,8 @@ class LayoutParser
     $tree.children('div').each((idx,e) => {
       var $e = $(e);
       var fields = {};
-      var layout_id = $e.data('id');
-      if(!layout_id)
+      var layoutId = $e.data('id');
+      if(!layoutId)
       {
         throw new TypeError(`Layout ID must not be null for ${$e.html()}`);
       }
@@ -50,7 +51,7 @@ class LayoutParser
       let thumbnailUrl = $e.data('thumbnail');
       if(!cats)
       {
-        throw new TypeError(`cats must not be null for ${$layout_id}`);
+        throw new TypeError(`cats must not be null for ${$layoutId}`);
       }
       if(typeof(cats) == 'string')
       {
@@ -58,12 +59,13 @@ class LayoutParser
       }
       let catsHash = {};
       cats.forEach(function(c) { catsHash[c]=true; });
-      layouts[layout_id] = {
-        id: layout_id,
+      layouts[layoutId] = {
+        id: layoutId,
         fields: _.merge({}, fields),
         categories: catsHash,
         template: html,
-        thumbnailUrl: thumbnailUrl || `${urlRoot}/${layout_id}.png`,
+        assetRoot: urlRoot,
+        thumbnailUrl: thumbnailUrl || `${imageRoot}/${layoutId}.png`,
       };
     });
     return layouts;

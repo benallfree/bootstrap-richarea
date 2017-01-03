@@ -1,34 +1,41 @@
-class ImageEditor extends RichAreaBaseEditor
+let BaseEditor = require('./BaseEditor');
+require('jquery.actual/jquery.actual.js');
+require('cropit/src/plugin.js');
+
+class ImageEditor extends BaseEditor
 {
   
   static initField(field, layout, options)
   {
-    field.defaultValue.originalImage = options.editors.ImageEditor.assetRoot + field.defaultValue.originalImage;
-    field.defaultValue.croppedImage = options.editors.ImageEditor.assetRoot + field.defaultValue.croppedImage;
+    let assetRoot = options.editors[this.slug].assetRoot || layout.assetRoot
+    field.defaultValue.originalImage = assetRoot + field.defaultValue.originalImage;
+    field.defaultValue.croppedImage = assetRoot + field.defaultValue.croppedImage;
   }
 
   static getVueData()
   {
     return {
-      props: ['item', 'fieldName', 'config'],
+      props: ['item', 'fieldName', 'config', 'layout'],
       template: `
         <div>
           <div :data-field="fieldName" class="image-editor">
             <input accept="image/gif,image/png,image/jpeg" class="cropit-image-input" type="file"></input>
-            <img :src="item.data[fieldName].croppedImage" class="reference" style="width:100%; display: none"/>
+            <img :src="layout.fields[fieldName].defaultValue.croppedImage" class="reference" style="width:100%; display: none"/>
             <div class="cropit-preview"></div>
             <input class="cropit-image-zoom-input" type="range"></input>
           </div>
         </div>
       `,
-      data: {
-        isCropperInitialized: false,
-        $modal: null,
-        $editor: null,
-        $root: null,
-        $referenceImage: null,
-        $fileInput: null,
-        shouldSave: false,
+      data() {
+        return {
+          isCropperInitialized: false,
+          $modal: null,
+          $editor: null,
+          $root: null,
+          $referenceImage: null,
+          $fileInput: null,
+          shouldSave: false,
+        };
       },
       computed: {
         field: function() {
@@ -43,10 +50,14 @@ class ImageEditor extends RichAreaBaseEditor
         shownBsModal: function() {
           this.shouldSave = false;
           if(this.isCropperInitialized) return;
+          if(this.$referenceImage.get(0).naturalWidth==0 || this.$referenceImage.get(0).naturalHeight==0)
+          {
+            throw new TypeError(`Reference/placeholder image was not found ${this.$referenceImage.attr('src')}`);
+          }
           let w = Math.floor(this.$referenceImage.actual('width'));
           let h = Math.floor(this.$referenceImage.actual('height'));
           this.$editor.cropit({
-            exportZoom: this.$referenceImage.get(0).naturalWidth / w,
+            exportZoom: (this.$referenceImage.get(0).naturalWidth / w) || 1,
             imageBackground: false,
             imageBackgroundBorderWidth: 0,
             initialZoom: 'image',
@@ -54,7 +65,7 @@ class ImageEditor extends RichAreaBaseEditor
             height: h,
             maxZoom: 5,
             onFileReadError: function() { console.log('onFileReadError', arguments); },
-            onImageError:  function() { console.log('onImageError', arguments); },
+            onImageError: this.onImageError,
             smallImage: 'allow', // Allow images that must be zoomed to fit
             onImageLoaded: this.onImageLoaded,
             onZoomChange: this.onZoomChange,
@@ -75,6 +86,12 @@ class ImageEditor extends RichAreaBaseEditor
               this.field.croppedImage = data.url;
             }
           });
+        },
+        onImageError: function() {
+          this.$editor.cropit('imageSrc', '');
+          this.isCropperInitialized = true;
+          this.$editor.visible();
+          this.$editor.cropit('offset', {x: 0, y: 0});
         },
         onImageLoaded: function() {
           if(!this.isCropperInitialized)
@@ -120,7 +137,7 @@ class ImageEditor extends RichAreaBaseEditor
         },        
       },
       mounted: function() {
-        console.log(`mount ${this.item.layout_id}:${this.fieldName}`);
+        console.log(`mount ${this.item.layoutId}:${this.fieldName}`);
         this.$root = $(this.$el);
         this.$modal = this.$root.closest('.modal');
         this.$editor = this.$root.find('.image-editor');
@@ -132,7 +149,7 @@ class ImageEditor extends RichAreaBaseEditor
       },
       
       beforeDestroy: function() {
-        console.log(`unmount ${this.item.layout_id}:${this.fieldName}`);
+        console.log(`unmount ${this.item.layoutId}:${this.fieldName}`);
         this.$modal.off('show.bs.modal', this.showBsModal);
         this.$modal.off('shown.bs.modal', this.shownBsModal);
         this.$modal.off('hide.bs.modal', this.hideBsModal);
@@ -141,5 +158,6 @@ class ImageEditor extends RichAreaBaseEditor
     };
   }
 }
+ImageEditor.slug = 'ImageEditor';
 
 module.exports = ImageEditor;

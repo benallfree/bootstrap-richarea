@@ -1,12 +1,11 @@
 let BaseEditor = require('./BaseEditor');
 
-import 'simplemde/src/css/simplemde.css'
-import 'codemirror/lib/codemirror.css'
-import 'codemirror-spell-checker/src/css/spell-checker.css'
-
-import simplemde from 'simplemde'; // import from npm package
-import marked from 'marked';
-import toMarkdown from 'to-markdown';
+require( 'simplemde/src/css/simplemde.css');
+require( 'codemirror/lib/codemirror.css');
+require( 'codemirror-spell-checker/src/css/spell-checker.css');
+let simplemde = require('simplemde');
+let marked = require('marked');
+let toMarkdown = require('to-markdown');
 
 jQuery.fn.visible = function() {
     return this.css('visibility', 'visible');
@@ -39,12 +38,12 @@ class MarkdownEditor extends BaseEditor
       `,
       methods: {
         showBsModal () {
-          console.log(`before show ${this.item.layout_id}:${this.fieldName}`);
+          console.log(`before show ${this.item.layoutId}:${this.fieldName}`);
           if(this.isInitialized) return;
           this.$editor.invisible();
         },
         shownBsModal () {
-          console.log(`on show ${this.item.layout_id}:${this.fieldName}`);
+          console.log(`on show ${this.item.layoutId}:${this.fieldName}`);
           if(this.isInitialized) return;
           this.mde = new simplemde({element: this.$refs.area })
           this.mde.value(toMarkdown(this.item.data[this.fieldName]));
@@ -57,7 +56,7 @@ class MarkdownEditor extends BaseEditor
         },              
       },
       mounted() {
-        console.log(`mount ${this.item.layout_id}:${this.fieldName}`);
+        console.log(`mount ${this.item.layoutId}:${this.fieldName}`);
         this.$root = $(this.$el);
         this.$modal = this.$root.closest('.modal');
         this.$editor = this.$root.find('.markdown-editor');
@@ -67,7 +66,7 @@ class MarkdownEditor extends BaseEditor
         
       },
       beforeDestroy () {
-        console.log(`unmount ${this.item.layout_id}:${this.fieldName}`);
+        console.log(`unmount ${this.item.layoutId}:${this.fieldName}`);
         this.$modal.off('show.bs.modal', this.showBsModal);
         this.$modal.off('shown.bs.modal', this.shownBsModal);
         this.$modal.off('hide.bs.modal', this.hideBsModal);

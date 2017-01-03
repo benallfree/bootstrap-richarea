@@ -7,7 +7,7 @@
     "dist": "npm run clean && concurrently 'npm run assets'",
     "clean": "rm -rf dist/*",
     "assets": "cp -r layouts/* dist",
-    "watch": "watch 'npm run build' layouts",
+    "watch": "watch 'npm run assets' layouts",
     "thumbnails": "node ./scripts/thumbnails.js ./src/assets/templates/layouts.html http://richarea.dev/samples/example1.html"
   },
   "bin": {
@@ -32,8 +32,10 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-modal-fullscreen": "^1.0.4",
+    "cropit": "^0.5.1",
     "draggable": "^4.1.2",
     "jquery": "^3.1.1",
+    "jquery.actual": "^1.0.18",
     "lodash": "^4.17.2",
     "marked": "^0.3.6",
     "md5": "^2.2.1",

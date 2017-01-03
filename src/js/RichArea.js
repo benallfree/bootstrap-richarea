@@ -5,6 +5,7 @@ let md5 = require('md5');
 let Q = require('q');
 let Vue = require('vue');
 let draggable = require('vuedraggable');
+let _ = require('lodash');
 Vue.component('draggable', draggable);
 
 class RichArea
@@ -28,9 +29,9 @@ class RichArea
       if(this.layoutUrls[url]) return;
       qs.push(LayoutParser.parse(url).then((layouts) => {
         // Init layout fields
-        for(let layout_id in layouts)
+        for(let layoutId in layouts)
         {
-          let layout = layouts[layout_id];
+          let layout = layouts[layoutId];
           for(let field_key in layout.fields)
           {
             let field = layout.fields[field_key];
@@ -104,6 +105,16 @@ class RichArea
     }).done();
   }
 
+  static migrate(item)
+  {
+    if(!item.version)
+    {
+      item.version = 1;
+      item.layoutId = item.layout_id;
+      delete item.layout_id;
+    }
+  }
+  
   static ensureDefaultValues(item)
   {
     if(item instanceof Array)
@@ -113,8 +124,9 @@ class RichArea
       });
       return item;
     }
+    this.migrate(item);
     _.merge(item, {data: {}});
-    let layout = this.layouts[item.layout_id];
+    let layout = this.layouts[item.layoutId];
     if(layout)
     {
       let fields = layout.fields;
@@ -169,7 +181,7 @@ class RichArea
         currentLayout: function() {
           var currentItem = this.items[this.currentIdx];
           if(!currentItem) return null;
-          return this.layouts[currentItem.layout_id];
+          return this.layouts[currentItem.layoutId];
         },
         config: function() {
           return options;
@@ -268,9 +280,9 @@ class RichArea
           this.currentIdx = $li.index();
           this.$currentLayout = $li;
         },
-        insert: function(layout_id)
+        insert: function(layoutId)
         {
-          let o = this.ensureDefaultValues({layout_id: layout_id});
+          let o = this.ensureDefaultValues({layoutId: layoutId});
           let idx = $sortable().find('li.active').index();
           if(idx>=0)
           {
@@ -403,5 +415,6 @@ RichArea.registerEditor(require('./editors/TextareaEditor.js'));
 RichArea.registerEditor(require('./editors/LinkEditor.js'));
 RichArea.registerEditor(require('./editors/DropdownEditor.js'));
 RichArea.registerEditor(require('./editors/MarkdownEditor.js'));
+RichArea.registerEditor(require('./editors/ImageEditor.js'));
 
 module.exports = RichArea;

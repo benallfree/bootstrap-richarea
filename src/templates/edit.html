@@ -11,7 +11,7 @@
             <span @click="remove" class="delete btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
           </div>
           <div class="item">
-            <layout :is="'c'+item.layout_id" :item="item" :config="config"></layout>
+            <layout :is="'c'+item.layoutId" :item="item" :config="config"></layout>
           </div>
         </li>
       </draggable>
@@ -36,7 +36,7 @@
                     <div class="form-group">
                       <label class="col-xs-2 control-label">{{fieldName | titlecase}}</label>
                       <div class="col-xs-10">
-                        <component :is="field.editor" :item="currentItem" :field-name="fieldName" :config="config" :key="'elem'+currentIdx"></component>
+                        <component :is="field.editor" :item="currentItem" :field-name="fieldName" :config="config" :key="'elem'+currentIdx" :layout="layouts[currentItem.layoutId]"></component>
                       </div>
                     </div>
                   </div>
