@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/richarea.css">
+
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js"></script>
+
+    <script src="vendor/bootstrap-modal-fullscreen/bs-modal-fullscreen.js"></script>    
+    <script src="../dist/richarea.js"></script>    
+  </head>
+  
+  <body>
+    <h1>File upload to server</h1>
+    <p style="color:red">Warning: Due to CORS, this may only work when run from a web server. The repo should be the web root.</p>
+    <hr/>
+    <div id="richarea"></div>
+    
+    <script>
+    $(function() {
+      $('#richarea').richarea({
+        assetRoot: '/dist',
+        imageUploadUrl: '/server/upload.php',
+        items: [
+          {layout_id: 25}
+        ]
+      });
+    });
+    </script>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  </body>
+</html>
