@@ -218,7 +218,6 @@ class RichArea
         },
       },
       methods: {
-        ensureDefaultValues: this.ensureDefaultValues,
         add: function(idx) {
           this.currentIdx = idx;
           let $modal = $editor().find('.layouts-modal');
@@ -282,7 +281,7 @@ class RichArea
         },
         insert: function(layoutId)
         {
-          let o = this.ensureDefaultValues({layoutId: layoutId});
+          let o = RichArea.ensureDefaultValues({version: 1, layoutId: layoutId});
           let idx = $sortable().find('li.active').index();
           if(idx>=0)
           {

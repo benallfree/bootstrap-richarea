@@ -744,7 +744,7 @@
 
 
 
-<div data-id="richarea-58" data-cat="['default','call-to-action']">
+<div data-id="richarea-58" data-cat="['default','call-to-action', 'video']">
 
 	<div class="row">
 
@@ -5603,7 +5603,7 @@
 
 			<h1 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
 		</div>
 
@@ -5635,11 +5635,11 @@
 
 				<h1 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum is Simply">{{ item.data.title }}</h1>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text" v-html="item.data.content"></p>
 
 			</div>
 
-			<p style="text-align: text-center" data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.">{{ item.data.content }}</p>
+			<p style="text-align: text-center" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus." v-html="item.data.content"></p>
 
 		</div>
 
@@ -5659,7 +5659,7 @@
 
 				<h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful Content">{{ item.data.title }}</h1>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 
 
 			</div>
@@ -5695,7 +5695,7 @@
         	</div>
 			<div class="col-sm-6">
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
         	</div>
 
@@ -5711,7 +5711,7 @@
 
 		<div class="col-sm-6">
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
        		 </div>
 
@@ -5733,7 +5733,7 @@
 
 		<div class="col-sm-6">
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
         	</div>
 
@@ -5771,7 +5771,7 @@
 
 		<div class="col-sm-6">
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
         	</div>
 
@@ -5947,7 +5947,7 @@
 
                			<h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful content. Responsive.">{{ item.data.title }}</h1>
 
-                		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text.">{{ item.data.content }}</p>
+                		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text." v-html="item.data.content"></p>
 
                 		<div style="margin:1em 0 2.5em;">
 
@@ -5975,7 +5975,7 @@
 
                 		<h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful content. Responsive.">{{ item.data.title }}</h1>
 
-                		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text.">{{ item.data.content }}</p>
+                		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text." v-html="item.data.content"></p>
 
                 		<div style="margin:1em 0 2.5em;">
 
@@ -6012,7 +6012,7 @@
 
             		<h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful content. Responsive.">{{ item.data.title }}</h1>
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 
             		<div style="margin:1em 0 2.5em;">
 
@@ -6036,7 +6036,7 @@
 
             		<h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful content. Responsive.">{{ item.data.title }}</h1>
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 
             		<div style="margin:1em 0 2.5em;">
 
@@ -6068,7 +6068,7 @@
 
                 <h1 data-editor="TextEditor" data-field="title" data-default-value="Beautiful content. Responsive.">{{ item.data.title }}</h1>
 
-                <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+                <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 
             </div>
 
@@ -6110,7 +6110,7 @@
 
                 		<i class="icon ion-quote"></i>
 
-	            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+	            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
                 		<small data-editor="TextEditor" data-field="name" data-default-value="by Your Name">{{ item.data.name }}</small>
 
@@ -6134,7 +6134,7 @@
 
                 		<i class="icon ion-quote"></i>
 
-	            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+	            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
                 		<small>by Your Name</small>
 
@@ -6218,7 +6218,7 @@
 
 			<h2 data-editor="TextEditor" data-field='subheading' data-default-value="Lorem Ipsum">{{ item.data.subheading }}</h2>
 
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 
 			<div class="is-social edit">
 
@@ -6256,7 +6256,7 @@
 
 			    <div class="col-sm-8">
 
-				    <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+				    <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 
 				    <div class="is-social edit">
 
@@ -6288,7 +6288,7 @@
 
 			    <div class="col-sm-8">
 
-				    <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+				    <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 
 				    <div class="is-social edit">
 
@@ -6396,7 +6396,7 @@
 
 			</div>
 
- 			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet.">{{ item.data.content }}</p>
+ 			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet." v-html="item.data.content"></p>
 
 		</div>
 
@@ -6680,14 +6680,14 @@
 		<div class="col-sm-6 text-center">
 			<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/180x180.png&quot;,&quot;croppedImage&quot;:&quot;/images/180x180.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			<br>
-	        <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+	        <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
             <p><b>Your Name, </b>Lorem Ipsum</p>
         </div>
 
 		<div class="col-sm-6 text-center">
 			<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/180x180.png&quot;,&quot;croppedImage&quot;:&quot;/images/180x180.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			<br>
-	        <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+	        <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
         	<p><b>Your Name, </b>Lorem Ipsum</p>
         </div>
 	</div>
@@ -6742,7 +6742,7 @@
 
 			</div>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet." v-html="item.data.content"></p>
 
 		</div>
 
@@ -6798,7 +6798,7 @@
 
                 		<h3 data-editor="TextEditor" data-field="title" data-default-value="Beautiful Content. Responsive.">{{ item.data.title }}</h3>
 
-                		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+                		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
                 		<div style="margin:1em 0 2.5em;">
 
@@ -6818,7 +6818,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h3>
 
-            	<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            	<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 			</div>
         </div>
 
@@ -6828,7 +6828,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h3>
 
-            	<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            	<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 
         	</div>
         </div>
@@ -6839,7 +6839,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h3>
 
-            	<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            	<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 
         	</div>
 		</div>
@@ -6851,7 +6851,7 @@
 	<div class="row">
 		<div class="col-sm-12">
             <h1 data-editor="TextEditor" data-field="title" data-default-value="Contact Us">{{ item.data.title }}</h1>
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -6919,7 +6919,7 @@
 
 			<h1 data-editor="TextEditor" data-field="title" data-default-value="Your Name">{{ item.data.title }}</h1>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus." v-html="item.data.content"></p>
 
 		</div>
 
@@ -6949,7 +6949,7 @@
 
 			<h1 data-editor="TextEditor" data-field="title" data-default-value="Your Name">{{ item.data.title }}</h1>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus." v-html="item.data.content"></p>
 
 		</div>
 
@@ -6962,7 +6962,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             		<h1 style="font-size: 3em" data-editor="TextEditor" data-field="title" data-default-value="Meet The Team">{{ item.data.title }}</h1>
-		    	<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">{{ item.data.content }}</p>
+		    	<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit." v-html="item.data.content"></p>
         	</div>
 	</div>	
 	<div class="row">
@@ -7010,7 +7010,7 @@
 
 			<h1 style="font-size: 3em" data-editor="TextEditor" data-field="title" data-default-value="Our Team">{{ item.data.title }}</h1>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
 		</div>
 
@@ -7024,7 +7024,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name">{{ item.data.title }}</h3>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" v-html="item.data.content"></p>
 
 				<div class="is-social edit">
 
@@ -7046,7 +7046,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name">{{ item.data.title }}</h3>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" v-html="item.data.content"></p>
 
 				<div class="is-social edit">
 
@@ -7080,7 +7080,7 @@
 				<div class="margin-25 text-center">
 					<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">			
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -7096,7 +7096,7 @@
 				<div class="margin-25 text-center">
 			    	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">		
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
             		<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -7112,7 +7112,7 @@
 				<div class="margin-25 text-center">
 			  		<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			   	 	<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -7129,7 +7129,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <h1 data-editor="TextEditor" data-field="title" data-default-value="Our Team">{{ item.data.title }}</h1>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -7186,7 +7186,7 @@
 			<div class="display">
                 <h1 data-editor="TextEditor" data-field="title" data-default-value="Meet Our Team">{{ item.data.title }}</h1>
 			</div>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -7227,7 +7227,7 @@
 			<div class="display">
 				<h1 data-editor="TextEditor" data-field="title" data-default-value="Meet The Team">{{ item.data.title }}</h1>
 			</div>
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 		</div>
 	</div>
 
@@ -7237,7 +7237,7 @@
 				<div class="margin-30 text-center">
                 	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/140x140.png&quot;,&quot;croppedImage&quot;:&quot;/images/140x140.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;">
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -7253,7 +7253,7 @@
 				<div class="margin-30 text-center">
                 	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/140x140.png&quot;,&quot;croppedImage&quot;:&quot;/images/140x140.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;">
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Your Name"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -7278,7 +7278,7 @@
 
 			</div>
 
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante, consectetur sit amet vulputate vel, dapibus sit amet lectus." v-html="item.data.content"></p>
 
         </div>
 
@@ -7340,7 +7340,7 @@
 
             <h1 style="font-size: 3em" data-editor="TextEditor" data-field="title" data-default-value="Our Works">{{ item.data.title }}</h1>
 
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem ipsum dolor sit amet, consectetur adipiscing elit." v-html="item.data.content"></p>
 
         </div>
 
@@ -7404,7 +7404,7 @@
 
 				<h2 style="font-size: 1.7em" data-editor="TextEditor" data-field='subheading' data-default-value="Lorem Ipsum">{{ item.data.subheading }}</h2>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet.">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet." v-html="item.data.content"></p>
 
 				<div style="margin:2em 0 2.5em;">
 
@@ -7420,7 +7420,7 @@
 
 				<h2 style="font-size: 1.7em" data-editor="TextEditor" data-field='subheading' data-default-value="Lorem Ipsum">{{ item.data.subheading }}</h2>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet.">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet." v-html="item.data.content"></p>
 
 				<div style="margin:2em 0 2.5em;">
 
@@ -7436,7 +7436,7 @@
 
 				<h2 style="font-size: 1.7em" data-editor="TextEditor" data-field='subheading' data-default-value="Lorem Ipsum">{{ item.data.subheading }}</h2>
 
-				<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet.">{{ item.data.content }}</p>
+				<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet." v-html="item.data.content"></p>
 
 				<div style="margin:2em 0 2.5em;">
 
@@ -7463,9 +7463,9 @@
 		<div class="col-sm-12">
             <div class="display">
                 <h1 style="font-size:3.3em" data-editor="TextEditor" data-field="title" data-default-value="Portfolio">{{ item.data.title }}</h1>
-                <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+                <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
             </div>
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
          </div>
 	</div>
 
@@ -7483,7 +7483,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <h1 style="font-size:3em" data-editor="TextEditor" data-field="title" data-default-value="Our Products">{{ item.data.title }}</h1>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -7499,7 +7499,7 @@
 				<div class="margin-25 text-center">
 					<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/120x120.png&quot;,&quot;croppedImage&quot;:&quot;/images/120x120.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px">
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product One"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0">
 						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -7512,7 +7512,7 @@
 				<div class="margin-25 text-center">
 			    	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/120x120.png&quot;,&quot;croppedImage&quot;:&quot;/images/120x120.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px">
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product Two"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
             		<div style="margin:2em 0">
 						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -7525,7 +7525,7 @@
 				<div class="margin-25 text-center">
 			  		<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/120x120.png&quot;,&quot;croppedImage&quot;:&quot;/images/120x120.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px">				
 			    	<h3 data-editor="TextEditor" data-field="title" data-default-value="Product Three"  style="font-size:1.5em">{{ item.data.title }}</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
      				<div style="margin:2em 0">
 						<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -7541,7 +7541,7 @@
 		<div class="col-sm-12 text-center">
 			<i class="icon ion-ios-cart size-64" style="color: #333"></i>
             <h1 class="size-64" style="margin-top:0" data-editor="TextEditor" data-field="title" data-default-value="Our Products">{{ item.data.title }}</h1>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -7557,7 +7557,7 @@
         </div>
 		<div class="col-sm-6">
             <h1 data-editor="TextEditor" data-field="title" data-default-value="Product One">{{ item.data.title }}</h1>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
             <div style="margin:1em 0 2.5em;">
             	<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;BUY NOW&quot;}">{{ item.data.link.display }}</a>
             </div>
@@ -7573,7 +7573,7 @@
 	<div class="row">
 		<div class="col-sm-6">
             		<h1 data-editor="TextEditor" data-field="title" data-default-value="Product Two">{{ item.data.title }}</h1>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
             		<div style="margin:1em 0 2.5em;">
             			<a :href="item.data.link" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;BUY NOW&quot;}">{{ item.data.link.display }}</a>
             		</div>
@@ -7592,7 +7592,7 @@
 
 			<h1 data-editor="TextEditor" data-field="title" data-default-value="Our Clients">{{ item.data.title }}</h1>
 
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 
         </div>
 
@@ -7646,7 +7646,7 @@
 
             </div>
 
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
 
         </div>
 
@@ -7767,7 +7767,7 @@
 
             <h1 data-editor="TextEditor" data-field="title" data-default-value="Our Partners">{{ item.data.title }}</h1>
 
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur elit.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur elit." v-html="item.data.content"></p>
 
         </div>
 
@@ -7835,7 +7835,7 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
             <h1 style="font-size:3em" data-editor="TextEditor" data-field="title" data-default-value="Our Partners">{{ item.data.title }}</h1>
-			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -8095,7 +8095,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Company One">{{ item.data.title }}</h3>
 
-            	<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            	<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 			</div>
         </div>
 
@@ -8105,7 +8105,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Company Two">{{ item.data.title }}</h3>
 
-        		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+        		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 			</div>
         </div>
 
@@ -8115,7 +8115,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title" data-default-value="Company Three">{{ item.data.title }}</h3>
 
-    			<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+    			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
 			</div>
     	</div>
 
@@ -8133,17 +8133,17 @@
 	<div class="row">
 		<div class="col-sm-4">
 			<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 
 		<div class="col-sm-4">
 			<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 
 		<div class="col-sm-4">
 			<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 	</div>
 </div>
@@ -8159,13 +8159,13 @@
 		<div class="col-sm-6">
             <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="Company One"  style="font-size:1.5em;margin-top:0">{{ item.data.title }}</h3>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 
 		<div class="col-sm-6">
             <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="Company Two"  style="font-size:1.5em;margin-top:0">{{ item.data.title }}</h3>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 	</div>
 
@@ -8173,13 +8173,13 @@
 		<div class="col-sm-6">
             <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="Company Three"  style="font-size:1.5em;margin-top:0">{{ item.data.title }}</h3>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 
 		<div class="col-sm-6">
             <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/90x90.png&quot;,&quot;croppedImage&quot;:&quot;/images/90x90.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="Company Four"  style="font-size:1.5em;margin-top:0">{{ item.data.title }}</h3>
-            <p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</p>
+            <p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></p>
         </div>
 	</div>
 </div>
@@ -8228,7 +8228,7 @@
 				<div class="margin-25 text-center">
 					<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM </h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8244,7 +8244,7 @@
 				<div class="margin-25 text-center">
 			    	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			    	<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
             		<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8260,7 +8260,7 @@
 				<div class="margin-25 text-center">
 			  		<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/110x110.png&quot;,&quot;croppedImage&quot;:&quot;/images/110x110.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			   		<h3 class="size-28 is-title1-28 is-title-lite">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8280,7 +8280,7 @@
 				<div class="margin-30 text-center">
                 	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/190x190.png&quot;,&quot;croppedImage&quot;:&quot;/images/190x190.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			   		<h3 class="size-32 is-title1-32 is-title-lite">LOREM IPSUM </h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8296,7 +8296,7 @@
 				<div class="margin-30 text-center">
                 	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/190x190.png&quot;,&quot;croppedImage&quot;:&quot;/images/190x190.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			     	<h3 class="size-32 is-title1-32 is-title-lite">LOREM IPSUM </h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8316,7 +8316,7 @@
 				<div class="margin-30 text-center">
                 	<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/190x190.png&quot;,&quot;croppedImage&quot;:&quot;/images/190x190.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="border-radius: 500px;" alt="">
 			   		<h3 class="size-32 is-title1-32 is-title-lite">LOREM IPSUM </h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0">
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
                 		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
@@ -8338,7 +8338,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8351,7 +8351,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8364,7 +8364,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8381,7 +8381,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8394,7 +8394,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8411,7 +8411,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8428,7 +8428,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8441,7 +8441,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8454,7 +8454,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/433x428.png&quot;,&quot;croppedImage&quot;:&quot;/images/433x428.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8471,7 +8471,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8484,7 +8484,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8501,7 +8501,7 @@
 			    <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x220.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x220.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 			    	<h3 class="size-28 margin-0 is-title-bold">LOREM IPSUM</h3>
-            		<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+            		<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
  					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-small is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -8519,7 +8519,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/431x426.png&quot;,&quot;croppedImage&quot;:&quot;/images/431x426.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
@@ -8541,7 +8541,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/431x426.png&quot;,&quot;croppedImage&quot;:&quot;/images/431x426.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
@@ -8563,7 +8563,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/431x426.png&quot;,&quot;croppedImage&quot;:&quot;/images/431x426.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-25">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
@@ -8591,7 +8591,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/390x213.png&quot;,&quot;croppedImage&quot;:&quot;/images/390x213.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
@@ -8613,7 +8613,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/387x210.png&quot;,&quot;croppedImage&quot;:&quot;/images/387x210.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
@@ -8641,7 +8641,7 @@
 				<img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/390x213.png&quot;,&quot;croppedImage&quot;:&quot;/images/390x213.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" class="margin-0" alt="">				
 				<div class="margin-30">				
 					<h3 class="size-28 margin-0 is-title-lite">LOREM IPSUM</h3>
-					<p data-editor="TextareaEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</p>
+					<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></p>
 					<div class="is-social edit" style="margin:2em 0 0.5em">
 
                 		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
