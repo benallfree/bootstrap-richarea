@@ -23,6 +23,12 @@ jQuery.fn.visibilityToggle = function() {
 
 class MarkdownEditor extends BaseEditor
 {
+  static initField(field, layout, options)
+  {
+    let assetRoot = options.editors[this.slug].assetRoot || layout.assetRoot
+    field.defaultValue = marked(field.defaultValue);
+  }
+  
   static getVueData() {
     return {
       props: ['item', 'fieldName'],
@@ -33,7 +39,7 @@ class MarkdownEditor extends BaseEditor
       },
       template: `
         <div>
-          <textarea class="form-control markdown-editor" rows="10" ref="area"></textarea>
+          <textarea class="form-control markdown-editor" style="height: 300px" ref="area"></textarea>
         </div>
       `,
       methods: {

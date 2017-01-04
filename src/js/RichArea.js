@@ -1,6 +1,6 @@
 let LayoutParser = require('./LayoutParser');
 let VueComponentFactory = require('./VueComponentFactory');
-let changeCase = changeCase = require('change-case');
+let changeCase = require('change-case');
 let md5 = require('md5');
 let Q = require('q');
 let Vue = require('vue');
@@ -339,11 +339,11 @@ class RichArea
         {
           $editor().find('.modal-fullscreen').fullscreen();
         }
-        let e = $editor().find('.layout-settings .modal-dialog').get(0);
-        var Draggable = require ('draggable');
-        new Draggable (e, {
-          handle: $(e).find('.modal-header').get(0),
-        });
+        // let e = $editor().find('.layout-settings .modal-dialog').get(0);
+        // var Draggable = require ('draggable');
+        // new Draggable (e, {
+        //   handle: $(e).find('.modal-header').get(0),
+        // });
 
         // A little hack to wait for all images to finish loading before telling Webshot it's okay to take a screen shot.
         // http://phantomjs.org/api/webpage/handler/on-callback.html

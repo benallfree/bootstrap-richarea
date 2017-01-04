@@ -10,7 +10,7 @@ class VueComponentFactory
           let url = require('url');
           let parts = url.parse(urlString, true, true);
           let m = parts.pathname.match(/embed\/(.*)/);
-          let id = parts.query.v || (m.length == 2 ? m[1] : '');
+          let id = parts.query.v || ((m && m.length == 2) ? m[1] : '');
           let list = parts.query.list
           let args = {
             pathname: '//www.youtube.com/embed/'+id,
