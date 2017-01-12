@@ -1158,7 +1158,7 @@
 			<div class="padding-20">
  				<i class="icon ion-quote size-32" style="color: #808080"></i>
 
-				<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+				<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content3"></div>
 
 				<p><b>Your Name, </b>Lorem Ipsum</p>
 			</div>
@@ -1168,7 +1168,7 @@
 			<div class="padding-20">
  				<i class="icon ion-quote size-32" style="color: #808080"></i>
 
-				<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+				<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content3"></div>
 
 				<p><b>Your Name, </b>Lorem Ipsum</p>
 			</div>
@@ -1178,7 +1178,7 @@
 			<div class="padding-20">
  				<i class="icon ion-quote size-32" style="color: #808080"></i>
 
-				<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
+				<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content3"></div>
 
 				<p><b>Your Name, </b>Lorem Ipsum</p>
 			</div>
@@ -1202,17 +1202,17 @@
 	<div class="row">
 		<div class="col-sm-6">
             <div class="quote">
-                <i class="icon ion-quote" style="color: #808080"></i>
-	            <p style="font-size:1.2em" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
-                <small>by Your Name</small>
+                <i class="fa fa-quote-left" ></i>
+                <div  data-editor="MarkdownEditor" data-field='testimonial1' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.testimonial1"></div>
+                <small data-editor="TextEditor" data-default-value="by Your Name" data-field="byline1">rated <i class="fa fa-star" data-editor="TextEditor" data-field="rating1" data-default-value="5" v-for="n in Array.apply(null, {length: item.data.rating1})"></i> {{ item.data.byline1 }}</small>
             </div>
         </div>
 
 		<div class="col-sm-6">
             <div class="quote">
-                <i class="icon ion-quote" style="color: #808080"></i>
-	            <p style="font-size:1.2em" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
-                <small>by Your Name</small>
+                <i class="fa fa-quote-left" ></i>
+	            <div  data-editor="MarkdownEditor" data-field='testimonial2' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.testimonial2"></div>
+                <small data-editor="TextEditor" data-default-value="by Your Name" data-field="byline2">rated <i class="fa fa-star" data-editor="TextEditor" data-field="rating2" data-default-value="5" v-for="n in Array.apply(null, {length: item.data.rating2})"></i> {{ item.data.byline2 }}</small>
             </div>
         </div>
 	</div>
@@ -1220,17 +1220,17 @@
 	<div class="row">
 		<div class="col-sm-6">
             <div class="quote">
-                <i class="icon ion-quote" style="color: #808080"></i>
-	            <p style="font-size:1.2em" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
-                <small>by Your Name</small>
+              <i class="fa fa-quote-left" ></i>
+	            <div  data-editor="MarkdownEditor" data-field='testimonial3' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.testimonial3"></div>
+              <small data-editor="TextEditor" data-default-value="by Your Name" data-field="byline3">rated <i class="fa fa-star" data-editor="TextEditor" data-field="rating3" data-default-value="5" v-for="n in Array.apply(null, {length: item.data.rating3})"></i> {{ item.data.byline3 }}</small>
             </div>
         </div>
 
 		<div class="col-sm-6">
             <div class="quote">
-                <i class="icon ion-quote" style="color: #808080"></i>
-	            <p style="font-size:1.2em" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</p>
-                <small>by Your Name</small>
+              <i class="fa fa-quote-left" ></i>
+	            <div  data-editor="MarkdownEditor" data-field='testimonial4' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.testimonial4"></div>
+              <small data-editor="TextEditor" data-default-value="by Your Name" data-field="byline4">rated <i class="fa fa-star" data-editor="TextEditor" data-field="rating4" data-default-value="5" v-for="n in Array.apply(null, {length: item.data.rating4})"></i> {{ item.data.byline4 }}</small>
             </div>
         </div>
 	</div>
@@ -2385,7 +2385,7 @@
             <p data-editor="TextEditor" data-field="price1" data-default-value="$29 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price1 }}</i></p>
             		<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content1"></div>
  			    	<div style="margin:2em 0">
-                    <a :href="item.data.link1" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link1" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link1.display }}</a>
+                    <a :href="item.data.link1.href" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link1" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link1.display }}</a>
                 	</div>
             	</div>
         	</div>
@@ -2395,10 +2395,10 @@
            <div class="is-card is-dark-text"> 
 				<div class="margin-25 text-center">
 			    	<h2 data-editor="TextEditor" data-field='subheading2' data-default-value="BUSINESS">{{ item.data.subheading2 }}</h2>
-                <p data-editor="TextEditor" data-field="price1" data-default-value="$39 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price2 }}</i></p>
+                <p data-editor="TextEditor" data-field="price2" data-default-value="$39 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price2 }}</i></p>
             		<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content2"></div>
  			    	<div style="margin:2em 0">
-                  <a :href="item.data.link2" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link2" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link2.display }}</a>
+                  <a :href="item.data.link2.href" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link2" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link2.display }}</a>
                 </div>
         		</div>
         	</div>
@@ -2407,11 +2407,11 @@
 		<div class="col-sm-4">
            <div class="is-card is-dark-text"> 
 				<div class="margin-25 text-center">
-			    	<h2 data-editor="TextEditor" data-field='subheadin3' data-default-value="DEVELOPER">{{ item.data.subheading3}}</h2>
+			    	<h2 data-editor="TextEditor" data-field='subheading3' data-default-value="DEVELOPER">{{ item.data.subheading3}}</h2>
                 <p data-editor="TextEditor" data-field="price3" data-default-value="$59 per month" style="font-size:1.3em;color:#808080"><i>{{ item.data.price3 }}</i></p>
             		<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content3"></div>
  			    	<div style="margin:2em 0">
-                  <a :href="item.data.link3" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link3" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link3.display }}</a>
+                  <a :href="item.data.link3.href" class="btn btn-primary btn-lg edit" data-editor="LinkEditor" data-field="link3" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link3.display }}</a>
                 </div>
         		</div>
         	</div>
@@ -6168,32 +6168,19 @@
 
 			<div class="col-sm-10">
 
-            		<p>
-
-                	<b>Sara Phillipps</b><br>A freelance web designer &amp; developer based in Melbourne, Australia.
-
-            		</p>
+            		<div data-editor="MarkdownEditor" data-field="content" data-default-value="**Sara Phillips**  \nA freelance web designer &amp; developer based in Melbourne, Australia." v-html="item.data.content"></div>
 
             		<div class="is-social edit">
-
-                		<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
-
-                		<a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
-
-                		<a href="https://plus.google.com/"><i class="icon ion-social-googleplus"></i></a>
-
-                		<!--<a href="#"><i class="icon ion-social-github"></i></a>
-
-                		<a href="#"><i class="icon ion-social-dribbble"></i></a>
-
-                		<a href="#"><i class="icon ion-social-pinterest"></i></a>
-
-                		<a href="#"><i class="icon ion-social-linkedin"></i></a>
-
-                		<a href="#"><i class="icon ion-social-instagram"></i></a>-->
-
-                		<a href="mailto:you@example.com"><i class="icon ion-ios-email-outline"></i></a>
-
+                		<a :href="item.data.youtube.href" v-if="item.data.youtube.href.length>0" data-editor="LinkEditor" data-field="youtube" data-default-value="{&quot;href&quot;: &quot;https://youtube.com/&quot;}"><i class="fa fa-youtube"></i></a>
+                		<a :href="item.data.twitter.href" v-if="item.data.twitter.href.length>0" data-editor="LinkEditor" data-field="twitter" data-default-value="{&quot;href&quot;: &quot;https://twitter.com/&quot;}"><i class="fa fa-twitter"></i></a>
+                		<a :href="item.data.facebook.href" v-if="item.data.facebook.href.length>0" data-editor="LinkEditor" data-field="facebook" data-default-value="{&quot;href&quot;: &quot;https://facebook.com/&quot;}"><i class="fa fa-facebook"></i></a>
+                		<a :href="item.data.google.href" v-if="item.data.google.href.length>0" data-editor="LinkEditor" data-field="google" data-default-value="{&quot;href&quot;: &quot;https://plus.google.com/&quot;}"><i class="fa fa-google-plus"></i></a>
+                		<a :href="item.data.github.href" v-if="item.data.github.href.length>0" data-editor="LinkEditor" data-field="github" data-default-value="{&quot;href&quot;: &quot;https://github.com/&quot;}"><i class="fa fa-github"></i></a>
+                		<a :href="item.data.dribble.href" v-if="item.data.dribble.href.length>0" data-editor="LinkEditor" data-field="dribble" data-default-value="{&quot;href&quot;: &quot;https://dribble.com/&quot;}"><i class="fa fa-dribble"></i></a>
+                		<a :href="item.data.pinterest.href" v-if="item.data.pinterest.href.length>0" data-editor="LinkEditor" data-field="pinterest" data-default-value="{&quot;href&quot;: &quot;https://pinterest.com.com/&quot;}"><i class="fa fa-pinterest"></i></a>
+                		<a :href="item.data.linkedin.href" v-if="item.data.linkedin.href.length>0" data-editor="LinkEditor" data-field="linkedin" data-default-value="{&quot;href&quot;: &quot;https://linkedin.com.com/&quot;}"><i class="fa fa-linkedin"></i></a>
+                		<a :href="item.data.instagram.href" v-if="item.data.instagram.href.length>0" data-editor="LinkEditor" data-field="instagram" data-default-value="{&quot;href&quot;: &quot;https://instagram.com.com/&quot;}"><i class="fa fa-instagram"></i></a>
+                		<a :href="item.data.mail.href" v-if="item.data.mail.href.length>0" data-editor="LinkEditor" data-field="mail" data-default-value="{&quot;href&quot;: &quot;mailto:me@me.com&quot;}"><i class="fa fa-envelope-o"></i></a>
            	 	</div>
 
        	</div>
@@ -6850,31 +6837,31 @@
 <div data-id="image-95" data-cat="['images','default','contact-info']">
 	<div class="row">
 		<div class="col-sm-12">
-            <h1 data-editor="TextEditor" data-field="title" data-default-value="Contact Us">{{ item.data.title }}</h1>
-			<p data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></p>
-        </div>
+      <h1 data-editor="TextEditor" data-field="title" data-default-value="Contact Us">{{ item.data.title }}</h1>
+			<div data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
+    </div>
 	</div>
 
 	<div class="row">
 		<div class="col-sm-6">
-            <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x230.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x230.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="margin-top: 0px;">
-        </div>
+      <img data-editor="ImageEditor" data-field="image" data-default-value="{&quot;originalImage&quot;:&quot;/images/395x230.png&quot;,&quot;croppedImage&quot;:&quot;/images/395x230.png&quot;,&quot;offset&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;zoom&quot;:null}" :src="item.data.image.croppedImage" style="margin-top: 0px;">
+    </div>
 
 		<div class="col-sm-6">
-            <h3 data-editor="TextEditor" data-field="title" data-default-value="Company, Inc."  style="margin-top:0">{{ item.data.title }}</h3>
-			<p>
-              123 Street, City<br>
-              State 12345<br>
-              P: (123) 456 7890 / 456 7891
-            </p>
+      <div data-editor="MarkdownEditor" data-field="content2" data-default-value="### Company, Inc.&#10;123 Street, City  &#13;State 12345  &#13;P: (123) 456 7890 / 456 7891"  style="margin-top:0" v-html="item.data.content2"></div>
 			<div class="is-social edit">
-                <a href="https://twitter.com/"><i class="icon ion-social-twitter" style="margin-right: 1em"></i></a>
-                <a href="https://www.facebook.com/"><i class="icon ion-social-facebook" style="margin-right: 1em"></i></a>
-				<a href="https://www.pinterest.com/"><i class="icon ion-social-pinterest-outline" style="margin-right: 1em"></i></a>
-                <a href="https://plus.google.com/"><i class="icon ion-social-googleplus" style="margin-right: 1em"></i></a>
-				<a href="https://www.instagram.com/"><i class="icon ion-social-instagram-outline"></i></a>
+    		<a :href="item.data.youtube.href" v-if="item.data.youtube.href.length>0" data-editor="LinkEditor" data-field="youtube" data-default-value="{&quot;href&quot;: &quot;https://youtube.com/&quot;}"><i class="fa fa-youtube"></i></a>
+    		<a :href="item.data.twitter.href" v-if="item.data.twitter.href.length>0" data-editor="LinkEditor" data-field="twitter" data-default-value="{&quot;href&quot;: &quot;https://twitter.com/&quot;}"><i class="fa fa-twitter"></i></a>
+    		<a :href="item.data.facebook.href" v-if="item.data.facebook.href.length>0" data-editor="LinkEditor" data-field="facebook" data-default-value="{&quot;href&quot;: &quot;https://facebook.com/&quot;}"><i class="fa fa-facebook"></i></a>
+    		<a :href="item.data.google.href" v-if="item.data.google.href.length>0" data-editor="LinkEditor" data-field="google" data-default-value="{&quot;href&quot;: &quot;https://plus.google.com/&quot;}"><i class="fa fa-google-plus"></i></a>
+    		<a :href="item.data.github.href" v-if="item.data.github.href.length>0" data-editor="LinkEditor" data-field="github" data-default-value="{&quot;href&quot;: &quot;https://github.com/&quot;}"><i class="fa fa-github"></i></a>
+    		<a :href="item.data.dribble.href" v-if="item.data.dribble.href.length>0" data-editor="LinkEditor" data-field="dribble" data-default-value="{&quot;href&quot;: &quot;https://dribble.com/&quot;}"><i class="fa fa-dribble"></i></a>
+    		<a :href="item.data.pinterest.href" v-if="item.data.pinterest.href.length>0" data-editor="LinkEditor" data-field="pinterest" data-default-value="{&quot;href&quot;: &quot;https://pinterest.com.com/&quot;}"><i class="fa fa-pinterest"></i></a>
+    		<a :href="item.data.linkedin.href" v-if="item.data.linkedin.href.length>0" data-editor="LinkEditor" data-field="linkedin" data-default-value="{&quot;href&quot;: &quot;https://linkedin.com.com/&quot;}"><i class="fa fa-linkedin"></i></a>
+    		<a :href="item.data.instagram.href" v-if="item.data.instagram.href.length>0" data-editor="LinkEditor" data-field="instagram" data-default-value="{&quot;href&quot;: &quot;https://instagram.com.com/&quot;}"><i class="fa fa-instagram"></i></a>
+    		<a :href="item.data.mail.href" v-if="item.data.mail.href.length>0" data-editor="LinkEditor" data-field="mail" data-default-value="{&quot;href&quot;: &quot;mailto:me@me.com&quot;}"><i class="fa fa-envelope-o"></i></a>
 			</div>
-        </div>
+    </div>
 	</div>
 </div>
 

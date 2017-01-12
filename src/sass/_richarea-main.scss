@@ -13,6 +13,24 @@
   img {
     max-width: 100%;
   }
+  
+  .quote
+  {
+    background-color: $gray-lighter;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 30px;
+    .fa-quote-left
+    {
+      color: $gray-darker;
+      font-size: 25px;
+      display: inline-block;
+      opacity: 0.5;
+      position: absolute;
+      top: 20px;
+    }
+  }
 
   .richarea-app
   {
