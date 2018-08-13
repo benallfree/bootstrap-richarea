@@ -824,7 +824,7 @@
 
 			<h3 data-editor="TextEditor" data-field="title2" data-default-value="Lorem Ipsum is simply dummy text">{{ item.data.title2 }}</h3>
 
-			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">{{ item.data.content2 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit." v-html="item.data.content2"></div>
 
 
 
@@ -1032,7 +1032,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title1" data-default-value="FEATURE ITEM" style="margin: 0.5em 0">{{ item.data.title1 }}</h3>
 
-				<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content1 }}</div>
+				<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content1"></div>
 			</div>
 		</div>
 
@@ -1042,7 +1042,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title2" data-default-value="FEATURE ITEM" style="margin: 0.5em 0">{{ item.data.title2 }}</h3>
 
-				<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content2 }}</div>
+				<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content2"></div>
 			</div>
 		</div>
 
@@ -1056,7 +1056,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title1" data-default-value="FEATURE ITEM" style="margin: 0.5em 0">{{ item.data.title1 }}</h3>
 
-				<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content1 }}</div>
+				<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content1"></div>
 			</div>
 		</div>
 
@@ -1066,7 +1066,7 @@
 
 				<h3 data-editor="TextEditor" data-field="title2" data-default-value="FEATURE ITEM" style="margin: 0.5em 0">{{ item.data.title2 }}</h3>
 
-				<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content2 }}</div>
+				<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content2"></div>
 			</div>
 		</div>
 
@@ -1157,19 +1157,19 @@
 		<div class="col-sm-4 text-center">
 			<i class="icon ion-ios-monitor-outline size-64"></i>
 			<h3 data-editor="TextEditor" data-field="title1" data-default-value="Feature Item" style="margin-top:0;">{{ item.data.title1 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content1 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content1"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
 			<i class="icon ion-android-download size-64"></i>
 			<h3 data-editor="TextEditor" data-field="title2" data-default-value="Feature Item" style="margin-top:0;">{{ item.data.title2 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content2 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content2"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
 			<i class="icon ion-ios-heart-outline size-64"></i>
 			<h3 data-editor="TextEditor" data-field="title3" data-default-value="Feature Item" style="margin-top:0;">{{ item.data.title3 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content3 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content3"></div>
 		</div>
 	</div>
 </div>
@@ -3153,22 +3153,22 @@
 	<div class="row">
 		<div class="col-sm-3">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="1" style="font-size:3em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-3">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="2" style="font-size:3em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-3">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="3" style="font-size:3em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-3">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="4" style="font-size:3em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -3260,17 +3260,17 @@
 	<div class="row">
 		<div class="col-sm-4 text-center">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="1" style="font-size:2.7em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="2" style="font-size:2.7em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
 			<h3 data-editor="TextEditor" data-field="title" data-default-value="3" style="font-size:2.7em;font-weight:800">{{ item.data.title }}</h3>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -3743,24 +3743,24 @@
 	<div class="row">
 		<div class="col-sm-6 text-center">
 			<i class="icon ion-ios-people-outline size-64"></i>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-6 text-center">
 			<i class="icon ion-ios-chatboxes-outline size-64"></i>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-sm-6 text-center">
 			<i class="icon ion-ios-star-outline size-64"></i>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 		</div>
 
 		<div class="col-sm-6 text-center">
 			<i class="icon ion-ios-paperplane-outline size-64"></i>
-			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">{{ item.data.content }}</div>
+			<div style="margin-top:0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -3803,7 +3803,7 @@
 
 		<div class="col-sm-12 text-center">
 
-			<div style="margin: 1.5em 0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div style="margin: 1.5em 0" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 
 		</div>
 
@@ -4564,7 +4564,7 @@
 				<span style="font-weight:800;font-size:2.2em">{{ item.data.subheading1 }}</span>
 			</h2>
 			<h3 data-editor="TextEditor" data-field="title1" data-default-value="Web Design">{{ item.data.title1 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content1 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content1' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content1"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
@@ -4572,7 +4572,7 @@
 				<span style="font-weight:800;font-size:2.2em">{{ item.data.subheading2 }}</span>
 			</h2>
 			<h3 data-editor="TextEditor" data-field="title2" data-default-value="PHP">{{ item.data.title2 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content2 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content2' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content2"></div>
 		</div>
 
 		<div class="col-sm-4 text-center">
@@ -4580,7 +4580,7 @@
 				<span style="font-weight:800;font-size:2.2em">{{ item.data.subheading3 }}</span>
 			</h2>
 			<h3 data-editor="TextEditor" data-field="title3" data-default-value="HTML &amp; CSS">{{ item.data.title3 }}</h3>
-			<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text of the printing industry.">{{ item.data.content3 }}</div>
+			<div data-editor="MarkdownEditor" data-field='content3' data-default-value="Lorem Ipsum is simply dummy text of the printing industry." v-html="item.data.content3"></div>
 		</div>
 	</div>
 </div>
@@ -4702,7 +4702,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title1-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4711,7 +4711,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title1-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4720,7 +4720,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title1-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4742,7 +4742,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-96" style="line-height:1"></i>
 			<h1 class="size-96 is-title2-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4752,7 +4752,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
 			<h1 class="size-64 is-title2-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4762,7 +4762,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
 			<h1 class="size-48 is-title2-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4784,7 +4784,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title3-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4793,7 +4793,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title3-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4802,7 +4802,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title3-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4823,7 +4823,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title4-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4832,7 +4832,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title4-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4841,7 +4841,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title4-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4862,7 +4862,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title5-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4871,7 +4871,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title5-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4880,7 +4880,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4901,7 +4901,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title1-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4910,7 +4910,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title1-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4919,7 +4919,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4941,7 +4941,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-96" style="line-height:1"></i>
 			<h1 class="size-96 is-title2-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4951,7 +4951,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-96" style="line-height:1"></i>
 			<h1 class="size-64 is-title2-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4961,7 +4961,7 @@
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
 			<h1 class="size-48 is-title2-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4983,7 +4983,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title3-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -4992,7 +4992,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title3-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5001,7 +5001,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title3-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5022,7 +5022,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title4-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5031,7 +5031,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title4-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5040,7 +5040,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title4-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5061,7 +5061,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-96 is-title5-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5070,7 +5070,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-64 is-title5-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5079,7 +5079,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="size-48 is-title5-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 		</div>
 	</div>
 </div>
@@ -5101,7 +5101,7 @@
 <div data-id="richarea-213" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title1-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5110,7 +5110,7 @@
 <div data-id="richarea-214" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title1-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5119,7 +5119,7 @@
 <div data-id="richarea-215" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title1-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5128,7 +5128,7 @@
 <div data-id="richarea-216" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title1-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5140,7 +5140,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-96" style="line-height:1"></i>
-			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title2-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5150,7 +5150,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title2-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5160,7 +5160,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title2-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5170,7 +5170,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-48" style="line-height:1"></i>
-			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title2-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5181,7 +5181,7 @@
 <div data-id="richarea-221" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title3-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5190,7 +5190,7 @@
 <div data-id="richarea-222" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title3-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5199,7 +5199,7 @@
 <div data-id="richarea-223" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title3-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5208,7 +5208,7 @@
 <div data-id="richarea-224" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title3-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5219,7 +5219,7 @@
 <div data-id="richarea-225" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title4-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5228,7 +5228,7 @@
 <div data-id="richarea-226" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title4-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5237,7 +5237,7 @@
 <div data-id="richarea-227" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title4-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5246,7 +5246,7 @@
 <div data-id="richarea-228" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title4-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5257,7 +5257,7 @@
 <div data-id="richarea-229" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title5-96 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5266,7 +5266,7 @@
 <div data-id="richarea-230" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title5-64 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5275,7 +5275,7 @@
 <div data-id="richarea-231" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5284,7 +5284,7 @@
 <div data-id="richarea-232" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info1" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title5-32 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5295,7 +5295,7 @@
 <div data-id="richarea-233" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title1-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5304,7 +5304,7 @@
 <div data-id="richarea-234" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title1-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5313,7 +5313,7 @@
 <div data-id="richarea-235" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5322,7 +5322,7 @@
 <div data-id="richarea-236" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title1-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5334,7 +5334,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-96" style="line-height:1"></i>
-			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title2-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5344,7 +5344,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title2-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5354,7 +5354,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-64" style="line-height:1"></i>
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title2-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5364,7 +5364,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<i class="icon ion-ios-home-outline size-48" style="line-height:1"></i>
-			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title2-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5375,7 +5375,7 @@
 <div data-id="richarea-241" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title3-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5384,7 +5384,7 @@
 <div data-id="richarea-242" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title3-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5393,7 +5393,7 @@
 <div data-id="richarea-243" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title3-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5402,7 +5402,7 @@
 <div data-id="richarea-244" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title3-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5413,7 +5413,7 @@
 <div data-id="richarea-245" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title4-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5422,7 +5422,7 @@
 <div data-id="richarea-246" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title4-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5431,7 +5431,7 @@
 <div data-id="richarea-247" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title4-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5440,7 +5440,7 @@
 <div data-id="richarea-248" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title4-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5451,7 +5451,7 @@
 <div data-id="richarea-249" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-24 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-96 is-title5-96 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5460,7 +5460,7 @@
 <div data-id="richarea-250" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 			<h1 class="size-64 is-title5-64 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="Lorem Ipsum">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5469,7 +5469,7 @@
 <div data-id="richarea-251" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="size-21 is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-48 is-title5-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -5478,7 +5478,7 @@
 <div data-id="richarea-252" data-cat="['info', 'title']">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">{{ item.data.content }}</div>
+			<div class="is-info2" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." v-html="item.data.content"></div>
 			<h1 class="size-32 is-title5-32 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY">{{ item.data.title }}</h1>
 		</div>
 	</div>
@@ -6002,7 +6002,7 @@
 			<div class="is-card is-dark-text">
 				<div class="margin-40 text-center">
 					<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 						<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
@@ -6019,7 +6019,7 @@
 			<div class="is-card is-dark-text">
 				<div class="margin-40 text-center">
 					<h1 class="size-48 is-title5-48 is-title-lite" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS SIMPLY DUMMY TEXT">{{ item.data.title }}</h1>
-					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
@@ -6073,7 +6073,7 @@
 			<div class="is-card is-dark-text">
 				<div class="margin-40 text-center">
 					<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
-					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-ghost2 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a> &nbsp;
 						<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Buy Now&quot;}">{{ item.data.link.display }}</a>
@@ -6090,7 +6090,7 @@
 			<div class="is-card is-dark-text">
 				<div class="margin-40 text-center">
 					<h1 class="size-48 is-title1-48 is-title-bold" data-editor="TextEditor" data-field="title" data-default-value="LOREM IPSUM IS DUMMY TEXT">{{ item.data.title }}</h1>
-					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">{{ item.data.content }}</div>
+					<div class="size-21" data-editor="MarkdownEditor" data-field='content' data-default-value="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." v-html="item.data.content"></div>
 					<div style="margin:2em 0 0.5em">
 						<a :href="item.data.link" class="is-btn is-btn-ghost1 is-upper edit" data-editor="LinkEditor" data-field="link" data-default-value="{&quot;href&quot;: &quot;#&quot;,&quot;display&quot;: &quot;Read More&quot;}">{{ item.data.link.display }}</a>
 					</div>
