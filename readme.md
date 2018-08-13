@@ -2,25 +2,45 @@
 
 RichArea offers a component-based approach to editing layouts and content in a WYSIWYG fashion. Instead of allowing the user complete control over markup and layout like a standard WYSIWYG editor, RichArea takes a different approach: it uses layout components where the layout is fixed but the content is editable via either standard text/textarea, Markdown, or more advanced controls.
 
+## Installation
+
+```
+npm i bootstrap-richarea @fortawesome\font-awesome-free bootstrap
+```
+
+Then, create your first editor!
+
+```html
+<div id="richarea"></div>
+```
+
+```javascript
+RichArea.create({
+  container: document.getElementById("richarea")
+});
+```
+
+## Layouts
+
 RichArea comes with 300 responsive layout components with these edit controls:
 
-* Text
-* Text area
-* Markdown area
-* Images
-* YouTube video embeds
-* Dropdown lists
-* Hyperlinks
+- Text
+- Text area
+- Markdown area
+- Images
+- YouTube video embeds
+- Dropdown lists
+- Hyperlinks
 
 Features:
 
-* Full WYSIWYG content editing
-* Retrieve both HTML output and RichArea content data structures
-* Render mobile-first Bootstrap components 
+- Full WYSIWYG content editing
+- Retrieve both HTML output and RichArea content data structures
+- Render mobile-first Bootstrap components
 
 ## Quickstart
 
-RichArea is designed to be used with Webpack. It does not contain a distribution file. See the RichArea Starter Kit for a working demo:
+See the RichArea Starter Kit for a working demo:
 
      git clone git@github.com:benallfree/bootstrap-richarea-starter.git
      cd bootstrap-richarea-starter
@@ -29,7 +49,7 @@ RichArea is designed to be used with Webpack. It does not contain a distribution
 ### Creating
 
     <div id="richarea"></div>
-    
+
     RichArea.create({
       container: document.getElementById('richarea'),
     });
@@ -79,7 +99,6 @@ RichArea will `POST` to the URL specified and expects back a JSON response:
       url: "/path/to/image/on/server.png",
     }
 
-
 ## Customizing CSS
 
 If you're using a Bootstrap theme and can build your own RichArea CSS, include your `variables.scss` and then `./src/sass/_richarea.scss`.
@@ -103,7 +122,7 @@ It might be easier though just to override RichArea's color choices:
                 }
               }
             }
-          }      
+          }
         }
         .modal-body.component-selector {
           background-color: $gray-lighter;
@@ -113,7 +132,7 @@ It might be easier though just to override RichArea's color choices:
           &.component {
             border: 1px solid $gray-lighter;
           }
-        }  
+        }
       }
     }
 
@@ -121,14 +140,14 @@ Or just the plain old CSS:
 
     .richarea.richarea-editor ul.sortable li .tools {
       background: rgba(85, 85, 85, 0.2); }
-      
+
     .richarea.richarea-editor ul.sortable li.active .item:after {
       background: rgba(238, 238, 238, 0.44); }
-    
+
     .richarea.richarea-editor .modal-body.component-selector {
       background-color: #eeeeee;
       color: #222222; }
-      
+
     .richarea.richarea-editor img.component {
       border: 1px solid #eeeeee; }
 
@@ -141,4 +160,3 @@ RichArea is built via Webpack. See the RichArea Starter Kit for details.
     brew install imagemagick
     brew install graphicsmagick
     node ./scripts/thumbnails.js
-
